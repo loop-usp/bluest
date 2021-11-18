@@ -1,2 +1,2 @@
 # bluest
-Sei lá meo
+Sei lá meq
