@@ -1,0 +1,109 @@
+{
+	"name": "Chão",
+	"plugin-id": "Sprite",
+	"sid": 133028194550621,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.492,
+						"originY": 0.504,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7625870,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Ponto de Imagem 1",
+								"x": 0.232,
+								"y": 0.332
+							},
+							{
+								"name": "Ponto de Imagem 2",
+								"x": 0.2,
+								"y": 0.444
+							},
+							{
+								"name": "Ponto de Imagem 3",
+								"x": 0.788,
+								"y": 0.464
+							},
+							{
+								"name": "Ponto de Imagem 4",
+								"x": 0.332,
+								"y": 0.744
+							},
+							{
+								"name": "Ponto de Imagem 5",
+								"x": 0.064,
+								"y": 0.928
+							},
+							{
+								"name": "Ponto de Imagem 6",
+								"x": 0.92,
+								"y": 0.084
+							},
+							{
+								"name": "Ponto de Imagem 7",
+								"x": 0.204,
+								"y": 0.3
+							},
+							{
+								"name": "Ponto de Imagem 8",
+								"x": 0.752,
+								"y": 0.796
+							},
+							{
+								"name": "Ponto de Imagem 9",
+								"x": 0.352,
+								"y": 0.496
+							},
+							{
+								"name": "Ponto de Imagem 10",
+								"x": 0.648,
+								"y": 0.804
+							},
+							{
+								"name": "Ponto de Imagem 11",
+								"x": 0.528,
+								"y": 0.248
+							},
+							{
+								"name": "Ponto de Imagem 12",
+								"x": 0.248,
+								"y": 0.26
+							},
+							{
+								"name": "Ponto de Imagem 13",
+								"x": 0.764,
+								"y": 0.716
+							},
+							{
+								"name": "Ponto de Imagem 14",
+								"x": 0.212,
+								"y": 0.684
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 433863767647491,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,198 @@
+{
+	"name": "Event sheet_Principal",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 984367252682091,
+					"parameters": {
+						"object": "JOGAR_CESTA_RESTAURANTE"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 286112228960932,
+					"parameters": {
+						"layout": "Hospital"
+					}
+				}
+			],
+			"sid": 453706095221015
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 380973666400165,
+					"parameters": {
+						"object": "CRÉDITOS"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 891933445803133,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 328338967433792,
+					"parameters": {
+						"object": "CONFIGURACOES"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 807179404786220,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 707685429064734,
+					"parameters": {
+						"object": "VOLUME"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 156160841189576,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 556068473061653,
+					"parameters": {
+						"object": "Botão_Snake"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 429142513424042,
+					"parameters": {
+						"layout": "Layout_Snake"
+					}
+				}
+			],
+			"sid": 912224767510263
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 133778375396810,
+					"parameters": {
+						"object": "Botão_Running"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 605600722170707,
+					"parameters": {
+						"layout": "Layout_Running_Parque"
+					}
+				}
+			],
+			"sid": 928243427426203
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 786936272282570,
+					"parameters": {
+						"object": "Botão_Cesta"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 789888430685949,
+					"parameters": {
+						"layout": "Layout_Cesta_Restaurante"
+					}
+				}
+			],
+			"sid": 552204606137438
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 714657264303256,
+					"parameters": {
+						"object": "Botão_Match3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 103179276069765,
+					"parameters": {
+						"layout": "Layout_Match3"
+					}
+				}
+			],
+			"sid": 119717331951190
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 161570413734601,
+					"parameters": {
+						"object": "Botão_Esteira"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 587939484329499,
+					"parameters": {
+						"layout": "Layout_Esteira_Restaurante"
+					}
+				}
+			],
+			"sid": 378690884936357
+		}
+	],
+	"sid": 490344362635689
+}

@@ -1,0 +1,271 @@
+{
+	"name": "Sistema",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "ProximaFala",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 864009430825509
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 785671459535863
+				}
+			],
+			"actions": [],
+			"sid": 668082664949952,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Falas",
+							"sid": 791167196068869,
+							"parameters": {
+								"instance-variable": "Mostrar"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 504929907524567,
+							"parameters": {
+								"text": "left(Falas.Texto,len(Falas.Texto)+1)"
+							}
+						}
+					],
+					"sid": 668544529787832,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-text",
+									"objectClass": "Falas",
+									"sid": 189148229244414,
+									"parameters": {
+										"text-to-compare": "Falas.Texto",
+										"case-sensitivity": "ignore-case"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Falas",
+									"sid": 277865489174512,
+									"parameters": {
+										"instance-variable": "Mostrar",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 780251340487761
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-function",
+					"objectClass": "Function",
+					"sid": 216930725275534,
+					"parameters": {
+						"name": "\"Conversa\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Balao_Texto",
+					"sid": 870077681507327,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PROXIMO",
+					"sid": 397899815513232,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Falas",
+					"sid": 324628027250394,
+					"parameters": {
+						"text": "\"\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Falas",
+					"sid": 399134279910664,
+					"parameters": {
+						"instance-variable": "Texto",
+						"value": "Function.Param(0)"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "Falas",
+					"sid": 148350582363742,
+					"parameters": {
+						"instance-variable": "Mostrar",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Personagem",
+					"sid": 677485337906080,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Personagem",
+					"sid": 475138617734075,
+					"parameters": {
+						"frame-number": "Function.Param(1)"
+					}
+				}
+			],
+			"sid": 393642554916259,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-parameter",
+							"objectClass": "Function",
+							"sid": 235047899588465,
+							"parameters": {
+								"index": "1",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Personagem",
+							"sid": 960809951716802,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 943383874309307
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-parameter",
+							"objectClass": "Function",
+							"sid": 430544845978932,
+							"parameters": {
+								"index": "0",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Balao_Texto",
+							"sid": 507042993370105,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 898640570653400,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 257165835553349,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 266101213687855
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-parameter",
+							"objectClass": "Function",
+							"sid": 642208879127231,
+							"parameters": {
+								"index": "1",
+								"comparison": 0,
+								"value": "\"PROXIMO\""
+							}
+						},
+						{
+							"id": "compare-parameter",
+							"objectClass": "Function",
+							"sid": 186798049345323,
+							"parameters": {
+								"index": "2",
+								"comparison": 0,
+								"value": "\"PROXIMO\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 540765459975625,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 137993226907952,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 686496452685205,
+					"isOrBlock": true
+				}
+			]
+		}
+	],
+	"sid": 630148290124916
+}

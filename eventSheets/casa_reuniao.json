@@ -1,0 +1,111 @@
+{
+	"name": "Casa_Reuniao",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 779299844875966
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 300203237181116,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Falas",
+					"sid": 989861191019826,
+					"parameters": {
+						"text": "\"Eles chegam em casa e ouvem uma musica tocando.\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Personagem",
+					"sid": 397466878303597,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 355166669426807
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 298495541476378,
+					"parameters": {
+						"object": "PROXIMO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 265857670235572,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 313959876086477
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 464524361729492,
+					"parameters": {
+						"variable": "ProximaFala",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Falas",
+					"sid": 584090487674190,
+					"parameters": {
+						"text": "\"Que bom Tina! Parece que todos vieram.\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Personagem",
+					"sid": 829322854845430,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PROXIMO",
+					"sid": 501211888343605,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 889203345061174
+		}
+	],
+	"sid": 318283135489956
+}

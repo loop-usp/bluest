@@ -1,0 +1,2131 @@
+{
+	"name": "Parque",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Retorno_Parque",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 828603446489765
+		},
+		{
+			"eventType": "variable",
+			"name": "Retorno_Parque_Sozinho",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 710049275032171
+		},
+		{
+			"eventType": "variable",
+			"name": "Sentar",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 202920170286686
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 906674912263131,
+					"parameters": {
+						"variable": "Sai_Sozinho"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 638543004370485,
+					"parameters": {
+						"group-name": "\"Chega ao Parque Sozinho\"",
+						"state": "activated"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 298831562814157,
+					"parameters": {
+						"group-name": "\"Chega ao Parque com Tina\"",
+						"state": "deactivated"
+					}
+				}
+			],
+			"sid": 301035219142295
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 417136886983752,
+					"parameters": {
+						"object": "PROXIMO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 260536676009010,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 445285400448408
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Chega ao Parque Sozinho",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 661072163361655
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 957501579676215,
+							"parameters": {
+								"variable": "Retorno_Parque_Sozinho",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 317957943148524,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 101937408022595
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 691951500327014,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 634356557283585,
+							"parameters": {
+								"text": "\"E um pouco estranho estar aqui sozinho.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 111877501400140,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 795412109494611,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "CAMINHAR",
+							"sid": 822546184547997
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SE_SENTAR_EM_ALGUM_LUGAR",
+							"sid": 374864443305102
+						}
+					],
+					"sid": 403556940683363
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 362314620781617,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 437755428587058,
+							"parameters": {
+								"text": "\"Blue comeca a ouvir uma musica e a segue.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 325982384004865,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 148543064839543
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 840461663091321,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 163477572288140,
+							"parameters": {
+								"text": "\"UAU! Um show, bem AQUI, ao ar livre. Que coincidencia maravilhosa.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 120136324020035,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 195573347459176
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 308329151405547,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 800360742665212,
+							"parameters": {
+								"text": "\"Blue comeca a se sentir mal enquanto assiste ao show.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 817875558331963,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 224472795440774
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 106006614879652,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 977236226031236,
+							"parameters": {
+								"text": "\"Eu nao deveria ter saido daquela forma do restaurante. Queria tanto que a Tina estivesse aqui para me ajudar.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 773732529995259,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 839910543704063
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 775144692941442,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 729865774933935,
+							"parameters": {
+								"text": "\"Em momentos em que se sentir fatigado/cansado e importante reconhecer e identificar alguem que possa lhe oferecer suporte. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 342132981990697,
+							"parameters": {
+								"frame-number": "5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 357549883812988,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 758384846252388,
+							"parameters": {
+								"object-to-create": "JOGAR_SUPORTE",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 315244619180496
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 440395286663916,
+							"parameters": {
+								"object": "JOGAR_SUPORTE"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_SUPORTE",
+							"sid": 274983305802495
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 109157366657683,
+							"parameters": {
+								"variable": "Retorno_Parque_Sozinho",
+								"value": "1"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 211834444822120,
+							"parameters": {
+								"layout": "Layout_Suporte"
+							}
+						}
+					],
+					"sid": 440168211683457
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 116858711030966
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 925029885249689,
+							"parameters": {
+								"variable": "Retorno_Parque_Sozinho",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 582854863892182,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_SUPORTE",
+							"sid": 728769168694114
+						}
+					],
+					"sid": 416924946775488
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 531378925736684,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 618422719301109,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 730494624342667,
+							"parameters": {
+								"text": "\"Que bom que me encontrou!\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 957474209253870,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 194148117497593
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 131430179496114,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 250175751434551,
+							"parameters": {
+								"text": "\"Me desculpe por ter agido daquela maneira, foi uma atitude desnecessaria.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 997732665006440,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 169035004981891
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 849662349102577,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 995043930230791,
+							"parameters": {
+								"text": "\"Vamos! Nao se preocupe... Vamos fazer algo, talvez faca voce se sentir melhor.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 472007689047923,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 961679340882416,
+							"parameters": {
+								"variable": "Sai_Sozinho",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 646698618732605
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 512752893182642,
+							"parameters": {
+								"variable": "Sai_Sozinho"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 498220277615379,
+							"parameters": {
+								"group-name": "\"Chega ao Parque com Tina\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 272744286067265
+						}
+					],
+					"sid": 133725005655674
+				}
+			],
+			"sid": 269778512880536
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Chega ao Parque com Tina",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 174149688869618
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 840542256665882,
+							"parameters": {
+								"variable": "Retorno_Parque",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 963379898252443,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 954716491711812,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 751237466216493,
+							"parameters": {
+								"text": "\"Alguma ideia do que quer fazer?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 812708062226519,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 264689960020166,
+							"parameters": {
+								"object-to-create": "CAMINHAR",
+								"layer": "1",
+								"x": "517",
+								"y": "669",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 928241224690757,
+							"parameters": {
+								"object-to-create": "SE_SENTAR_EM_ALGUM_LUGAR",
+								"layer": "1",
+								"x": "748",
+								"y": "669",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 501219215725203
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 256082111828362,
+							"parameters": {
+								"object": "CAMINHAR"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "CAMINHAR",
+							"sid": 802945865655626
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SE_SENTAR_EM_ALGUM_LUGAR",
+							"sid": 642322181744582
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 717029000301476,
+							"parameters": {
+								"group-name": "\"Opção: Caminhar\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 509626163655215,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 410702893370948
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 677875354164074,
+							"parameters": {
+								"object": "SE_SENTAR_EM_ALGUM_LUGAR"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "CAMINHAR",
+							"sid": 632746861131786
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SE_SENTAR_EM_ALGUM_LUGAR",
+							"sid": 440672683790950
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 216599188105007,
+							"parameters": {
+								"group-name": "\"Opção: Se Sentar em Algum Lugar\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 998705442677731,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 182187209829124
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Opção: Caminhar",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 487634295397294,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 799974324437439,
+									"parameters": {
+										"text": "\"Prefiro caminhar um pouco por agora.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 530450798603993,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PROXIMO",
+									"sid": 481052170940230,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 667311399698015
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 415492257331856,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 536785043413063,
+									"parameters": {
+										"text": "\"Enquanto estao caminhando Blue indaga.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 989907962007213,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 154168410677142
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 866800704740375,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 344856936654742,
+									"parameters": {
+										"text": "\"Lembra quando vinhamos aqui quando criancas?\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 229824203217585,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 414218517386501
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 170022724579727,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 389418823152753,
+									"parameters": {
+										"text": "\"Claro!!! Nossos pais amavam esse lugar.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 603218236981992,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 439432728611447
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 500340923057106,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 499572112100373,
+									"parameters": {
+										"text": "\"E entao, eles chegam a pista de atletismo.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 545261943834550,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 633808699870908
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 484454906456651,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 675814190221403,
+									"parameters": {
+										"text": "\"Aposto que eu ganharia uma corrida.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 820990527654263,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 143087034642232
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 968748341592319,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 299407494016772,
+									"parameters": {
+										"text": "\"Nao exagera Blue.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 302683599797501,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 180338265494684
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 692063647836387,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 378695596900228,
+									"parameters": {
+										"text": "\"Um bom habito para evitar fadiga e se programar para realizar suas atividades em momentos do dia em que se tem pico de energia. \"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 695636318466532,
+									"parameters": {
+										"frame-number": "4"
+									}
+								}
+							],
+							"sid": 789488177179863
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 276583953074777,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "9"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 543283542667188,
+									"parameters": {
+										"text": "\"Para isso, tambem e necessario se ter uma boa noite de sono e consumir agua de forma abundante.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 250811229934780,
+									"parameters": {
+										"frame-number": "5"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PROXIMO",
+									"sid": 323556109305094,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 769906062340509,
+									"parameters": {
+										"object-to-create": "JOGAR_RUNNING_PARQUE",
+										"layer": "1",
+										"x": "1164",
+										"y": "682",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 505222308032290
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 764823301070765,
+									"parameters": {
+										"object": "JOGAR_RUNNING_PARQUE"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "JOGAR_RUNNING_PARQUE",
+									"sid": 739471775191153
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 657773847910682,
+									"parameters": {
+										"variable": "Retorno_Parque",
+										"value": "1"
+									}
+								},
+								{
+									"type": "comment",
+									"text": "Para evitar que volte para a opção \"Chegar ao Parque Sozinho\""
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 722745319804808,
+									"parameters": {
+										"variable": "Retorno_Parque_Sozinho",
+										"value": "1"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 408400726598574,
+									"parameters": {
+										"layout": "Layout_Running_Parque"
+									}
+								}
+							],
+							"sid": 345584287643695
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 396879338225695
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 772645410279092,
+									"parameters": {
+										"variable": "Retorno_Parque",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 202973240836126,
+									"parameters": {
+										"variable": "ProximaFala",
+										"value": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "JOGAR_RUNNING_PARQUE",
+									"sid": 283678621085526
+								}
+							],
+							"sid": 205034994512085
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 899068678050435,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "PROXIMO",
+									"sid": 878782232466812,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 180206469433990,
+									"parameters": {
+										"text": "\"Vamos sentar no parquinho para descansarmos um pouco.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 122099663033376,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 735973882534629,
+									"parameters": {
+										"variable": "Sentar",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 766795678815581
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 528196694272912,
+									"parameters": {
+										"variable": "Sentar"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 795184399058943,
+									"parameters": {
+										"group-name": "\"Opção: Se Sentar em Algum Lugar\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 356254802651654,
+									"parameters": {
+										"variable": "ProximaFala",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 502952153981075
+						}
+					],
+					"sid": 726996988836652,
+					"text-color": [
+						0,
+						0,
+						0,
+						0
+					],
+					"background-color": [
+						0.596078431372549,
+						0.7725490196078432,
+						0.9215686274509803,
+						1
+					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Opção: Se Sentar em Algum Lugar",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 482560859877116,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 776229855302304,
+									"parameters": {
+										"variable": "ProximaFala",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 176137240746325,
+									"parameters": {
+										"variable": "Retorno_Parque",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 785053810287621,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 864750096151493,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 446978876567731,
+									"parameters": {
+										"text": "\"Eles se sentam em um banco com um espaco vago no parquinho. E neste banco ha uma mulher sentada observando as criancas. entao Blue puxa assunto.\""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 642084329878290,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PROXIMO",
+									"sid": 338427697467473,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 608768647938674
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 242909079427001,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 219858507307883,
+									"parameters": {
+										"text": "\"Qual deles e seu filho?\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 318471590394893,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 753549679717478
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 411075182465854,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 567790305425060,
+									"parameters": {
+										"text": "\"Bom… (ela ri) Nenhum deles. Estou olhando meu irmaozinho. É aquele de camisa amarela. \"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 585044597966119,
+									"parameters": {
+										"frame-number": "6"
+									}
+								}
+							],
+							"sid": 695918308587973
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 958311411946663,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 949124578499033,
+									"parameters": {
+										"text": "\"Oh! Me desculpe a confusao.\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 375037284143645,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 939994418097557
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 117869365876448,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 846302678331155,
+									"parameters": {
+										"text": "\"Tudo bem, isso acontece.\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 797780313551660,
+									"parameters": {
+										"frame-number": "6"
+									}
+								}
+							],
+							"sid": 158656583871760
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 239564382560642,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 363399750467227,
+									"parameters": {
+										"text": "\"A moca se levanta.\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 111758864591362,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 206674092975828
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 262565828396001,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 975079131298787,
+									"parameters": {
+										"text": "\"Arthur! Vamos?\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 761219145624466,
+									"parameters": {
+										"frame-number": "6"
+									}
+								}
+							],
+							"sid": 492446436248606
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 995284172711196,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "9"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 418139569911315,
+									"parameters": {
+										"text": "\"O garoto de camisa amarela se aproxima e entao a moca se vira para Blue.\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 249028731754933,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 172427119687635
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 675942559057780,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 593829015342469,
+									"parameters": {
+										"text": "\"Ja estamos indo, ate mais. Tenha uma otima tarde. \"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 923331243626311,
+									"parameters": {
+										"frame-number": "6"
+									}
+								}
+							],
+							"sid": 142795539565204
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 495875372749272,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "11"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 755277473444679,
+									"parameters": {
+										"text": "\"Ate mais!\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 184059563946855,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 776288445267813
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 984044714963186,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "12"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 687568942489879,
+									"parameters": {
+										"text": "\"A moca sai com o garoto.\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 356532408411438,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PROXIMO",
+									"sid": 737376130275849,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 164952220101183,
+									"parameters": {
+										"object-to-create": "JOGAR_LABIRINTO",
+										"layer": "1",
+										"x": "1164",
+										"y": "682",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 286942772859554
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 253801489252821,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "13"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 861506603217196,
+									"parameters": {
+										"text": "\"A organizacao das suas atividades e uma parte muito importante. Ao priorizar suas atividades diarias mais importantes e possível se organizar para realizar uma atividade de cada vez e ainda estabelecer uma rotina de descanso diario. \"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 351427225238480,
+									"parameters": {
+										"frame-number": "4"
+									}
+								}
+							],
+							"sid": 592782701219528
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 565471752960694,
+									"parameters": {
+										"object": "JOGAR_LABIRINTO"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "JOGAR_LABIRINTO",
+									"sid": 631470788479418
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 238214005275790,
+									"parameters": {
+										"variable": "Retorno_Parque",
+										"value": "1"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 354092204431875,
+									"parameters": {
+										"layout": "Layout_Labirinto"
+									}
+								}
+							],
+							"sid": 957536693490918
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 838903784844737
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 353837124493110,
+									"parameters": {
+										"variable": "Retorno_Parque",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 300526696875088,
+									"parameters": {
+										"variable": "ProximaFala",
+										"value": "1"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "JOGAR_LABIRINTO",
+									"sid": 542874161042635
+								}
+							],
+							"sid": 165942802716723
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 831756279551170,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "14"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 185611559366552,
+									"parameters": {
+										"text": "\"Isso me lembrou a epoca em que nossos pais se foram. \""
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 408715949547935,
+									"parameters": {
+										"frame-number": "2"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PROXIMO",
+									"sid": 897531835342795,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 532335035012826
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 195228434369817,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "15"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 264980601264153,
+									"parameters": {
+										"text": "\"Voce sempre me trazia aqui para tentar me alegrar… (PAUSA) Caso eu tenha alguma complicacao, nao quero que se distancie desse lugar, sempre tivemos bons momentos aqui. \"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 432749278265042,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 985407962254756
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 903059656777094,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "16"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 779073856622800,
+									"parameters": {
+										"text": "\"Nao fala assim. A ideia de nao te ter por aqui me doi muito. Preciso que aguente firme por nos dois. \"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 164967730506549,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 719945883297326
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 538023533647810,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "17"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 566248485876206,
+									"parameters": {
+										"text": "\"Tudo bem, prometo nunca te deixar sozinha. \"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 113835855555234,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 279489288171193
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 203034982994991,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "18"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 174545878392519,
+									"parameters": {
+										"text": "\"Eles se abracam.\"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 977486917606206,
+									"parameters": {
+										"frame-number": "0"
+									}
+								}
+							],
+							"sid": 193258393089355
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 506547897286907,
+									"parameters": {
+										"variable": "ProximaFala",
+										"comparison": 0,
+										"value": "19"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "Falas",
+									"sid": 120720082516947,
+									"parameters": {
+										"text": "\"Bom, temos que nos apressar. \"\r\n"
+									}
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "Personagem",
+									"sid": 873349660457123,
+									"parameters": {
+										"frame-number": "0"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PROXIMO",
+									"sid": 877915355852430,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 818275448332220,
+									"parameters": {
+										"object-to-create": "IR_A_LOJA",
+										"layer": "1",
+										"x": "1164",
+										"y": "672",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 952706023163965
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 330956282332351,
+									"parameters": {
+										"object": "IR_A_LOJA"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 143604211537005,
+									"parameters": {
+										"layout": "Sapataria"
+									}
+								}
+							],
+							"sid": 572713938388944
+						}
+					],
+					"sid": 122330823421521,
+					"background-color": [
+						0.9294117647058824,
+						0.7529411764705882,
+						0.8980392156862745,
+						1
+					]
+				}
+			],
+			"sid": 479350137249745
+		}
+	],
+	"sid": 355626337600224
+}

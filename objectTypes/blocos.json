@@ -1,0 +1,330 @@
+{
+	"name": "Blocos",
+	"plugin-id": "Sprite",
+	"sid": 719437730628008,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Cor",
+			"type": "number",
+			"desc": "",
+			"sid": 268405330336722
+		},
+		{
+			"name": "EsPareja",
+			"type": "boolean",
+			"desc": "",
+			"sid": 294493274924217
+		},
+		{
+			"name": "elegida",
+			"type": "boolean",
+			"desc": "",
+			"sid": 590090236287749
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 247913522831986
+		},
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastarSoltar",
+			"sid": 930682896523872
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 75,
+						"height": 75,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\bloques\\cerdo.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2938584,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 75,
+						"height": 75,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\bloques\\gallina.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7461985,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 75,
+						"height": 75,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\bloques\\girafa.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2461144,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 75,
+						"height": 75,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\bloques\\loro.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7881737,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 75,
+						"height": 75,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\bloques\\serpi.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6571679,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 908468225060070,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\parejas\\1.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6514305,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\parejas\\2.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6604312,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\parejas\\3.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6622515,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\parejas\\4.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9111806,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\parejas\\5.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8498538,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\parejas\\6.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9217178,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0,
+								0.979167,
+								0,
+								0.979167,
+								1,
+								0.0208333,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 247449400989117,
+				"name": "final",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

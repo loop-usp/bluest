@@ -1,0 +1,22 @@
+{
+	"name": "Falas",
+	"plugin-id": "Text",
+	"sid": 939852052003010,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Texto",
+			"type": "string",
+			"desc": "",
+			"sid": 747471442895297
+		},
+		{
+			"name": "Mostrar",
+			"type": "boolean",
+			"desc": "",
+			"sid": 135249612951052
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

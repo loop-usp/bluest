@@ -1,0 +1,57 @@
+{
+	"name": "Criadores_Match",
+	"plugin-id": "Sprite",
+	"sid": 134430375626226,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 75,
+						"height": 75,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "C:\\Users\\Juan-casa\\Documents\\Match-3\\assets\\extras\\creadores.png",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6446761,
+						"collisionPoly": {
+							"points": [
+								0.0208333,
+								0.0208333,
+								0.5,
+								0,
+								0.979167,
+								0.0208333,
+								1,
+								0.5,
+								0.979167,
+								0.979167,
+								0.5,
+								1,
+								0.0208333,
+								0.979167,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 732521694746192,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

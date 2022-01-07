@@ -1,0 +1,847 @@
+{
+	"name": "Event sheet_Match3",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Xpos",
+			"type": "number",
+			"initialValue": "77",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 973307155184128
+		},
+		{
+			"eventType": "variable",
+			"name": "Ypos",
+			"type": "number",
+			"initialValue": "598",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 474578057529489
+		},
+		{
+			"eventType": "variable",
+			"name": "Movimento",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 432967476996054
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "HOME",
+					"sid": 244717631708938
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 530953469311385,
+					"parameters": {
+						"layout": "Layout_Principal"
+					}
+				}
+			],
+			"sid": 122577465478879
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_MATCH3",
+					"sid": 822850873323394
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 294301977626476,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 363986011406785
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 817622231446292
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Blocos",
+					"sid": 194846343341264
+				}
+			],
+			"sid": 359252230016729
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Gravidade e Criação de Blocos",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "Criadores_Match",
+							"sid": 562109839329798,
+							"parameters": {
+								"object": "Blocos",
+								"offset-x": "0",
+								"offset-y": "10"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 268288544916773,
+							"parameters": {
+								"variable": "Movimento",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Criadores_Match",
+							"sid": 435304150616475,
+							"parameters": {
+								"object": "Blocos",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Blocos",
+							"sid": 197412257431296,
+							"parameters": {
+								"instance-variable": "Cor",
+								"value": "choose(0,1,2,3,4)"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Blocos",
+							"sid": 696918262729623,
+							"parameters": {
+								"frame-number": "Blocos.Cor"
+							}
+						}
+					],
+					"sid": 787918977450687
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "Blocos",
+							"sid": 946799956922024,
+							"parameters": {
+								"object": "Blocos",
+								"offset-x": "0",
+								"offset-y": "2"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Blocos",
+							"sid": 767964722857051,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "Ypos"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-at-angle",
+							"objectClass": "Blocos",
+							"sid": 212809184635855,
+							"parameters": {
+								"angle": "90",
+								"distance": "Blocos.Width/8"
+							}
+						}
+					],
+					"sid": 357854988150753
+				}
+			],
+			"sid": 533811147364779
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Seleção de Bloco",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drag-start",
+							"objectClass": "Blocos",
+							"sid": 438245690753820,
+							"behaviorType": "ArrastarSoltar"
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 838936182087622,
+							"parameters": {
+								"variable": "Movimento",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-at-xy",
+							"objectClass": "Array",
+							"sid": 191298978512700,
+							"parameters": {
+								"x": "0",
+								"y": "0",
+								"value": "Blocos.X"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "Array",
+							"sid": 218035717984665,
+							"parameters": {
+								"x": "0",
+								"y": "1",
+								"value": "Blocos.Y"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 660588732779516,
+							"parameters": {
+								"variable": "Movimento",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "baixo",
+							"sid": 404042141309475,
+							"parameters": {
+								"x": "Blocos.X",
+								"y": "Blocos.Y+Blocos.Width"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "cima",
+							"sid": 529137714552108,
+							"parameters": {
+								"x": "Blocos.X",
+								"y": "Blocos.Y-Blocos.Width"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "direita",
+							"sid": 864772725214643,
+							"parameters": {
+								"x": "Blocos.X+Blocos.Width",
+								"y": "Blocos.Y"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "esquerda",
+							"sid": 146556564495114,
+							"parameters": {
+								"x": "Blocos.X-Blocos.Width",
+								"y": "Blocos.Y"
+							}
+						}
+					],
+					"sid": 306870316664751
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Blocos",
+							"sid": 195637760991025,
+							"behaviorType": "ArrastarSoltar"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 709401171170579,
+							"parameters": {
+								"variable": "Movimento",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 476385820776322,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 938901798245860,
+									"parameters": {
+										"object": "baixo"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 112359014088931,
+									"parameters": {
+										"object": "direita"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 975536498982611,
+									"parameters": {
+										"object": "esquerda"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "baixo",
+									"sid": 649194785319702,
+									"parameters": {
+										"comparison": 5,
+										"y-co-ordinate": "Ypos"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 489016148768400,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "baixo.X"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 420967123645660,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "baixo.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Blocos",
+									"sid": 211509346605937,
+									"parameters": {
+										"x": "Array.at(0,0)",
+										"y": "Array.at(0,1)"
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 840607859578624,
+									"parameters": {
+										"name": "\"Troca\"",
+										"parameter-n": []
+									}
+								}
+							],
+							"sid": 696426465306300
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 498010455497019
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 440797936676629,
+									"parameters": {
+										"object": "cima"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 623471466074848,
+									"parameters": {
+										"object": "direita"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 953496321217759,
+									"parameters": {
+										"object": "esquerda"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "cima",
+									"sid": 235313781127038,
+									"parameters": {
+										"comparison": 5,
+										"y-co-ordinate": "Xpos"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 304628275152388,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "cima.X"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 174028129043655,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "cima.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Blocos",
+									"sid": 931809357258047,
+									"parameters": {
+										"x": "Array.at(0,0)",
+										"y": "Array.at(0,1)"
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 755181406732638,
+									"parameters": {
+										"name": "\"Troca\"",
+										"parameter-n": []
+									}
+								}
+							],
+							"sid": 617216214156426
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 997450549338543
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 365837540656774,
+									"parameters": {
+										"object": "direita"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 459076102867587,
+									"parameters": {
+										"object": "baixo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 246421264029007,
+									"parameters": {
+										"object": "cima"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "direita",
+									"sid": 554215076675064,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "Ypos"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 384885763277516,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "direita.X"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 741861148623970,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "direita.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Blocos",
+									"sid": 205256528344388,
+									"parameters": {
+										"x": "Array.at(0,0)",
+										"y": "Array.at(0,1)"
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 891906055684059,
+									"parameters": {
+										"name": "\"Troca\"",
+										"parameter-n": []
+									}
+								}
+							],
+							"sid": 547492664882328
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 820885893637824
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 609469536392539,
+									"parameters": {
+										"object": "esquerda"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 479271666716904,
+									"parameters": {
+										"object": "baixo"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocos",
+									"sid": 305908095730911,
+									"parameters": {
+										"object": "cima"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "esquerda",
+									"sid": 373079301634534,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "Xpos"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 473669008386359,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "esquerda.X"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 740435609212138,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "esquerda.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Blocos",
+									"sid": 960433395295154,
+									"parameters": {
+										"x": "Array.at(0,0)",
+										"y": "Array.at(0,1)"
+									}
+								},
+								{
+									"id": "call-function",
+									"objectClass": "Function",
+									"sid": 947934403900684,
+									"parameters": {
+										"name": "\"Troca\"",
+										"parameter-n": []
+									}
+								}
+							],
+							"sid": 447221716531053
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 939655521310549
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocos",
+									"sid": 278368891934760,
+									"parameters": {
+										"x": "Array.at(0,0)",
+										"y": "Array.at(0,1)"
+									}
+								}
+							],
+							"sid": 563396032669177
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-function",
+							"objectClass": "Function",
+							"sid": 452818848935819,
+							"parameters": {
+								"name": "\"Troca\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 658618792569852,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Blocos",
+									"sid": 156653540434487,
+									"parameters": {
+										"comparison": 0,
+										"x-co-ordinate": "Array.At(0,0)"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Blocos",
+									"sid": 485696898424004,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "Array.At(0,1)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocos",
+									"sid": 366117463965521,
+									"parameters": {
+										"x": "-75",
+										"y": "-75"
+									}
+								}
+							],
+							"sid": 625083003005006
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Blocos",
+									"sid": 509171097140159,
+									"parameters": {
+										"comparison": 0,
+										"x-co-ordinate": "Array.At(1,0)"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Blocos",
+									"sid": 179804638023810,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "Array.At(1,1)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocos",
+									"sid": 310401293911539,
+									"parameters": {
+										"x": "Array.At(0,0)",
+										"y": "Array.At(0,1)"
+									}
+								}
+							],
+							"sid": 731442559971510
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Blocos",
+									"sid": 838867812973866,
+									"parameters": {
+										"comparison": 0,
+										"x-co-ordinate": "-75"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Blocos",
+									"sid": 490103624760688,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "-75"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocos",
+									"sid": 102217672805154,
+									"parameters": {
+										"x": "Array.At(1,0)",
+										"y": "Array.At(1,1)"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 977884046486053,
+									"parameters": {
+										"x": "0",
+										"y": "0",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 941328515239738,
+									"parameters": {
+										"x": "0",
+										"y": "1",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 394383785171805,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "Array",
+									"sid": 642818597028901,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 295607106018295
+						}
+					]
+				}
+			],
+			"sid": 125805284687854
+		}
+	],
+	"sid": 669671266768637
+}
