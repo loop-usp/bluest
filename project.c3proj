@@ -1,0 +1,542 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 27602,
+	"name": "Bluest",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Arr",
+			"name": "Array",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Function",
+			"name": "Function",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "TileMovement",
+			"name": "Tile movement",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		}
+	],
+	"uniqueId": "tj5wknur0l8",
+	"objectTypes": {
+		"items": [
+			"Keyboard",
+			"Touch",
+			"PlatformInfo",
+			"Function",
+			"HOME",
+			"Player",
+			"BLUEST",
+			"FIM"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"arrow",
+					"btnRestart",
+					"snake",
+					"toEat",
+					"txtGameOver",
+					"txtScore",
+					"wall",
+					"Bg_proibido",
+					"VOLTAR_SNAKE"
+				],
+				"subfolders": [],
+				"name": "Snake"
+			},
+			{
+				"items": [
+					"chao_parque",
+					"bg_parque",
+					"DistanceDisplay",
+					"VOLTAR_RUNNING_PARQUE",
+					"VOLTAR_RUNNING_SAPATARIA",
+					"VOLTAR_RUNNING_PUB"
+				],
+				"subfolders": [],
+				"name": "Running"
+			},
+			{
+				"items": [
+					"Botão_Snake",
+					"Botão_Running",
+					"Botão_Match3",
+					"Botão_Cesta",
+					"Botão_Esteira"
+				],
+				"subfolders": [],
+				"name": "Principal"
+			},
+			{
+				"items": [
+					"Cesta",
+					"bons_alimento",
+					"Criador_Cesta",
+					"ruins_alimento",
+					"Chão",
+					"Parede",
+					"Pontos",
+					"vidas",
+					"Vida",
+					"VOLTAR_CESTA_RESTAURANTE",
+					"VOLTAR_CESTA_PUB",
+					"VOLTAR_CESTA_SAPATARIA"
+				],
+				"subfolders": [],
+				"name": "Cesta"
+			},
+			{
+				"items": [
+					"Criadores_Match",
+					"Blocos",
+					"baixo",
+					"cima",
+					"direita",
+					"esquerda",
+					"Array",
+					"Pontos_Match3",
+					"VOLTAR_MATCH3"
+				],
+				"subfolders": [],
+				"name": "Match3"
+			},
+			{
+				"items": [
+					"Pontos_Esteira",
+					"Alimento_Bom",
+					"Criador_Esteira",
+					"Esteira",
+					"Prato",
+					"Alimento_Ruim",
+					"Parede_Esteira",
+					"VOLTAR_ESTEIRA_RESTAURANTE",
+					"VOLTAR_ESTEIRA_PUB"
+				],
+				"subfolders": [],
+				"name": "Esteira"
+			},
+			{
+				"items": [
+					"Personagem",
+					"Balao_Texto",
+					"Falas"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"PROXIMO",
+							"IR_AO_RESTAURANTE",
+							"JOGAR_CESTA_RESTAURANTE",
+							"CONFIGURACOES",
+							"CRÉDITOS",
+							"VOLUME",
+							"IR_AO_PARQUE",
+							"JOGAR_MATCH3",
+							"JOGAR_ESTEIRA_RESTAURANTE",
+							"JOGAR_COBRINHA",
+							"JOGAR_SUPORTE",
+							"JOGAR_RUNNING_PARQUE",
+							"JOGAR_LABIRINTO",
+							"IR_A_LOJA",
+							"JOGAR_CESTA_SAPATARIA",
+							"IR_AO_DENTISTA",
+							"JOGAR_RUNNING_SAPATARIA",
+							"JOGAR_CAÇA",
+							"JOGAR_7ERROS",
+							"IR_AO_PUB",
+							"JOGAR_CESTA_PUB",
+							"JOGAR_ESTEIRA_PUB",
+							"IR_PARA_CASA_JOGOS",
+							"IR_PARA_CASA_SOBRINHA",
+							"JOGAR_RUNNING_PUB"
+						],
+						"subfolders": [
+							{
+								"items": [
+									"SENTAR_LA_FORA",
+									"SENTAR_NO_BALCAO",
+									"IR_A_MAQUINA",
+									"NAO_IR_A_MAQUINA",
+									"CAMINHAR",
+									"SE_SENTAR_EM_ALGUM_LUGAR",
+									"FESTA_DA_SOBRINHA",
+									"NOITE_DE_JOGOS",
+									"DEIXAR_TINA_SE_SENTAR",
+									"SE_SENTAR",
+									"EU_ESCOLHO",
+									"PODE_ESCOLHER"
+								],
+								"subfolders": [],
+								"name": "Opções Narrativa"
+							}
+						],
+						"name": "Botões"
+					}
+				],
+				"name": "Narrativa"
+			},
+			{
+				"items": [
+					"VOLTAR_7ERROS",
+					"VOLTAR_CAÇA",
+					"VOLTAR_LABIRINTO",
+					"VOLTAR_SUPORTE",
+					"Contrucao"
+				],
+				"subfolders": [],
+				"name": "EM CONSTRUÇÃO"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Hospital",
+			"Restaurante",
+			"Parque",
+			"Sapataria",
+			"Dentista",
+			"PUB",
+			"Casa_Reuniao",
+			"Casa_Festa"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Layout_Labirinto",
+					"Layout_Suporte",
+					"Layout_Caça",
+					"Layout_7Erros"
+				],
+				"subfolders": [],
+				"name": "Em construção"
+			},
+			{
+				"items": [
+					"Layout_Snake",
+					"Layout_Running_Parque",
+					"Layout_Principal",
+					"Layout_Match3",
+					"Layout_Cesta_Restaurante",
+					"Layout_Esteira_Restaurante",
+					"Layout_Running_Sapataria",
+					"Layout_Running_PUB",
+					"Layout_Esteira_PUB",
+					"Layout_Cesta_PUB",
+					"Layout_Cesta_Sapataria"
+				],
+				"subfolders": [],
+				"name": "Minigames"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"Hospital",
+			"Restaurante",
+			"Parque",
+			"Sapataria",
+			"Dentista",
+			"PUB",
+			"Casa_Reuniao",
+			"Casa_Festa",
+			"Sistema",
+			"EM CONTRUÇÃO"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Event sheet_Cesta",
+					"Event sheet_Esteira",
+					"Event sheet_Match3",
+					"Event sheet_Principal",
+					"Event sheet_Running",
+					"Event sheet_Snake"
+				],
+				"subfolders": [],
+				"name": "Minigames"
+			}
+		]
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "JustNormalPixelFont.ttf",
+					"type": "application/font-sfnt",
+					"sid": 638349348697382
+				},
+				{
+					"name": "ThaleahFat.ttf",
+					"type": "application/font-sfnt",
+					"sid": 868474845951320
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 803671517810013,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 278576070753395,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 123060219358458,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 510486413110743,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 177933962497059,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 347395281549571,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 179736902713760,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "Lana Nogueira Vieira",
+		"authorEmail": "lananog@usp.br",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": true,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "file"
+	},
+	"viewportWidth": 1280,
+	"viewportHeight": 720,
+	"firstLayout": "Layout_Principal"
+}

@@ -1,0 +1,48 @@
+{
+	"name": "Alimento_Ruim",
+	"plugin-id": "Sprite",
+	"sid": 107804117030611,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "ArrastarSoltar",
+			"sid": 281341833463950
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Projétil",
+			"sid": 211376082773813
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 150,
+						"height": 150,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7254515,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 603048939640402,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

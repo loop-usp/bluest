@@ -1,0 +1,90 @@
+{
+	"name": "EM CONTRUÇÃO",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_LABIRINTO",
+					"sid": 916676290984295
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 517827180878316,
+					"parameters": {
+						"layout": "Parque"
+					}
+				}
+			],
+			"sid": 680715385362315
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_SUPORTE",
+					"sid": 631373556162352
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 856481197017039,
+					"parameters": {
+						"layout": "Parque"
+					}
+				}
+			],
+			"sid": 251449902292177
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_CAÇA",
+					"sid": 740607654811677
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 705544959518300,
+					"parameters": {
+						"layout": "Dentista"
+					}
+				}
+			],
+			"sid": 342880239055675
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_7ERROS",
+					"sid": 100312807824453
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 801332250024479,
+					"parameters": {
+						"layout": "Dentista"
+					}
+				}
+			],
+			"sid": 365488548829906
+		}
+	],
+	"sid": 553239238302620
+}

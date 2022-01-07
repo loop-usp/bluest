@@ -1,0 +1,1634 @@
+{
+	"name": "Dentista",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Retorno_Dentista",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 988793198799932
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 466964961131061,
+					"parameters": {
+						"object": "PROXIMO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 102499185296353,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 111636279787522
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "História Geral 3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 104737697263337
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 458540466882601,
+							"parameters": {
+								"variable": "Retorno_Dentista",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 403139885813884,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 379925074621704,
+							"parameters": {
+								"text": "\"Eles chegam ao consultorio e Blue vai ate a secretaria.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 807475595356960,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 468934034826741
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 377538874318563,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 572494267227055,
+							"parameters": {
+								"text": "\"Boa tarde, tenho uma consulta agendada. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 302654099606191,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 925537766526536
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 605206835103350,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 501907930360799,
+							"parameters": {
+								"text": "\"Boa tarde, qual seu nome?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 432983427576307,
+							"parameters": {
+								"frame-number": "8"
+							}
+						}
+					],
+					"sid": 808220084714566
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 687606518609047,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 826219963474347,
+							"parameters": {
+								"text": "\"Blue\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 430915274475227,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 672773278607960
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 980380234985622,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 647380271819979,
+							"parameters": {
+								"text": "\"Certo, preciso que aguarde aqui na recepcao ate chamarem pelo seu nome.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 902297793826701,
+							"parameters": {
+								"frame-number": "8"
+							}
+						}
+					],
+					"sid": 132603661684849
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 507002595759585,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 545663323507711,
+							"parameters": {
+								"text": "\"Blue olha em volta e percebe que ha um unico lugar vago para se sentar.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 692926629309339,
+							"parameters": {
+								"frame-number": "10"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 180539123056672,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 289432864403930,
+							"parameters": {
+								"object-to-create": "DEIXAR_TINA_SE_SENTAR",
+								"layer": "1",
+								"x": "748",
+								"y": "669",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 833329109178848,
+							"parameters": {
+								"object-to-create": "SE_SENTAR",
+								"layer": "1",
+								"x": "517",
+								"y": "669",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 565842210223942
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 969744616449375,
+							"parameters": {
+								"object": "DEIXAR_TINA_SE_SENTAR"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "DEIXAR_TINA_SE_SENTAR",
+							"sid": 494919268552701
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SE_SENTAR",
+							"sid": 273529885575404
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 615450698537519,
+							"parameters": {
+								"group-name": "\"Opção: Deixar Tina se Sentar\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 339110386002475,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 597972780492752
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 339219409234288,
+							"parameters": {
+								"object": "SE_SENTAR"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "DEIXAR_TINA_SE_SENTAR",
+							"sid": 331991787143021
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SE_SENTAR",
+							"sid": 153192479508693
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 200149666318345,
+							"parameters": {
+								"group-name": "\"Opção: Se Sentar\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 186725034406344,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 708457319103298
+				}
+			],
+			"sid": 891668140709148
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Opção: Deixar Tina se Sentar",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 357168056087132,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 960485923637066,
+							"parameters": {
+								"text": "\"Pode se sentar, eu espero um outro lugar vagar.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 703027949744971,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 561927617536562,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 749683658411884
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 130645175264767,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 571412448081286,
+							"parameters": {
+								"text": "\"Voce e incorrigivel. (ela ri)\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 742338860259851,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 222569926243167
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 805882416790670,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 482676363437231,
+							"parameters": {
+								"text": "\"10 minutos depois...\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 677627143236436,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 946168987311568
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 583783247752284,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 374087764476882,
+							"parameters": {
+								"text": "\"Srta. Margaret, vai ser atendida agora. Pode me acompanhar?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 397591946485805,
+							"parameters": {
+								"frame-number": "8"
+							}
+						}
+					],
+					"sid": 855192525742714
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 560251778685906,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 319489528654453,
+							"parameters": {
+								"text": "\"Blue prontamente se senta no lugar agora vago.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 315544863242391,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 297724636175816
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 571564897443616,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 446433084709604,
+							"parameters": {
+								"text": "\"Ei, Tina. Pode alcancar essa revista pra mim?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 149833861060934,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 438342003017120
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 512099013967801,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 719200848470587,
+							"parameters": {
+								"text": "\"Tina lhe entrega uma revista de caca-palavras.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 696800197874676,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 965935848668660
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 116065131395622,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "13"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 508693128198131,
+							"parameters": {
+								"text": "\"Para manter uma boa saude bucal a manutencao de habitos de higiene oral e extremamente importante. Tambem e necessario tomar cuidado ao mastigar alimentos solidos e evitar alimentos acidos, citricos e condimentos. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 569108997961273,
+							"parameters": {
+								"frame-number": "5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 727037616706176,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 572571447987736,
+							"parameters": {
+								"object-to-create": "JOGAR_CAÇA",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 424801900491356
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 156295606219875,
+							"parameters": {
+								"object": "JOGAR_CAÇA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CAÇA",
+							"sid": 832561361498087
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 657674724743169,
+							"parameters": {
+								"layout": "Layout_Caça"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 974026283424293,
+							"parameters": {
+								"variable": "Retorno_Dentista",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 214884078984214
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 978017910386465
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 583122641251605,
+							"parameters": {
+								"variable": "Retorno_Dentista",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 199885235790267,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CAÇA",
+							"sid": 969290466896416
+						}
+					],
+					"sid": 221975813447138
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 283576859115608,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "14"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 191129236807300,
+							"parameters": {
+								"text": "\"Blue, pode entrar a Dra. Katia vai lhe atender agora.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 684929965391409,
+							"parameters": {
+								"frame-number": "8"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 182446577308981,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 443336646401356
+				}
+			],
+			"sid": 603231851268167,
+			"background-color": [
+				0.6627450980392157,
+				0.796078431372549,
+				0.8745098039215686,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Opção: Se Sentar",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 722301062039004,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 181317054415129,
+							"parameters": {
+								"text": "\"Acho que aquele lugar ali e meu.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 539388082329870,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 794801545922771,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 656650664472347
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 329503892183057,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 552267646257143,
+							"parameters": {
+								"text": "\"Olha, voce ja foi melhor. (ela ri)\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 220093985552422,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 111066510760587
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 786857278142170,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 178039079112391,
+							"parameters": {
+								"text": "\"Blue se senta e percebe uma revista do seu lado.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 651824338225191,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 246937437056328
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 272631903915048,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 999826608484734,
+							"parameters": {
+								"text": "\"Poxa, vai ser meu passatempo para agora.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 924006195858338,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 746834913944076
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 685108337581962,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 501568020420742,
+							"parameters": {
+								"text": "\"Ele abre a revista em um caca-palavras.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 110003490056756,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 204942798999924
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 139248004488382,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 376518499086530,
+							"parameters": {
+								"text": "\"Para manter uma boa saude bucal a manutencao de habitos de higiene oral e extremamente importante. Tambem e necessario tomar cuidado ao mastigar alimentos solidos e evitar alimentos acidos, citricos e condimentos. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 365813621215692,
+							"parameters": {
+								"frame-number": "5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 192125864262423,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 706225934930050,
+							"parameters": {
+								"object-to-create": "JOGAR_CAÇA",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 594302559853864
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 243292236863991,
+							"parameters": {
+								"object": "JOGAR_CAÇA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CAÇA",
+							"sid": 919590621394578
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 984560039541217,
+							"parameters": {
+								"layout": "Layout_Caça"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 254131182701901,
+							"parameters": {
+								"variable": "Retorno_Dentista",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 315587870302910
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 681710475079558
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 198300065868626,
+							"parameters": {
+								"variable": "Retorno_Dentista",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 457083289675495,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CAÇA",
+							"sid": 279952762986447
+						}
+					],
+					"sid": 137142563118168
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 559403693401275,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 643007801541617,
+							"parameters": {
+								"text": "\"Blue, pode entrar a Dra. Katia vai lhe atender agora.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 607071884722765,
+							"parameters": {
+								"frame-number": "8"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 833560542039994,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 888319925943420,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "14"
+							}
+						}
+					],
+					"sid": 192312717844526
+				}
+			],
+			"sid": 286226934258315,
+			"background-color": [
+				0.8549019607843137,
+				0.7725490196078432,
+				0.8862745098039215,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "História Geral 4",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 452764601850003,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "14"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 627130945590521,
+							"parameters": {
+								"text": "\"Blue entra no consultorio.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 859786363373902,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 479188487608625,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 302100720210625
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 747031153639299,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "15"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 864929250391947,
+							"parameters": {
+								"text": "\"Boa tarde Blue, posso dar uma olhada nesses dentes?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 427124190218310,
+							"parameters": {
+								"frame-number": "9"
+							}
+						}
+					],
+					"sid": 624888693931132
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 624990426963875,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "16"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 288028226544292,
+							"parameters": {
+								"text": "\"Blue se senta na cadeira.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 916782913631824,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 672069463754803
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 888946601336855,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "17"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 701893425257549,
+							"parameters": {
+								"text": "\"Como havia dito, mantenha bons habitos de higiene oral e tome cuidado com alimentos solidos ao mastigar. Tente tambem evitar alimentos acidos, citricos e condimentos. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 245638917744349,
+							"parameters": {
+								"frame-number": "5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 986741957113207,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 995969480347254,
+							"parameters": {
+								"object-to-create": "JOGAR_7ERROS",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 442278999273457
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 317508527022527,
+							"parameters": {
+								"object": "JOGAR_7ERROS"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_7ERROS",
+							"sid": 722429764852072
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 816797016217573,
+							"parameters": {
+								"layout": "Layout_7Erros"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 189641110012070,
+							"parameters": {
+								"variable": "Retorno_Dentista",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 622409355331880
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 234421791218773
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 780795580302267,
+							"parameters": {
+								"variable": "Retorno_Dentista",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 534866005950551,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_7ERROS",
+							"sid": 698315291255969
+						}
+					],
+					"sid": 342615033499142
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 899986088582411,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "18"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 284326642046716,
+							"parameters": {
+								"text": "\"Esta tudo otimo. E nao se esqueca de tirar suas duvidas comigo quando surgir alguma. Ate mais. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 445037936367008,
+							"parameters": {
+								"frame-number": "9"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 963133879830610,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 376224425246268
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 739947086888554,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "19"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 912808855271752,
+							"parameters": {
+								"text": "\"Blue sai do consultório.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 239413303919347,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 591969591046519
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 679332575124586,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "20"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 507599920390550,
+							"parameters": {
+								"text": "\"Bom Tina, parece que ja finalizamos todas as tarefas do dia. O que vem agora?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 719974282076104,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 582593787064891
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 725220147118599,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "21"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 661669995650163,
+							"parameters": {
+								"text": "\"O que acha de nos divertirmos um pouquinho?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 785541450517677,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 147934401076651,
+							"parameters": {
+								"object-to-create": "IR_AO_PUB",
+								"layer": "1",
+								"x": "1164",
+								"y": "672",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 242476604604790
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 488683672203582,
+							"parameters": {
+								"object": "IR_AO_PUB"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 470616823745661,
+							"parameters": {
+								"layout": "PUB"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 834680350871285,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 628090857309196
+				}
+			],
+			"sid": 788893269591600
+		}
+	],
+	"sid": 910825316832490
+}

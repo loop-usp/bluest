@@ -1,0 +1,49 @@
+{
+	"name": "direita",
+	"plugin-id": "Sprite",
+	"sid": 384619974434053,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 75,
+						"height": 75,
+						"originX": 1,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9308340,
+						"collisionPoly": {
+							"points": [
+								0.9599999745686849,
+								0.0366668701171875,
+								0.9566665649414062,
+								0.9633333841959637,
+								0.023333358764648593,
+								0.95,
+								0.036666615804036407,
+								0.04000015258789062
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 263689007246050,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

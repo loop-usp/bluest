@@ -1,0 +1,57 @@
+{
+	"name": "Balao_Texto",
+	"plugin-id": "Sprite",
+	"sid": 418339467147293,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 402,
+						"height": 102,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7489512,
+						"collisionPoly": {
+							"points": [
+								0.0024875621890547263,
+								0.00980392156862745,
+								0.5,
+								0.00980392156862745,
+								0.9950248756218906,
+								0.00980392156862745,
+								0.9950248756218906,
+								0.5,
+								0.9950248756218906,
+								0.9803921568627451,
+								0.5,
+								0.9803921568627451,
+								0.0024875621890547263,
+								0.9803921568627451,
+								0.0024875621890547263,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 305164446041538,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,382 @@
+{
+	"name": "Event sheet_Cesta",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Pontos",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 904027008897911
+		},
+		{
+			"eventType": "variable",
+			"name": "Vida",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 865649802422060
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 238366332783257
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bons_alimento",
+					"sid": 263204510664024
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ruins_alimento",
+					"sid": 255814925862668
+				}
+			],
+			"sid": 771941664815211
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "HOME",
+					"sid": 408474385979271
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 804602167465041,
+					"parameters": {
+						"layout": "Layout_Principal"
+					}
+				}
+			],
+			"sid": 914589489290510
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_CESTA_RESTAURANTE",
+					"sid": 285258928724821
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 566656740934403,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 211741704935593
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_CESTA_PUB",
+					"sid": 694346188281252
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 356106450042192,
+					"parameters": {
+						"layout": "PUB"
+					}
+				}
+			],
+			"sid": 562544182503412
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_CESTA_SAPATARIA",
+					"sid": 567751076075981
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 232154044751515,
+					"parameters": {
+						"layout": "Sapataria"
+					}
+				}
+			],
+			"sid": 786074034781656
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 808715905148435,
+					"parameters": {
+						"interval-seconds": "3.23"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Criador_Cesta",
+					"sid": 432856619787666,
+					"parameters": {
+						"object": "bons_alimento",
+						"layer": "0",
+						"image-point": "random(1,14)",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "bons_alimento",
+					"sid": 801466889815395,
+					"parameters": {
+						"frame-number": "random(0,3)"
+					}
+				}
+			],
+			"sid": 176456393813375
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 658406998991136,
+					"parameters": {
+						"interval-seconds": "5.34"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Criador_Cesta",
+					"sid": 328738379231628,
+					"parameters": {
+						"object": "ruins_alimento",
+						"layer": "0",
+						"image-point": "random(1,14)",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 936121999692454
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bons_alimento",
+					"sid": 720598908247570,
+					"parameters": {
+						"object": "Chão"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 730475317024438,
+					"parameters": {
+						"variable": "Vida",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bons_alimento",
+					"sid": 132666507935516
+				}
+			],
+			"sid": 451908689396407,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bons_alimento",
+					"sid": 385485649755098,
+					"parameters": {
+						"object": "Cesta"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 926686530602144,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "50"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bons_alimento",
+					"sid": 448110912804047
+				}
+			],
+			"sid": 242716014563672,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ruins_alimento",
+					"sid": 595106423346117,
+					"parameters": {
+						"object": "Chão"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 759494326102366,
+					"parameters": {
+						"variable": "Pontos",
+						"value": "25"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ruins_alimento",
+					"sid": 728729271551538
+				}
+			],
+			"sid": 506697943599172,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ruins_alimento",
+					"sid": 367783674406740,
+					"parameters": {
+						"object": "Cesta"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 703315662540569,
+					"parameters": {
+						"variable": "Vida",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ruins_alimento",
+					"sid": 449020694786667
+				}
+			],
+			"sid": 800379624908172,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 556328030002901
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Pontos",
+					"sid": 716218817152149,
+					"parameters": {
+						"text": "Pontos"
+					}
+				}
+			],
+			"sid": 449030377376672
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 917893879788984
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Vida",
+					"sid": 161133105745142,
+					"parameters": {
+						"text": "Vida"
+					}
+				}
+			],
+			"sid": 417822550681028
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 323310375749643
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "vidas",
+					"sid": 689059735699763,
+					"parameters": {
+						"frame-number": "Vida"
+					}
+				}
+			],
+			"sid": 848434149415286
+		}
+	],
+	"sid": 747739139562875
+}

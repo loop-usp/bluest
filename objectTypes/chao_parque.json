@@ -1,0 +1,31 @@
+{
+	"name": "chao_parque",
+	"plugin-id": "TiledBg",
+	"sid": 509208990209430,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 576122757729457
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 616876370866467
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 39,
+		"height": 39,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 7676648,
+		"useCollisionPoly": true
+	}
+}

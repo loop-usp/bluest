@@ -1,0 +1,1331 @@
+{
+	"name": "Sapataria",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Retorno_Sapataria",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 271487618540555
+		},
+		{
+			"eventType": "variable",
+			"name": "Festa_Sobrinha",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 105520718035086
+		},
+		{
+			"eventType": "variable",
+			"name": "Noite_Jogos",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 199667516620187
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 259760426079523,
+					"parameters": {
+						"object": "PROXIMO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 836969256071901,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 940972117666687
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "História Geral 2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 862573272622641
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 854081203417516,
+							"parameters": {
+								"variable": "Retorno_Sapataria",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 136490905410752,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 960159810487626,
+							"parameters": {
+								"text": "\"Eles chegam a loja de sapatos.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 479231574926193,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 174993956708824
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 682584761512314,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 621878278596598,
+							"parameters": {
+								"text": "\"Boa tarde, posso ajuda-los?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 232706504578808,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 811164711118033
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 920618724772748,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 102132105427203,
+							"parameters": {
+								"text": "\"Estou procurando algo que me agrade para usar hoje a noite.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 302798213851602,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 468940667886188
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 668780444377650,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 409984859601159,
+							"parameters": {
+								"text": "\"Qual a ocasiao?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 583402022432526,
+							"parameters": {
+								"frame-number": "10"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 238263283849027,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 323463977849036,
+							"parameters": {
+								"object-to-create": "FESTA_DA_SOBRINHA",
+								"layer": "1",
+								"x": "517",
+								"y": "669",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 341379797688164,
+							"parameters": {
+								"object-to-create": "NOITE_DE_JOGOS",
+								"layer": "1",
+								"x": "748",
+								"y": "669",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 725701292359247
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 480582200967855,
+							"parameters": {
+								"object": "FESTA_DA_SOBRINHA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "FESTA_DA_SOBRINHA",
+							"sid": 403876600187723
+						},
+						{
+							"id": "destroy",
+							"objectClass": "NOITE_DE_JOGOS",
+							"sid": 482410051189822
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 784968348523054,
+							"parameters": {
+								"group-name": "\"Opção: Festa da Sobrinha\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 283257797670612,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 457407791144120,
+							"parameters": {
+								"variable": "Festa_Sobrinha",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 469289239355807
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 474878388149010,
+							"parameters": {
+								"object": "NOITE_DE_JOGOS"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "FESTA_DA_SOBRINHA",
+							"sid": 888644978604587
+						},
+						{
+							"id": "destroy",
+							"objectClass": "NOITE_DE_JOGOS",
+							"sid": 110615957223956
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 663852061917365,
+							"parameters": {
+								"group-name": "\"Opção: Noite de Jogos\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 911939006356548,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 657236465559907,
+							"parameters": {
+								"variable": "Noite_Jogos",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 777836280877077
+				}
+			],
+			"sid": 255424677428632
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Opção: Festa da Sobrinha",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 968029130726755,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 300602645397902,
+							"parameters": {
+								"text": "\"Vamos fazer uma festa de aniversario para minha sobrinha, hoje ela completa 4 aninhos. Meu maior presente.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 108878081479329,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 405526511242132,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 299360107510102
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 460341378727415,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 711217074793744,
+							"parameters": {
+								"text": "\"Por favor, me acompanhe. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 323794999459461,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 808145978044656
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 374462073340431,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 413103650874688,
+							"parameters": {
+								"text": "\"O Vendedor caminha ate uma das prateleiras da loja.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 318698739778756,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 265391144023185
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 331812484896792,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 445105244935701,
+							"parameters": {
+								"text": "\"Algum lhe agrada?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 205747623757506,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 244217712835962
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 701618418695622,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 575555062265803,
+							"parameters": {
+								"text": "\"Utilizar sabonetes neutros e hidratar as maos e pes diariamente com cremes hidratantes topicos auxilia na prevenção de efeitos adversos como a Sindrome Mao-Pe que pode evoluir para uma condicao bastante dolorosa.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 521032152513050,
+							"parameters": {
+								"frame-number": "4"
+							}
+						}
+					],
+					"sid": 285724017213679
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 901726321670417,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 424039989914518,
+							"parameters": {
+								"text": "\"Tambem e muito importante evitar exposicao das maos e pes a altas temperaturas, contato direto dessas regioes com produtos de limpeza e o uso de calcados desconfortaveis.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 240430673307448,
+							"parameters": {
+								"frame-number": "5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 343795183206005,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 770479050202480,
+							"parameters": {
+								"object-to-create": "JOGAR_CESTA_SAPATARIA",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 799453664115244
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 345729836125434,
+							"parameters": {
+								"object": "JOGAR_CESTA_SAPATARIA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CESTA_SAPATARIA",
+							"sid": 608783057680187
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 641157817703367,
+							"parameters": {
+								"layout": "Layout_Cesta_Sapataria"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 702900418563675,
+							"parameters": {
+								"variable": "Retorno_Sapataria",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 260350975260468
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 131021896669767
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 433525101131476,
+							"parameters": {
+								"variable": "Retorno_Sapataria",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 895339088965280,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CESTA_SAPATARIA",
+							"sid": 401228104538641
+						}
+					],
+					"sid": 622169084576544
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 286960872461365,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 755473647649990,
+							"parameters": {
+								"text": "\"Bom, parece que esse e perfeito. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 288648420629068,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 724149542588932,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 448803578452129
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 370387822543897,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 613416474731269,
+							"parameters": {
+								"text": "\"Ficou otimo. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 794865227174649,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 814735929093203
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 497463121085913,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 837949143489253,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 839010259886884,
+							"parameters": {
+								"text": "\"Que bom, tenham uma otima festa a noite. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 274239956046785,
+							"parameters": {
+								"frame-number": "10"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 198417847992815,
+							"parameters": {
+								"object-to-create": "IR_AO_DENTISTA",
+								"layer": "1",
+								"x": "1164",
+								"y": "672",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 381529289400097
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 548632420265188,
+							"parameters": {
+								"object": "IR_AO_DENTISTA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 591781390609469,
+							"parameters": {
+								"layout": "Dentista"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 942566747651907,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 390545910124477
+				}
+			],
+			"sid": 209503737710922,
+			"background-color": [
+				0.9450980392156862,
+				0.9490196078431372,
+				0.7529411764705882,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Opção: Noite de Jogos",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 451314059542303,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 285012765752487,
+							"parameters": {
+								"text": "\"Bom, ja faz um tempo que perdi o contato com meus amigos e combinamos de nos reunir em minha casa para uma noite de jogos. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 894809755939980,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 904573348700058,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 301668264211687
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 776539400914965,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 494917598768592,
+							"parameters": {
+								"text": "\"Espere aqui, vou trazer algumas opcoes para voce experimentar. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 716852048725358,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 849141891957024
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 842493204857149,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 989765752383269,
+							"parameters": {
+								"text": "\"O Vendedor sai e depois volta com algumas ciaxas de sapatos. E entao ele abre uma das caixas para mostrar ao Blue.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 983775451030246,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 596020181298696
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 840708579917954,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 877558559217874,
+							"parameters": {
+								"text": "\"O que acha? Experimente!\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 752499395487076,
+							"parameters": {
+								"frame-number": "10"
+							}
+						}
+					],
+					"sid": 496736207143733
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 339980376983777,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 414601560166073,
+							"parameters": {
+								"text": "\"Utilizar sabonetes neutros e hidratar as maos e pes diariamente com cremes hidratantes topicos auxilia na prevenção de efeitos adversos como a Sindrome Mao-Pe que pode evoluir para uma condicao bastante dolorosa.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 235604694903149,
+							"parameters": {
+								"frame-number": "5"
+							}
+						}
+					],
+					"sid": 221450187468495
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 870969694485146,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 589397467885515,
+							"parameters": {
+								"text": "\"Tambem e muito importante evitar exposicao das maos e pes a altas temperaturas, contato direto dessas regioes com produtos de limpeza e o uso de calcados desconfortaveis.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 466643591828228,
+							"parameters": {
+								"frame-number": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 351071825389153,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 768827106636919,
+							"parameters": {
+								"object-to-create": "JOGAR_RUNNING_SAPATARIA",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 238935160474857
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 933806259227569,
+							"parameters": {
+								"object": "JOGAR_RUNNING_SAPATARIA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_RUNNING_SAPATARIA",
+							"sid": 272527065006823
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 471496511986288,
+							"parameters": {
+								"layout": "Layout_Running_Sapataria"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 146137942598110,
+							"parameters": {
+								"variable": "Retorno_Sapataria",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 571888235233796
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 647473147500178
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 100303488684959,
+							"parameters": {
+								"variable": "Retorno_Sapataria",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 361897434461716,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CESTA_SAPATARIA",
+							"sid": 763763778304377
+						}
+					],
+					"sid": 695322130931840
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 850633776681029,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 892829214849426,
+							"parameters": {
+								"text": "\"Esse e muito sua cara.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 894661576964122,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 990558365821027,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 444485095863215
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 176441436372918,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 595859495710492,
+							"parameters": {
+								"text": "\"Eu realmente gostei muito dessa opcao. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 266730638537571,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 187408878804357
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 337953386848222,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 757662962331884,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 942015115605314,
+							"parameters": {
+								"text": "\"Fico contente de ter ajudado. Tenham uma otima noite de jogos.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 228298463110100,
+							"parameters": {
+								"frame-number": "10"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 684482034165112,
+							"parameters": {
+								"object-to-create": "IR_AO_DENTISTA",
+								"layer": "1",
+								"x": "1164",
+								"y": "672",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 773374582196958
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 776920726347246,
+							"parameters": {
+								"object": "IR_AO_DENTISTA"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 105179968783611,
+							"parameters": {
+								"layout": "Dentista"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 380381229216027,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 422813476244528
+				}
+			],
+			"sid": 913703027523657,
+			"background-color": [
+				0.7372549019607844,
+				0.9411764705882353,
+				0.7725490196078432,
+				1
+			]
+		}
+	],
+	"sid": 829655469789429
+}

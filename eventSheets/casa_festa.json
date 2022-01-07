@@ -1,0 +1,111 @@
+{
+	"name": "Casa_Festa",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 832617843516530
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 882601670851493,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Falas",
+					"sid": 358717944727451,
+					"parameters": {
+						"text": "\"Eles chegam em casa e a casa esta cheia de baloes.\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Personagem",
+					"sid": 624879628925631,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 996409057014568
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 601256847284037,
+					"parameters": {
+						"object": "PROXIMO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 492102510026381,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 952901821955150
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 153032543741918,
+					"parameters": {
+						"variable": "ProximaFala",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Falas",
+					"sid": 785883701347251,
+					"parameters": {
+						"text": "\"Senti saudades de voces. Voces querem me ajudar a abrir meus presentes?\""
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Personagem",
+					"sid": 766161299571863,
+					"parameters": {
+						"frame-number": "11"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "PROXIMO",
+					"sid": 179118798094505,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 168249722110950
+		}
+	],
+	"sid": 369144199355569
+}

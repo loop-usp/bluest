@@ -1,0 +1,311 @@
+{
+	"name": "Hospital",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Sistema"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 599509087299371
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 814667015856070,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 931676758353274
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 991519662543120
+				}
+			],
+			"actions": [
+				{
+					"id": "call-function",
+					"objectClass": "Function",
+					"sid": 736539738034791,
+					"parameters": {
+						"name": "\"Conversa\"",
+						"parameter-n": [
+							"\"Blue e sua irma Tina estao aguardando o carro...\"",
+							"0",
+							"\"PROXIMO\""
+						]
+					}
+				}
+			],
+			"sid": 660015727798351
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 602577303487042,
+					"parameters": {
+						"object": "PROXIMO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 441205583374995,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 823909066096527,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 489353072046244,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 492264221399787,
+							"parameters": {
+								"name": "\"Conversa\"",
+								"parameter-n": [
+									"\"Como esta se sentindo?\"",
+									"2",
+									"\"PROXIMO\""
+								]
+							}
+						}
+					],
+					"sid": 471360146576361
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 434375476286436,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 981466717197388,
+							"parameters": {
+								"name": "\"Conversa\"",
+								"parameter-n": [
+									"\"O dia esta tao lindo hoje... Tao... Azul... E uma manha maravilhosa! \"",
+									"1",
+									"\"PROXIMO\""
+								]
+							}
+						}
+					],
+					"sid": 109622068063737
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 135954996298145,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 507330817054096,
+							"parameters": {
+								"name": "\"Conversa\"",
+								"parameter-n": [
+									"\"Realmente, sera um dia muito produtivo para a gente.\"",
+									"2",
+									"\"PROXIMO\""
+								]
+							}
+						}
+					],
+					"sid": 159450643578574
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 574434773192171,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 930922656387114,
+							"parameters": {
+								"name": "\"Conversa\"",
+								"parameter-n": [
+									"\"O carro chega...\"",
+									"0",
+									"\"PROXIMO\""
+								]
+							}
+						}
+					],
+					"sid": 924878803969541
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 837191731914128,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 999375658699685,
+							"parameters": {
+								"name": "\"Conversa\"",
+								"parameter-n": [
+									"\"Ola, eu sou o Dr. Sergio e esta e a Dra. Daniela. Seja bem-vindo. Nosso trabalho aqui e te orientar sobre os efeitos adversos relacionados ao seu tratamento oncologico. \"",
+									"12"
+								]
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 840119945980515,
+							"parameters": {
+								"seconds": "10"
+							}
+						},
+						{
+							"id": "call-function",
+							"objectClass": "Function",
+							"sid": 534838649365916,
+							"parameters": {
+								"name": "\"Conversa\"",
+								"parameter-n": [
+									"\"Durante nossas conversas iremos falar sobre habitos que auxiliam na prevencao desses efeitos adversos e tambem na melhora de seus sintomas. Se tiver duvidas, podemos ajudar. \"",
+									"12"
+								]
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 955800562379355,
+							"parameters": {
+								"seconds": "10"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 215233845274055,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 514126175651032,
+							"parameters": {
+								"object-to-create": "IR_AO_RESTAURANTE",
+								"layer": "1",
+								"x": "1164",
+								"y": "672",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 814690650565027
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 864146748269126,
+					"parameters": {
+						"object": "IR_AO_RESTAURANTE"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 997910983072096,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 650591008352707
+		}
+	],
+	"sid": 572301173069323
+}

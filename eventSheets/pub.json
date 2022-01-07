@@ -1,0 +1,1496 @@
+{
+	"name": "PUB",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Retorno_PUB",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 650110518798178
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 325206865760806,
+					"parameters": {
+						"object": "PROXIMO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 106902234655489,
+					"parameters": {
+						"variable": "ProximaFala",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 331646151359914
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "História Geral 5",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 902554357201123
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 820079803446734,
+							"parameters": {
+								"variable": "Retorno_PUB",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 109248044897134,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 553634217908719,
+							"parameters": {
+								"text": "\"Blue e Tina chegam ao PUB.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 199445418234323,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 805968644769641
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 844569612500120,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 583678210680801,
+							"parameters": {
+								"text": "\"Eu adoro o suco desse lugar.  \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 322882880797924,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 160466531388582
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 417150282617262,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 175424935209727,
+							"parameters": {
+								"variable": "Festa_Sobrinha"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 759895556285285,
+							"parameters": {
+								"text": "\"Talvez seja melhor ficar no suco mesmo, e aniversario da sua filha.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 559348200412609,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 535259575613253
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 868954117054825,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "2"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 326383810747218,
+							"parameters": {
+								"variable": "Noite_Jogos"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 651452455298408,
+							"parameters": {
+								"text": "\"Talvez seja melhor ficar no suco mesmo, e dia de noite de jogos.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 685068965407323,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 773404954362512
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 258265875033365,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 396369557028511,
+							"parameters": {
+								"text": "\"Durante nossa jornada conversamos sobre como e importante evitar comidas apimentadas, alcool (e produtos que contenham alcool) e priorizar uma alimentacao fracionada com pequenas porcoes em intervalos mais curtos (2 - 3 horas).\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 473766724696812,
+							"parameters": {
+								"frame-number": "5"
+							}
+						}
+					],
+					"sid": 708714746126839
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 720831378063999,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 601100374271009,
+							"parameters": {
+								"text": "\"Outra informacao importante e que nao se deve tomar inibidores de protons (como omeprazol, esomeprazol, lansoprazol, pantoprazol, rabeprazol e dexlansoprazol) até 2h apos o uso de Sunitib. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 291253667853623,
+							"parameters": {
+								"frame-number": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 602033377839635,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 858693262336336,
+							"parameters": {
+								"object-to-create": "JOGAR_CESTA_PUB",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 219903848327477
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 637364507606759,
+							"parameters": {
+								"object": "JOGAR_CESTA_PUB"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CESTA_PUB",
+							"sid": 979885704178134
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 470551596870004,
+							"parameters": {
+								"layout": "Layout_Cesta_PUB"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 588109083570584,
+							"parameters": {
+								"variable": "Retorno_PUB",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 646033114261547
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 509767033934052
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 428477968363277,
+							"parameters": {
+								"variable": "Retorno_PUB",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 555761693041964,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_CESTA_PUB",
+							"sid": 440918737214758
+						}
+					],
+					"sid": 283363247858615
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 379843993631295,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 757113868544892,
+							"parameters": {
+								"text": "\"Acho que agora e minha vez de escolher onde vamos nos sentar.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 214652072183529,
+							"parameters": {
+								"frame-number": "2"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 853145645873833,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 134607123797977,
+							"parameters": {
+								"object-to-create": "PODE_ESCOLHER",
+								"layer": "1",
+								"x": "517",
+								"y": "669",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 665041124744565,
+							"parameters": {
+								"object-to-create": "EU_ESCOLHO",
+								"layer": "1",
+								"x": "748",
+								"y": "669",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 984752136519659
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 586875300520904,
+							"parameters": {
+								"object": "PODE_ESCOLHER"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "PODE_ESCOLHER",
+							"sid": 160343829996585
+						},
+						{
+							"id": "destroy",
+							"objectClass": "EU_ESCOLHO",
+							"sid": 577048358116781
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 770360326259793,
+							"parameters": {
+								"group-name": "\"Opção: Pode Escolher\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 752862325676734,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 832181752674742
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 973664480357736,
+							"parameters": {
+								"object": "EU_ESCOLHO"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "PODE_ESCOLHER",
+							"sid": 951591914707896
+						},
+						{
+							"id": "destroy",
+							"objectClass": "EU_ESCOLHO",
+							"sid": 645796079368005
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 854996134958849,
+							"parameters": {
+								"group-name": "\"Opção: Eu Escolho\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 420918872988039,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 214692768981852
+				}
+			],
+			"sid": 677407474948350
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Opção: Pode Escolher",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 364316937040574,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 950727675209418,
+							"parameters": {
+								"text": "\"Acho que eu ja perdi essa. Pode escolher. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 646313164172568,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 390957138722166,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 750192766504359
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 535443761948370,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 167566930609411,
+							"parameters": {
+								"text": "\"Estou com um pouco de fome, a gente podia se sentar ali perto das comidinhas.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 453809980047123,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 218000431822907
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 794401888049261,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 929105624117275,
+							"parameters": {
+								"text": "\"Na verdade, ate que e uma boa ideia.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 720092333426788,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 545428629114641
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 663501511835365,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 162545766651237,
+							"parameters": {
+								"text": "\"Eles se sentam próximos a esteira de comidas.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 871881470095644,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 325035332572126
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 107906621165210,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 186178462104706,
+							"parameters": {
+								"text": "\"Nao se esqueca da importancia de evitar comidas apimentadas, alcool (e produtos que contenham alcool) e priorizar uma alimentacao fracionada com pequenas porcoes em intervalos mais curtos (2 - 3 horas).\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 759776193383951,
+							"parameters": {
+								"frame-number": "4"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 453644263621680,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 491829454212860,
+							"parameters": {
+								"object-to-create": "JOGAR_ESTEIRA_PUB",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 585053825389732
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 528592202960541,
+							"parameters": {
+								"object": "JOGAR_ESTEIRA_PUB"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_ESTEIRA_PUB",
+							"sid": 623725690554302
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 768278080317306,
+							"parameters": {
+								"layout": "Layout_Esteira_PUB"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 357859230204292,
+							"parameters": {
+								"variable": "Retorno_PUB",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 255812788972243
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 695051560346889
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 962641767629054,
+							"parameters": {
+								"variable": "Retorno_PUB",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 630567386611958,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_ESTEIRA_PUB",
+							"sid": 701050748916058
+						}
+					],
+					"sid": 765904850616459
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 618156756716711,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 723155924936766,
+							"parameters": {
+								"text": "\"Acho que estou satisfeito, seria bom ir para casa agora.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 804436592523870,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 501369859884910,
+							"parameters": {
+								"group-name": "\"Ir para Casa\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 489738289512485
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Ir para Casa",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 380230189446853,
+									"parameters": {
+										"variable": "Festa_Sobrinha"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 464486214925524,
+									"parameters": {
+										"object-to-create": "IR_PARA_CASA_SOBRINHA",
+										"layer": "1",
+										"x": "1164",
+										"y": "672",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 526839415253403
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 862701526843500,
+									"parameters": {
+										"object": "IR_PARA_CASA_SOBRINHA"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 412127176129028,
+									"parameters": {
+										"layout": "Casa_Festa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 327144640728695,
+									"parameters": {
+										"variable": "ProximaFala",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 636213880209078
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 553045069635710,
+									"parameters": {
+										"variable": "Noite_Jogos"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 337866293647293,
+									"parameters": {
+										"object-to-create": "IR_PARA_CASA_JOGOS",
+										"layer": "1",
+										"x": "1164",
+										"y": "672",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 229262226202047
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 590022314182162,
+									"parameters": {
+										"object": "IR_PARA_CASA_JOGOS"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 592417190956168,
+									"parameters": {
+										"layout": "Casa_Reuniao"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 930905257276404,
+									"parameters": {
+										"variable": "ProximaFala",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 367026067418310
+						}
+					],
+					"sid": 802179768826722
+				}
+			],
+			"sid": 507087037729143,
+			"background-color": [
+				0.9686274509803922,
+				0.8941176470588236,
+				0.6941176470588235,
+				1
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Opção: Eu Escolho",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 102123627562002,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 487530161679242,
+							"parameters": {
+								"text": "\"Acredito que seria uma boa ir la fora tomar um pouco de ar. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 436383727224302,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 980282193254383,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 272695517139359
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 284972407577532,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 657091448724658,
+							"parameters": {
+								"text": "\"Tudo bem. Vou pedir algo para comer, pode ir se sentando.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 575592271690659,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 326496228317830
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 270212169424215,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 636346135356397,
+							"parameters": {
+								"text": "\"Blue se senta e tira uma caixinha de remedios do bolso. Tina chega e faz uma observacao. \""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 897752531773065,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 883090365248312
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 745327728049941,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 477023975481748,
+							"parameters": {
+								"text": "\"Você tomou algum remedio hoje?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 538413915244841,
+							"parameters": {
+								"frame-number": "2"
+							}
+						}
+					],
+					"sid": 839786427526132
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 446504150152598,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 987127393374404,
+							"parameters": {
+								"text": "\"Ainda nao tomei nenhum.\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 597033511221676,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 407491734727006
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 132037823896132,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 652994241808439,
+							"parameters": {
+								"text": "\"Nao se esqueça da importancia de evitar comidas apimentadas, alcool (e produtos que contenham alcool) e priorizar uma alimentacao fracionada com pequenas porcoes em intervalos mais curtos (2 - 3 horas).\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 421266413579642,
+							"parameters": {
+								"frame-number": "5"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "PROXIMO",
+							"sid": 623561322733223,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 421394269989531,
+							"parameters": {
+								"object-to-create": "JOGAR_RUNNING_PUB",
+								"layer": "1",
+								"x": "1164",
+								"y": "682",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 890132964974795
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 215584642280194,
+							"parameters": {
+								"object": "JOGAR_RUNNING_PUB"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_RUNNING_PUB",
+							"sid": 759850664733020
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 714231414944623,
+							"parameters": {
+								"layout": "Layout_Running_PUB"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 299902265740386,
+							"parameters": {
+								"variable": "Retorno_PUB",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 370838893124846
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 468361735436488
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 362202133413956,
+							"parameters": {
+								"variable": "Retorno_PUB",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 884716802842580,
+							"parameters": {
+								"variable": "ProximaFala",
+								"value": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "JOGAR_RUNNING_PUB",
+							"sid": 689647546056013
+						}
+					],
+					"sid": 849640059708598
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 494752992906225,
+							"parameters": {
+								"variable": "ProximaFala",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Falas",
+							"sid": 304036554724596,
+							"parameters": {
+								"text": "\"Bom, você ja comeu e ja tomou seu suco. O que acha de irmos para casa?\""
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Personagem",
+							"sid": 329627857087416,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 837211347416955,
+							"parameters": {
+								"group-name": "\"Ir para Casa2\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 233567230807809
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Ir para Casa2",
+					"description": "",
+					"isActiveOnStart": false,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 387913449324793,
+									"parameters": {
+										"variable": "Festa_Sobrinha"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 882358730357711,
+									"parameters": {
+										"object-to-create": "IR_PARA_CASA_SOBRINHA",
+										"layer": "1",
+										"x": "1164",
+										"y": "672",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 469417823166662
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 837948392964651,
+									"parameters": {
+										"object": "IR_PARA_CASA_SOBRINHA"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 168503641996809,
+									"parameters": {
+										"layout": "Casa_Festa"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 327558029564462,
+									"parameters": {
+										"variable": "ProximaFala",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 285595321248746
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 178124605547298,
+									"parameters": {
+										"variable": "Noite_Jogos"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 803841662198562,
+									"parameters": {
+										"object-to-create": "IR_PARA_CASA_JOGOS",
+										"layer": "1",
+										"x": "1164",
+										"y": "672",
+										"create-hierarchy": false
+									}
+								}
+							],
+							"sid": 216507657790201
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 854896993286951,
+									"parameters": {
+										"object": "IR_PARA_CASA_JOGOS"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 978723337707224,
+									"parameters": {
+										"layout": "Casa_Reuniao"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 480657295523052,
+									"parameters": {
+										"variable": "ProximaFala",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 683335248304631
+						}
+					],
+					"sid": 686319733023357
+				}
+			],
+			"sid": 874296106209371,
+			"background-color": [
+				0.5176470588235295,
+				0.596078431372549,
+				0.6823529411764706,
+				1
+			]
+		}
+	],
+	"sid": 975411021712502
+}

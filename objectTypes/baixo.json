@@ -1,0 +1,49 @@
+{
+	"name": "baixo",
+	"plugin-id": "Sprite",
+	"sid": 493785334676272,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 75,
+						"height": 75,
+						"originX": 1,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1232583,
+						"collisionPoly": {
+							"points": [
+								0.9633331298828125,
+								0.9599999745686849,
+								0.036666615804036296,
+								0.9566665649414062,
+								0.050000000000000044,
+								0.023333358764648593,
+								0.9599998474121094,
+								0.036666615804036407
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 689282109791551,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

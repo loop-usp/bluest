@@ -1,0 +1,480 @@
+{
+	"name": "Event sheet_Running",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "TotalDistance",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The total distance run so far, in pixels.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 574560733041731
+		},
+		{
+			"eventType": "variable",
+			"name": "CurrentDistance",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Counts up to 'NextBlock', at which point a new block is created.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 259965837974893
+		},
+		{
+			"eventType": "variable",
+			"name": "NextBlock",
+			"type": "number",
+			"initialValue": "600",
+			"comment": "The distance after which to create the next block.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 245594183708043
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "HOME",
+					"sid": 666548714913082
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 708458862166591,
+					"parameters": {
+						"layout": "Layout_Principal"
+					}
+				}
+			],
+			"sid": 380351998870111
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_RUNNING_PARQUE",
+					"sid": 115843810086329
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 240060386542392,
+					"parameters": {
+						"layout": "Parque"
+					}
+				}
+			],
+			"sid": 801481799103041
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_RUNNING_SAPATARIA",
+					"sid": 280109192410258
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 329822380431416,
+					"parameters": {
+						"layout": "Layout_Cesta_Sapataria"
+					}
+				}
+			],
+			"sid": 841139008126457
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "VOLTAR_RUNNING_PUB",
+					"sid": 933044954878980
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 498320071385937,
+					"parameters": {
+						"layout": "PUB"
+					}
+				}
+			],
+			"sid": 328747653439309
+		},
+		{
+			"eventType": "comment",
+			"text": "Make sure everything moves left across the screen (since the default 0 degrees is right)"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 519052062183558
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "bg_parque",
+					"sid": 428952706508660,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "chao_parque",
+					"sid": 504700580583918,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "180"
+					}
+				}
+			],
+			"sid": 192932181169185
+		},
+		{
+			"eventType": "comment",
+			"text": "Wrap the scrolling background infinitely by moving it back after it's scrolled the width of the main image to the left."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "bg_parque",
+					"sid": 533269030135628,
+					"parameters": {
+						"comparison": 3,
+						"x-co-ordinate": "-Self.Width / 2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "bg_parque",
+					"sid": 583021533241089,
+					"parameters": {
+						"x": "Self.X + Self.Width / 2"
+					}
+				}
+			],
+			"sid": 407568885705515
+		},
+		{
+			"eventType": "comment",
+			"text": "While on floor, keep holding the \"run right\" control, so the character keeps running."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-floor",
+					"objectClass": "Player",
+					"sid": 710458766759073,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 950299548871224,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 942219930591580
+		},
+		{
+			"eventType": "comment",
+			"text": "On any user input at all, make the character jump."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 780880473093108
+				},
+				{
+					"id": "on-any-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 771794827529952
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "Player",
+					"sid": 275991556835808,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				}
+			],
+			"sid": 165293520056819,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "comment",
+			"text": "Keep incrementing the current and total distances, and display the total distance in a text object."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 218347622846592
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 289513224395892,
+					"parameters": {
+						"variable": "CurrentDistance",
+						"value": "chao_parque.Bullet.Speed * dt"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 886357299134876,
+					"parameters": {
+						"variable": "TotalDistance",
+						"value": "chao_parque.Bullet.Speed * dt"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "DistanceDisplay",
+					"sid": 155058412664906,
+					"parameters": {
+						"text": "round(TotalDistance)"
+					}
+				}
+			],
+			"sid": 444860445038350
+		},
+		{
+			"eventType": "comment",
+			"text": "Once CurrentDistance reaches NextBlock, it is time to create a new block.  Create it with a random width and height, then position it just off the right edge of the screen.  Make it move to the left again, then set NextBlock to create another block a random distance after this one."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 672849116858421,
+					"parameters": {
+						"variable": "CurrentDistance",
+						"comparison": 5,
+						"value": "NextBlock"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 830436640304538,
+					"parameters": {
+						"variable": "CurrentDistance",
+						"value": "NextBlock"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 956842111944400,
+					"parameters": {
+						"object-to-create": "chao_parque",
+						"layer": "\"Game\"",
+						"x": "0",
+						"y": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "chao_parque",
+					"sid": 598541880396923,
+					"parameters": {
+						"width": "100 + random(400)",
+						"height": "60 + random(180)"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "chao_parque",
+					"sid": 967109976480974,
+					"parameters": {
+						"x": "LayoutWidth",
+						"y": "LayoutHeight - Self.Height"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "chao_parque",
+					"sid": 299007788164344,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "180"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 150277616277185,
+					"parameters": {
+						"variable": "NextBlock",
+						"value": "chao_parque.Width + 20 + random(200)"
+					}
+				}
+			],
+			"sid": 794183409196615
+		},
+		{
+			"eventType": "comment",
+			"text": "Destroy blocks that go off the left of the screen so they don't keep taking up memory or CPU."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "chao_parque",
+					"sid": 812644267706255,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "-Self.Width"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "chao_parque",
+					"sid": 938415477934479
+				}
+			],
+			"sid": 128743101363172
+		},
+		{
+			"eventType": "comment",
+			"text": "If the player falls off the bottom of the screen, restart the game."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-y",
+					"objectClass": "Player",
+					"sid": 210205987349604,
+					"parameters": {
+						"comparison": 4,
+						"y-co-ordinate": "LayoutHeight"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 363984754810619
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 834570579044508
+				}
+			],
+			"sid": 138792307751558
+		},
+		{
+			"eventType": "comment",
+			"text": "Due to the acceleration of the platform movement, we need to do some tweaks to make sure the player doesn't gradually get pushed off to the left of the screen over time."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-x",
+					"objectClass": "Player",
+					"sid": 599440567961491,
+					"parameters": {
+						"comparison": 2,
+						"x-co-ordinate": "105"
+					}
+				},
+				{
+					"id": "is-on-floor",
+					"objectClass": "Player",
+					"sid": 965433200547629,
+					"behaviorType": "Platform",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Player",
+					"sid": 580160457270644,
+					"parameters": {
+						"x": "Self.X + 5 * dt"
+					}
+				}
+			],
+			"sid": 736774271171678
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-landed",
+					"objectClass": "Player",
+					"sid": 750392358007195,
+					"behaviorType": "Platform"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "Player",
+					"sid": 492658265441746,
+					"parameters": {
+						"x": "Self.X + 1"
+					}
+				}
+			],
+			"sid": 157335875946340
+		}
+	],
+	"sid": 453506405208434
+}
