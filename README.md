@@ -1,2 +1,2 @@
 # bluest
-Sei lá meq
+JOGAÇO LANAÇO
