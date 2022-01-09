@@ -1,3 +1,2 @@
 # bluest
 JOGAÇO LANAÇO
-BLUESTAÇO
