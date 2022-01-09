@@ -14,10 +14,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 882601670851493,
+					"sid": 552073272219291,
 					"parameters": {
 						"variable": "ProximaFala",
-						"value": "0"
+						"value": "5"
 					}
 				},
 				{
