@@ -3,12 +3,24 @@
 	"plugin-id": "Sprite",
 	"sid": 145829456421977,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "is_holding_jump",
+			"type": "boolean",
+			"desc": "",
+			"sid": 372104783356029
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Platform",
 			"name": "Platform",
 			"sid": 681732668226439
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Cronômetro",
+			"sid": 526071839796292
 		}
 	],
 	"effectTypes": [],

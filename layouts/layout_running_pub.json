@@ -27,17 +27,6 @@
 								"enabled": true,
 								"tags": ""
 							}
-						},
-						"Bullet": {
-							"properties": {
-								"speed": 300,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
 						}
 					},
 					"world": {
@@ -67,7 +56,9 @@
 						"live-preview": false
 					},
 					"uid": 77,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"is_holding_jump": false
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -82,6 +73,9 @@
 								"default-controls": false,
 								"enabled": true
 							}
+						},
+						"Cronômetro": {
+							"properties": {}
 						}
 					},
 					"world": {

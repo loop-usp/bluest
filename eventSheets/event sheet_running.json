@@ -42,6 +42,16 @@
 			"sid": 954858647379334
 		},
 		{
+			"eventType": "variable",
+			"name": "PlayerGravity",
+			"type": "number",
+			"initialValue": "1100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 344844327215360
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -126,139 +136,392 @@
 			"sid": 328747653439309
 		},
 		{
-			"eventType": "comment",
-			"text": "Make sure everything moves left across the screen (since the default 0 degrees is right)"
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Ao começo do Layout",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 519052062183558
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle-of-motion",
-					"objectClass": "chao_parque",
-					"sid": 504700580583918,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "180"
-					}
-				}
-			],
-			"sid": 192932181169185
-		},
-		{
-			"eventType": "comment",
-			"text": "Comportamento do background."
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 170915508371420
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "background_parque",
-					"sid": 980071915801688,
-					"parameters": {
-						"x": "background_parque.X - BgSpeed * dt"
-					}
-				}
-			],
-			"sid": 407568885705515
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-x",
-					"objectClass": "background_parque",
-					"sid": 158737796232098,
-					"parameters": {
-						"comparison": 3,
-						"x-co-ordinate": "-background_parque.Width"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "background_parque",
-					"sid": 941994555398203,
-					"parameters": {
-						"x": "background_parque.X + 2 * background_parque.Width"
-					}
-				}
-			],
-			"sid": 701789640028964
-		},
-		{
-			"eventType": "comment",
-			"text": "While on floor, keep holding the \"run right\" control, so the character keeps running."
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-on-floor",
-					"objectClass": "Player",
-					"sid": 710458766759073,
-					"behaviorType": "Platform"
-				}
-			],
-			"actions": [
-				{
-					"id": "simulate-control",
-					"objectClass": "Player",
-					"sid": 950299548871224,
-					"behaviorType": "Platform",
-					"parameters": {
-						"control": "right"
-					}
-				}
-			],
-			"sid": 942219930591580
-		},
-		{
-			"eventType": "comment",
-			"text": "On any user input at all, make the character jump."
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-any-touch-start",
-					"objectClass": "Touch",
-					"sid": 780880473093108
+					"eventType": "comment",
+					"text": "Make sure everything moves left across the screen (since the default 0 degrees is right)"
 				},
 				{
-					"id": "on-any-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 771794827529952
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 434073748879753
+						}
+					],
+					"actions": [
+						{
+							"id": "set-gravity",
+							"objectClass": "Player",
+							"sid": 549784550997455,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "PlayerGravity"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "Player",
+							"sid": 956383083715621,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "300"
+							}
+						}
+					],
+					"sid": 473605913898936
 				}
 			],
-			"actions": [
+			"sid": 979984130120441
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Comportamento do Background",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "simulate-control",
-					"objectClass": "Player",
-					"sid": 275991556835808,
-					"behaviorType": "Platform",
-					"parameters": {
-						"control": "jump"
-					}
+					"eventType": "comment",
+					"text": "São 2 backgrounds, quando um sai completamente da tela ele vai para o final da tela e assiim por diante."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 903752210478154
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "background_parque",
+							"sid": 931173003890695,
+							"parameters": {
+								"x": "background_parque.X - BgSpeed * dt"
+							}
+						}
+					],
+					"sid": 769958578921121
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "background_parque",
+							"sid": 345893420453453,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "-background_parque.Width"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "background_parque",
+							"sid": 852894750805032,
+							"parameters": {
+								"x": "background_parque.X + 2 * background_parque.Width"
+							}
+						}
+					],
+					"sid": 802582740903596
 				}
 			],
-			"sid": 165293520056819,
-			"isOrBlock": true
+			"sid": 588507047550514
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Comportamento do Player",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Due to the acceleration of the platform movement, we need to do some tweaks to make sure the player doesn't gradually get pushed off to the left of the screen over time."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Player",
+							"sid": 600334439159655,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "105"
+							}
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "Player",
+							"sid": 933385480660782,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Player",
+							"sid": 181320334115201,
+							"parameters": {
+								"x": "Self.X + 5 * dt"
+							}
+						}
+					],
+					"sid": 512176763252053,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-landed",
+							"objectClass": "Player",
+							"sid": 876190628965201,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Player",
+							"sid": 444859962527546,
+							"parameters": {
+								"x": "Self.X + 1"
+							}
+						}
+					],
+					"sid": 295796944760610,
+					"disabled": true
+				},
+				{
+					"eventType": "comment",
+					"text": "While on floor, keep holding the \"run right\" control, so the character keeps running."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-floor",
+							"objectClass": "Player",
+							"sid": 299577223207626,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 811547612253910,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 937859561850978,
+					"disabled": true
+				},
+				{
+					"eventType": "comment",
+					"text": "Pulo do player. (O mesmo pra usar o toque)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-touch-start",
+							"objectClass": "Touch",
+							"sid": 803200556703805
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 635410288346750,
+							"parameters": {
+								"instance-variable": "is_holding_jump",
+								"value": "true"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Player",
+							"sid": 410309471667545,
+							"behaviorType": "Cronômetro",
+							"parameters": {
+								"duration": "0.3",
+								"type": "once",
+								"tag": "\"jump_timer\""
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Player",
+							"sid": 884024107675621,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 236395111420304
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-touch-end",
+							"objectClass": "Touch",
+							"sid": 716904272598009
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 605211906880601,
+							"parameters": {
+								"instance-variable": "is_holding_jump",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 465611266511961
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 749419929425959,
+							"parameters": {
+								"instance-variable": "is_holding_jump"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-gravity",
+							"objectClass": "Player",
+							"sid": 990553275490622,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "0"
+							}
+						}
+					],
+					"sid": 873625511197370
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Player",
+							"sid": 215318915972059,
+							"parameters": {
+								"instance-variable": "is_holding_jump"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-gravity",
+							"objectClass": "Player",
+							"sid": 372754285934068,
+							"behaviorType": "Platform",
+							"parameters": {
+								"gravity": "PlayerGravity"
+							}
+						}
+					],
+					"sid": 468063636226737
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Player",
+							"sid": 233465769307203,
+							"behaviorType": "Cronômetro",
+							"parameters": {
+								"tag": "\"jump_timer\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player",
+							"sid": 193521513643085,
+							"parameters": {
+								"instance-variable": "is_holding_jump",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 129360799150394
+				},
+				{
+					"eventType": "comment",
+					"text": "Morte do Player. (Quando ele cai)"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Player",
+							"sid": 621556006571636,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "LayoutHeight"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-global-variables",
+							"objectClass": "System",
+							"sid": 307520298034708
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 621282364127859
+						}
+					],
+					"sid": 415536878073646
+				}
+			],
+			"sid": 389832951352634
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Comportamento do Chão",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 176107842621204
 		},
 		{
 			"eventType": "comment",
@@ -274,24 +537,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 289513224395892,
-					"parameters": {
-						"variable": "CurrentDistance",
-						"value": "chao_parque.Bullet.Speed * dt"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 886357299134876,
-					"parameters": {
-						"variable": "TotalDistance",
-						"value": "chao_parque.Bullet.Speed * dt"
-					}
-				},
 				{
 					"id": "set-text",
 					"objectClass": "DistanceDisplay",
@@ -362,15 +607,6 @@
 					}
 				},
 				{
-					"id": "set-angle-of-motion",
-					"objectClass": "chao_parque",
-					"sid": 299007788164344,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "180"
-					}
-				},
-				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 150277616277185,
@@ -407,95 +643,6 @@
 				}
 			],
 			"sid": 128743101363172
-		},
-		{
-			"eventType": "comment",
-			"text": "If the player falls off the bottom of the screen, restart the game."
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-y",
-					"objectClass": "Player",
-					"sid": 210205987349604,
-					"parameters": {
-						"comparison": 4,
-						"y-co-ordinate": "LayoutHeight"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "reset-global-variables",
-					"objectClass": "System",
-					"sid": 363984754810619
-				},
-				{
-					"id": "restart-layout",
-					"objectClass": "System",
-					"sid": 834570579044508
-				}
-			],
-			"sid": 138792307751558
-		},
-		{
-			"eventType": "comment",
-			"text": "Due to the acceleration of the platform movement, we need to do some tweaks to make sure the player doesn't gradually get pushed off to the left of the screen over time."
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-x",
-					"objectClass": "Player",
-					"sid": 599440567961491,
-					"parameters": {
-						"comparison": 2,
-						"x-co-ordinate": "105"
-					}
-				},
-				{
-					"id": "is-on-floor",
-					"objectClass": "Player",
-					"sid": 965433200547629,
-					"behaviorType": "Platform",
-					"isInverted": true
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "Player",
-					"sid": 580160457270644,
-					"parameters": {
-						"x": "Self.X + 5 * dt"
-					}
-				}
-			],
-			"sid": 736774271171678
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-landed",
-					"objectClass": "Player",
-					"sid": 750392358007195,
-					"behaviorType": "Platform"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-x",
-					"objectClass": "Player",
-					"sid": 492658265441746,
-					"parameters": {
-						"x": "Self.X + 1"
-					}
-				}
-			],
-			"sid": 157335875946340
 		}
 	],
 	"sid": 453506405208434

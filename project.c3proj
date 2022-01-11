@@ -104,16 +104,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Bullet",
-			"name": "Projétil",
+			"id": "EightDir",
+			"name": "8 Direções",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direções",
+			"id": "Bullet",
+			"name": "Projétil",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -130,6 +130,14 @@
 			"type": "behavior",
 			"id": "Platform",
 			"name": "Plataforma",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Cronômetro",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
