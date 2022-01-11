@@ -309,7 +309,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "While on floor, keep holding the \"run right\" control, so the character keeps running."
+					"text": "No chão rode a animação do chão, se não rode a animação de pulo."
 				},
 				{
 					"eventType": "block",
@@ -323,21 +323,43 @@
 					],
 					"actions": [
 						{
-							"id": "simulate-control",
+							"id": "set-animation",
 							"objectClass": "Player",
-							"sid": 811547612253910,
-							"behaviorType": "Platform",
+							"sid": 621566213263962,
 							"parameters": {
-								"control": "right"
+								"animation": "\"Default\"",
+								"from": "beginning"
 							}
 						}
 					],
-					"sid": 937859561850978,
-					"disabled": true
+					"sid": 937859561850978
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-jumping",
+							"objectClass": "Player",
+							"sid": 576230588490443,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Player",
+							"sid": 855169983996174,
+							"parameters": {
+								"animation": "\"jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 456359249129694
 				},
 				{
 					"eventType": "comment",
-					"text": "Pulo do player. (O mesmo pra usar o toque)"
+					"text": "Pulo do player."
 				},
 				{
 					"eventType": "block",
