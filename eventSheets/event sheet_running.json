@@ -32,6 +32,16 @@
 			"sid": 245594183708043
 		},
 		{
+			"eventType": "variable",
+			"name": "BgSpeed",
+			"type": "number",
+			"initialValue": "200",
+			"comment": "Velocidade na qual o background irá se movimentar",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 954858647379334
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -131,15 +141,6 @@
 			"actions": [
 				{
 					"id": "set-angle-of-motion",
-					"objectClass": "bg_parque",
-					"sid": 428952706508660,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "180"
-					}
-				},
-				{
-					"id": "set-angle-of-motion",
 					"objectClass": "chao_parque",
 					"sid": 504700580583918,
 					"behaviorType": "Bullet",
@@ -152,32 +153,53 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "Wrap the scrolling background infinitely by moving it back after it's scrolled the width of the main image to the left."
+			"text": "Comportamento do background."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 170915508371420
+				}
+			],
+			"actions": [
+				{
+					"id": "set-x",
+					"objectClass": "background_parque",
+					"sid": 980071915801688,
+					"parameters": {
+						"x": "background_parque.X - BgSpeed * dt"
+					}
+				}
+			],
+			"sid": 407568885705515
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "compare-x",
-					"objectClass": "bg_parque",
-					"sid": 533269030135628,
+					"objectClass": "background_parque",
+					"sid": 158737796232098,
 					"parameters": {
 						"comparison": 3,
-						"x-co-ordinate": "-Self.Width / 2"
+						"x-co-ordinate": "-background_parque.Width"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-x",
-					"objectClass": "bg_parque",
-					"sid": 583021533241089,
+					"objectClass": "background_parque",
+					"sid": 941994555398203,
 					"parameters": {
-						"x": "Self.X + Self.Width / 2"
+						"x": "background_parque.X + 2 * background_parque.Width"
 					}
 				}
 			],
-			"sid": 407568885705515
+			"sid": 701789640028964
 		},
 		{
 			"eventType": "comment",

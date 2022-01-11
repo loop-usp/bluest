@@ -17,7 +17,7 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Text",
+			"name": "Texto",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -25,7 +25,7 @@
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Tiled Background",
+			"name": "Fundo em blocos",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -33,7 +33,7 @@
 		{
 			"type": "plugin",
 			"id": "Button",
-			"name": "Button",
+			"name": "Botão",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -41,7 +41,7 @@
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Array",
+			"name": "Matriz",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -49,7 +49,7 @@
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Keyboard",
+			"name": "Teclado",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -57,7 +57,7 @@
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "Touch",
+			"name": "Toque",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -65,7 +65,7 @@
 		{
 			"type": "plugin",
 			"id": "PlatformInfo",
-			"name": "Platform info",
+			"name": "Informação da Plataforma",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -73,7 +73,7 @@
 		{
 			"type": "plugin",
 			"id": "Function",
-			"name": "Function",
+			"name": "[Function]",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -81,7 +81,7 @@
 		{
 			"type": "behavior",
 			"id": "Flash",
-			"name": "Flash",
+			"name": "Piscar",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -89,7 +89,7 @@
 		{
 			"type": "behavior",
 			"id": "TileMovement",
-			"name": "Tile movement",
+			"name": "Movimento em grid",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -97,7 +97,7 @@
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solid",
+			"name": "Sólido",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -105,7 +105,7 @@
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Bullet",
+			"name": "Projétil",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -113,7 +113,7 @@
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "8 Direction",
+			"name": "8 Direções",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -121,7 +121,7 @@
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"name": "Arrastar & Soltar",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -129,7 +129,7 @@
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Platform",
+			"name": "Plataforma",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -166,11 +166,11 @@
 			{
 				"items": [
 					"chao_parque",
-					"bg_parque",
 					"DistanceDisplay",
 					"VOLTAR_RUNNING_PARQUE",
 					"VOLTAR_RUNNING_SAPATARIA",
-					"VOLTAR_RUNNING_PUB"
+					"VOLTAR_RUNNING_PUB",
+					"background_parque"
 				],
 				"subfolders": [],
 				"name": "Running"
