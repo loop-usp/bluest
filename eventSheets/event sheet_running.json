@@ -52,6 +52,16 @@
 			"sid": 344844327215360
 		},
 		{
+			"eventType": "variable",
+			"name": "GroundSpeed",
+			"type": "number",
+			"initialValue": "100",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 509221800147304
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -309,7 +319,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "No chão rode a animação do chão, se não rode a animação de pulo."
+					"text": "No chão rode a animação do chão, se não rode a animação de pulo. (A parte do definir X compensa o \"arrastamento\" causado pelo chão no player quando ele está em cima do chão)"
 				},
 				{
 					"eventType": "block",
@@ -329,6 +339,14 @@
 							"parameters": {
 								"animation": "\"Default\"",
 								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Player",
+							"sid": 446356698227325,
+							"parameters": {
+								"x": "Player.X + GroundSpeed * dt"
 							}
 						}
 					],
@@ -398,6 +416,17 @@
 							"behaviorType": "Platform",
 							"parameters": {
 								"control": "jump"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Áudio",
+							"sid": 801581978433588,
+							"parameters": {
+								"audio-file": "wop",
+								"loop": "not-looping",
+								"volume": "10",
+								"tag-optional": "\"jump_sound\""
 							}
 						}
 					],
@@ -542,7 +571,76 @@
 			"title": "Comportamento do Chão",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 829111917997535
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "chao_parque",
+							"sid": 357653416829046,
+							"parameters": {
+								"x": "chao_parque.X - GroundSpeed * dt"
+							}
+						}
+					],
+					"sid": 944401321644572
+				},
+				{
+					"eventType": "comment",
+					"text": "Destroy blocks that go off the left of the screen so they don't keep taking up memory or CPU."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "chao_parque",
+							"sid": 149462027376186,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "- chao_parque.Width"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "chao_parque",
+							"sid": 281187151931671
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 961710156897887,
+							"parameters": {
+								"object-to-create": "chao_parque",
+								"layer": "\"Game\"",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "chao_parque",
+							"sid": 290622044449475,
+							"parameters": {
+								"x": "LayoutWidth + 5",
+								"y": "100"
+							}
+						}
+					],
+					"sid": 205839658325612
+				}
+			],
 			"sid": 176107842621204
 		},
 		{
@@ -638,33 +736,8 @@
 					}
 				}
 			],
-			"sid": 794183409196615
-		},
-		{
-			"eventType": "comment",
-			"text": "Destroy blocks that go off the left of the screen so they don't keep taking up memory or CPU."
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-x",
-					"objectClass": "chao_parque",
-					"sid": 812644267706255,
-					"parameters": {
-						"comparison": 2,
-						"x-co-ordinate": "-Self.Width"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "chao_parque",
-					"sid": 938415477934479
-				}
-			],
-			"sid": 128743101363172
+			"sid": 794183409196615,
+			"disabled": true
 		}
 	],
 	"sid": 453506405208434

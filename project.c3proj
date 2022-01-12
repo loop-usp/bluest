@@ -79,6 +79,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Áudio",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Flash",
 			"name": "Piscar",
@@ -153,7 +161,8 @@
 			"HOME",
 			"Player",
 			"BLUEST",
-			"FIM"
+			"FIM",
+			"Áudio"
 		],
 		"subfolders": [
 			{
@@ -396,7 +405,13 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "wop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 942913061764302
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
