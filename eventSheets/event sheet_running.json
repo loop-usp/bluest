@@ -595,7 +595,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "Destroy blocks that go off the left of the screen so they don't keep taking up memory or CPU."
+					"text": "Destrói os blocos que somem da tela."
 				},
 				{
 					"eventType": "block",
@@ -615,11 +615,50 @@
 							"id": "destroy",
 							"objectClass": "chao_parque",
 							"sid": 281187151931671
+						}
+					],
+					"sid": 205839658325612
+				},
+				{
+					"eventType": "comment",
+					"text": "Blocos geram novos blocos."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "chao_parque",
+							"sid": 591520320663690,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "LayoutWidth - chao_parque.Width"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "chao_parque",
+							"sid": 320900351809966,
+							"parameters": {
+								"instance-variable": "GeneratedBlock"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "chao_parque",
+							"sid": 472620451125788,
+							"parameters": {
+								"instance-variable": "GeneratedBlock",
+								"value": "true"
+							}
 						},
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 961710156897887,
+							"sid": 449789509492430,
 							"parameters": {
 								"object-to-create": "chao_parque",
 								"layer": "\"Game\"",
@@ -629,16 +668,47 @@
 							}
 						},
 						{
+							"type": "comment",
+							"text": "S = S0 + V0t + 1/2gt^2"
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 744789395264521,
+							"parameters": {
+								"instance-variable": "t",
+								"value": "Player.Platform.JumpStrength / Player.Platform.Gravity"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Player",
+							"sid": 818192615602836,
+							"parameters": {
+								"instance-variable": "MaxHeight",
+								"value": "Player.Y - Player.Platform.JumpStrength * Player.t + (Player.t*Player.t) * Player.Platform.Gravity * 1/2"
+							}
+						},
+						{
 							"id": "set-position",
 							"objectClass": "chao_parque",
-							"sid": 290622044449475,
+							"sid": 390035107631091,
 							"parameters": {
-								"x": "LayoutWidth + 5",
-								"y": "100"
+								"x": "LayoutWidth + 20",
+								"y": "random(Player.MaxHeight , LayoutHeight - 10)"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "chao_parque",
+							"sid": 633384586209962,
+							"parameters": {
+								"width": "250",
+								"height": "LayoutHeight - chao_parque.Y"
 							}
 						}
 					],
-					"sid": 205839658325612
+					"sid": 297759006529784
 				}
 			],
 			"sid": 176107842621204

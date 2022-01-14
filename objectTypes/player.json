@@ -9,6 +9,18 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 372104783356029
+		},
+		{
+			"name": "MaxHeight",
+			"type": "number",
+			"desc": "Altura máxima que ele pode pular em um dado instante",
+			"sid": 799548707303104
+		},
+		{
+			"name": "t",
+			"type": "number",
+			"desc": "Taxa pra calcular a altura máxima",
+			"sid": 390017076124017
 		}
 	],
 	"behaviorTypes": [

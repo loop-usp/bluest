@@ -20,7 +20,9 @@
 						"image-angle": 0
 					},
 					"uid": 76,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"GeneratedBlock": false
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
@@ -57,7 +59,9 @@
 					},
 					"uid": 77,
 					"instanceVariables": {
-						"is_holding_jump": false
+						"is_holding_jump": false,
+						"MaxHeight": 0,
+						"t": 0
 					},
 					"behaviors": {
 						"Platform": {

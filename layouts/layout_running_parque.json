@@ -83,7 +83,9 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
-						"is_holding_jump": false
+						"is_holding_jump": false,
+						"MaxHeight": 0,
+						"t": 0
 					},
 					"behaviors": {
 						"Platform": {
@@ -105,8 +107,8 @@
 						}
 					},
 					"world": {
-						"x": 325,
-						"y": 217,
+						"x": 553,
+						"y": 304,
 						"width": 52.7,
 						"height": 106.12612612612611,
 						"originX": 0,
@@ -135,7 +137,9 @@
 						"image-angle": 0
 					},
 					"uid": 70,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"GeneratedBlock": false
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
@@ -145,9 +149,9 @@
 						}
 					},
 					"world": {
-						"x": 195,
+						"x": 548,
 						"y": 445,
-						"width": 628,
+						"width": 900,
 						"height": 78,
 						"originX": 0,
 						"originY": 0,

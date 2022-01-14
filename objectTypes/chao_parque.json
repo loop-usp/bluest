@@ -3,7 +3,14 @@
 	"plugin-id": "TiledBg",
 	"sid": 509208990209430,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "GeneratedBlock",
+			"type": "boolean",
+			"desc": "",
+			"sid": 508377689506831
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
@@ -20,7 +27,7 @@
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 7676648,
+		"imageSpriteId": 546899,
 		"useCollisionPoly": true
 	}
 }
