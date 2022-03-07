@@ -1,0 +1,15 @@
+{
+	"name": "FloatingText",
+	"plugin-id": "Text",
+	"sid": 215901612913402,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 986868048146129
+		}
+	],
+	"effectTypes": []
+}

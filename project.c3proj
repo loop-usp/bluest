@@ -128,6 +128,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -145,7 +153,10 @@
 			"HOME",
 			"Player",
 			"BLUEST",
-			"FIM"
+			"FIM",
+			"ondeestaowally_770x433_acf_cropped",
+			"wally",
+			"barrierWally"
 		],
 		"subfolders": [
 			{
@@ -304,13 +315,48 @@
 				],
 				"subfolders": [],
 				"name": "EM CONSTRUÇÃO"
+			},
+			{
+				"items": [
+					"TiledBackground",
+					"BlockPositions",
+					"Spawner",
+					"Points",
+					"FloatingText"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"Block1",
+							"Block2",
+							"Block3",
+							"Block4",
+							"Block5"
+						],
+						"subfolders": [],
+						"name": "Blocks"
+					},
+					{
+						"items": [
+							"LeftBlock",
+							"RightBlock",
+							"TopBlock",
+							"BottomBlock"
+						],
+						"subfolders": [],
+						"name": "MarkerBlocks"
+					}
+				],
+				"name": "Object types"
 			}
 		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Blocks"
+		],
 		"subfolders": []
 	},
 	"layouts": {
@@ -347,7 +393,9 @@
 					"Layout_Running_PUB",
 					"Layout_Esteira_PUB",
 					"Layout_Cesta_PUB",
-					"Layout_Cesta_Sapataria"
+					"Layout_Cesta_Sapataria",
+					"Layout_Match3_fix",
+					"Layout_suporte_na_multidao"
 				],
 				"subfolders": [],
 				"name": "Minigames"
@@ -375,7 +423,9 @@
 					"Event sheet_Match3",
 					"Event sheet_Principal",
 					"Event sheet_Running",
-					"Event sheet_Snake"
+					"Event sheet_Snake",
+					"Event_sheet_match3_fix",
+					"Event_suporte_na_multidao"
 				],
 				"subfolders": [],
 				"name": "Minigames"

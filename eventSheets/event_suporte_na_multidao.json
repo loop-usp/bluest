@@ -1,0 +1,77 @@
+{
+	"name": "Event_suporte_na_multidao",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 701727526457947
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "wally",
+					"sid": 202316778631482,
+					"parameters": {
+						"x": "random(0, 1100)",
+						"y": "random(0, 650)"
+					}
+				}
+			],
+			"sid": 780425440958740
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 356577639649636,
+					"parameters": {
+						"object": "wally"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 262063807474705,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 734340719829445
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "wally",
+					"sid": 547183117084786,
+					"parameters": {
+						"object": "barrierWally"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "wally",
+					"sid": 537192529433841,
+					"parameters": {
+						"x": "random(0, 1100)",
+						"y": "random(0, 650)"
+					}
+				}
+			],
+			"sid": 711489611172196
+		}
+	],
+	"sid": 863088708444195
+}
