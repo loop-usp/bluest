@@ -1,0 +1,37 @@
+{
+	"name": "wally",
+	"plugin-id": "Sprite",
+	"sid": 452256055821876,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 265,
+						"height": 264,
+						"originX": 0.49433962264150944,
+						"originY": 0.49242424242424243,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5196805,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 901731796368101,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

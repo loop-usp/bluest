@@ -108,7 +108,18 @@
 		}
 	],
 	"sid": 868672361655197,
-	"nonworld-instances": [],
+	"nonworld-instances": [
+		{
+			"type": "BlockPositions",
+			"properties": {
+				"width": 5,
+				"height": 5,
+				"depth": 1
+			},
+			"uid": 166,
+			"instanceVariables": {}
+		}
+	],
 	"effectTypes": [],
 	"width": 1280,
 	"height": 720,

@@ -1,0 +1,52 @@
+{
+	"name": "Blocks",
+	"plugin-id": "Sprite",
+	"sid": 289138797393342,
+	"instanceVariables": [
+		{
+			"name": "Type",
+			"type": "number",
+			"desc": "",
+			"sid": 531328419293767
+		},
+		{
+			"name": "Matched",
+			"type": "boolean",
+			"desc": "",
+			"sid": 249358289076615
+		},
+		{
+			"name": "MatchedX",
+			"type": "boolean",
+			"desc": "",
+			"sid": 502754569646338
+		},
+		{
+			"name": "MatchedY",
+			"type": "boolean",
+			"desc": "",
+			"sid": 819590240818693
+		},
+		{
+			"name": "CanSwap",
+			"type": "boolean",
+			"desc": "",
+			"sid": 197317804922169
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 353805229631250
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"Block1",
+		"Block5",
+		"Block2",
+		"Block3",
+		"Block4"
+	]
+}
