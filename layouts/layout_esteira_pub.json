@@ -101,53 +101,6 @@
 					}
 				},
 				{
-					"type": "Alimento_Bom",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 83,
-					"instanceVariables": {},
-					"behaviors": {
-						"ArrastarSoltar": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						},
-						"Projétil": {
-							"properties": {
-								"speed": 120,
-								"acceleration": 50,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 272,
-						"y": -97,
-						"width": 150,
-						"height": 150,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Pontos_Esteira",
 					"properties": {
 						"text": "Pontos",
@@ -220,53 +173,6 @@
 					}
 				},
 				{
-					"type": "Alimento_Ruim",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 86,
-					"instanceVariables": {},
-					"behaviors": {
-						"ArrastarSoltar": {
-							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						},
-						"Projétil": {
-							"properties": {
-								"speed": 120,
-								"acceleration": 50,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 442,
-						"y": -96,
-						"width": 150,
-						"height": 150,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0.005294697594838915,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Parede_Esteira",
 					"properties": {
 						"initially-visible": true,
@@ -324,11 +230,106 @@
 							1
 						]
 					}
+				},
+				{
+					"type": "Alimento_Bom2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 83,
+					"instanceVariables": {},
+					"behaviors": {
+						"ArrastarSoltar": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Projétil": {
+							"properties": {
+								"speed": 120,
+								"acceleration": 50,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 276,
+						"y": -103,
+						"width": 150,
+						"height": 150,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Alimento_Ruim2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 86,
+					"instanceVariables": {},
+					"behaviors": {
+						"ArrastarSoltar": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Projétil": {
+							"properties": {
+								"speed": 120,
+								"acceleration": 50,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": false,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 495,
+						"y": -106,
+						"width": 150,
+						"height": 150,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0.005294697594838915,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 754169017088216,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
 			"color": [
 				1,
 				1,
@@ -363,5 +364,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet_Esteira"
+	"eventSheet": "Event sheet_Esteira_PUB"
 }

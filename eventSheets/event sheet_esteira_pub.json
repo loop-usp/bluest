@@ -1,15 +1,15 @@
 {
-	"name": "Event sheet_Esteira",
+	"name": "Event sheet_Esteira_PUB",
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "Pontos_Esteira",
+			"name": "Pontos_Esteira2",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
-			"sid": 478512436443029
+			"sid": 411511647681481
 		},
 		{
 			"eventType": "block",
@@ -17,62 +17,20 @@
 				{
 					"id": "on-clicked",
 					"objectClass": "HOME",
-					"sid": 425498372882172
+					"sid": 573842276470069
 				}
 			],
 			"actions": [
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 723936539891740,
+					"sid": 536715901703929,
 					"parameters": {
 						"layout": "Layout_Principal"
 					}
 				}
 			],
-			"sid": 988555632504700
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked",
-					"objectClass": "VOLTAR_ESTEIRA_RESTAURANTE",
-					"sid": 325242982161524
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 528897285862189,
-					"parameters": {
-						"layout": "Restaurante"
-					}
-				}
-			],
-			"sid": 333499683355079
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked",
-					"objectClass": "VOLTAR_ESTEIRA_PUB",
-					"sid": 630779260789996
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 178915911011976,
-					"parameters": {
-						"layout": "PUB"
-					}
-				}
-			],
-			"sid": 419975066337453
+			"sid": 853083904793104
 		},
 		{
 			"eventType": "block",
@@ -80,7 +38,7 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 447087465364176,
+					"sid": 933468139353482,
 					"parameters": {
 						"interval-seconds": "2.1"
 					}
@@ -90,9 +48,9 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Criador_Esteira",
-					"sid": 388651899640735,
+					"sid": 556524548911216,
 					"parameters": {
-						"object": "Alimento_Bom",
+						"object": "Alimento_Bom2",
 						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
@@ -100,14 +58,14 @@
 				},
 				{
 					"id": "set-animation-frame",
-					"objectClass": "Alimento_Bom",
-					"sid": 678137380091080,
+					"objectClass": "Alimento_Bom2",
+					"sid": 994746621492844,
 					"parameters": {
 						"frame-number": "random(0,3)"
 					}
 				}
 			],
-			"sid": 130447774701541
+			"sid": 881287201634028
 		},
 		{
 			"eventType": "block",
@@ -115,7 +73,7 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 405374335886280,
+					"sid": 187212342484655,
 					"parameters": {
 						"interval-seconds": "5.2"
 					}
@@ -125,24 +83,24 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Criador_Esteira",
-					"sid": 831006560899685,
+					"sid": 601557935972050,
 					"parameters": {
-						"object": "Alimento_Ruim",
+						"object": "Alimento_Ruim2",
 						"layer": "0",
 						"image-point": "0",
 						"create-hierarchy": false
 					}
 				}
 			],
-			"sid": 986818336484259
+			"sid": 178002996942341
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "Alimento_Bom",
-					"sid": 943864142043504,
+					"objectClass": "Alimento_Bom2",
+					"sid": 285397793241502,
 					"parameters": {
 						"object": "Prato"
 					}
@@ -152,35 +110,35 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 611917543543232,
+					"sid": 673635108586087,
 					"parameters": {
-						"variable": "Pontos_Esteira",
+						"variable": "Pontos_Esteira2",
 						"value": "100"
 					}
 				},
 				{
 					"id": "set-text",
 					"objectClass": "Pontos_Esteira",
-					"sid": 219859646835735,
+					"sid": 547747864708787,
 					"parameters": {
-						"text": "Pontos_Esteira"
+						"text": "Pontos_Esteira2"
 					}
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Alimento_Bom",
-					"sid": 786765500682537
+					"objectClass": "Alimento_Bom2",
+					"sid": 185597330229070
 				}
 			],
-			"sid": 626645327972516
+			"sid": 268975239170207
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "is-overlapping-another-object",
-					"objectClass": "Alimento_Ruim",
-					"sid": 985660051421864,
+					"objectClass": "Alimento_Ruim2",
+					"sid": 656425641704751,
 					"parameters": {
 						"object": "Prato"
 					}
@@ -190,27 +148,27 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 308036489729365,
+					"sid": 912246888394013,
 					"parameters": {
-						"variable": "Pontos_Esteira",
+						"variable": "Pontos_Esteira2",
 						"value": "200"
 					}
 				},
 				{
 					"id": "set-text",
 					"objectClass": "Pontos_Esteira",
-					"sid": 643149234064420,
+					"sid": 734831999420247,
 					"parameters": {
-						"text": "Pontos_Esteira"
+						"text": "Pontos_Esteira2"
 					}
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Alimento_Ruim",
-					"sid": 531000947967251
+					"objectClass": "Alimento_Ruim2",
+					"sid": 414156667171112
 				}
 			],
-			"sid": 571707838869702
+			"sid": 546881677183437
 		},
 		{
 			"eventType": "block",
@@ -218,9 +176,9 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Parede_Esteira",
-					"sid": 529812302108801,
+					"sid": 990718391979705,
 					"parameters": {
-						"object": "Alimento_Bom"
+						"object": "Alimento_Bom2"
 					}
 				}
 			],
@@ -228,19 +186,19 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 221954676030991,
+					"sid": 660277700725857,
 					"parameters": {
-						"variable": "Pontos_Esteira",
+						"variable": "Pontos_Esteira2",
 						"value": "50"
 					}
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Alimento_Bom",
-					"sid": 139179515722687
+					"objectClass": "Alimento_Bom2",
+					"sid": 572924339393257
 				}
 			],
-			"sid": 552077713750660
+			"sid": 704822836597875
 		},
 		{
 			"eventType": "block",
@@ -248,9 +206,9 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Parede_Esteira",
-					"sid": 672333132735602,
+					"sid": 808078029179489,
 					"parameters": {
-						"object": "Alimento_Ruim"
+						"object": "Alimento_Ruim2"
 					}
 				}
 			],
@@ -258,20 +216,69 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 924529467561113,
+					"sid": 510221512119984,
 					"parameters": {
-						"variable": "Pontos_Esteira",
+						"variable": "Pontos_Esteira2",
 						"value": "50"
 					}
 				},
 				{
 					"id": "destroy",
-					"objectClass": "Alimento_Ruim",
-					"sid": 182734550171665
+					"objectClass": "Alimento_Ruim2",
+					"sid": 349656836999372
 				}
 			],
-			"sid": 889986322577898
+			"sid": 712414310665529
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 393202437462227,
+					"parameters": {
+						"variable": "Pontos_Esteira2",
+						"comparison": 5,
+						"value": "2500"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 532420801968438,
+					"parameters": {
+						"layout": "PUB"
+					}
+				}
+			],
+			"sid": 137079606215529
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 281199914064415,
+					"parameters": {
+						"variable": "Pontos_Esteira2",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 110162933512113
+				}
+			],
+			"sid": 938492009876616
 		}
 	],
-	"sid": 914026895729002
+	"sid": 388954879098347
 }

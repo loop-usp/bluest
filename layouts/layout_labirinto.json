@@ -82,6 +82,7 @@
 			"sid": 837971916944337,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
 			"color": [
 				1,
 				1,
@@ -116,5 +117,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "EM CONTRUÇÃO"
+	"eventSheet": "Event sheet_Caca"
 }

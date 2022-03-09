@@ -1,5 +1,5 @@
 {
-	"name": "Event sheet_Cesta",
+	"name": "Event sheet_Cesta_Restaurante",
 	"events": [
 		{
 			"eventType": "variable",
@@ -64,27 +64,6 @@
 				}
 			],
 			"sid": 914589489290510
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked",
-					"objectClass": "VOLTAR_CESTA_RESTAURANTE",
-					"sid": 285258928724821
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 566656740934403,
-					"parameters": {
-						"layout": "Restaurante"
-					}
-				}
-			],
-			"sid": 211741704935593
 		},
 		{
 			"eventType": "block",
@@ -376,6 +355,55 @@
 				}
 			],
 			"sid": 848434149415286
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 948995141762950,
+					"parameters": {
+						"variable": "Vida",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 467463050827351
+				}
+			],
+			"sid": 983457002813186
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 773402533709459,
+					"parameters": {
+						"variable": "Pontos",
+						"comparison": 5,
+						"value": "600"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 169087474346365,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 163455094212392
 		}
 	],
 	"sid": 747739139562875
