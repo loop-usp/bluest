@@ -1,0 +1,367 @@
+{
+	"name": "Event sheet_7Erros",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Erros",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 845533151657495
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Botoes2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "VOLTAR_LABIRINTO",
+							"sid": 948704598958638
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 444679561473300,
+							"parameters": {
+								"layout": "Parque"
+							}
+						}
+					],
+					"sid": 167256227775489
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "VOLTAR_SUPORTE",
+							"sid": 246354916801369
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 641672818736743,
+							"parameters": {
+								"layout": "Parque"
+							}
+						}
+					],
+					"sid": 643943152560941
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "VOLTAR_CAÇA",
+							"sid": 827186977621610
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 160895715663700,
+							"parameters": {
+								"layout": "Dentista"
+							}
+						}
+					],
+					"sid": 960590388349211
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "VOLTAR_7ERROS",
+							"sid": 718682389163482
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 800316918733242,
+							"parameters": {
+								"layout": "Dentista"
+							}
+						}
+					],
+					"sid": 402952983378304
+				}
+			],
+			"sid": 547517853118912
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 966558785898169,
+					"parameters": {
+						"object": "Erro1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Erro1",
+					"sid": 799262078676521,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 278673120012979,
+					"parameters": {
+						"variable": "Erros",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 386577354173514
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 633536197400687,
+					"parameters": {
+						"object": "Erro2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Erro2",
+					"sid": 301879191988543,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 565533568498823,
+					"parameters": {
+						"variable": "Erros",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 851280684128769
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 334198062607018,
+					"parameters": {
+						"object": "Erro3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Erro3",
+					"sid": 179073291013691,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 961015452631226,
+					"parameters": {
+						"variable": "Erros",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 199211768542998
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 981506898334550,
+					"parameters": {
+						"object": "Erro4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Erro4",
+					"sid": 100773029307680,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 254759891643580,
+					"parameters": {
+						"variable": "Erros",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 948299049564129
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 488693093038539,
+					"parameters": {
+						"object": "Erro5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Erro5",
+					"sid": 635896879669117,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 447444603540395,
+					"parameters": {
+						"variable": "Erros",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 902129773624191
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 764691665361220,
+					"parameters": {
+						"object": "Erro6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Erro6",
+					"sid": 987671600158270,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 812516591848761,
+					"parameters": {
+						"variable": "Erros",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 691508563216301
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-touched-object",
+					"objectClass": "Touch",
+					"sid": 274073414133335,
+					"parameters": {
+						"object": "Erro7"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Erro7",
+					"sid": 728504164004945,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 635124887934804,
+					"parameters": {
+						"variable": "Erros",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 973281585227123
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 654693382729429,
+					"parameters": {
+						"variable": "Erros",
+						"comparison": 0,
+						"value": "7"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 935805678131929,
+					"parameters": {
+						"layout": "Dentista"
+					}
+				}
+			],
+			"sid": 987138310963430
+		}
+	],
+	"sid": 968672547543832
+}

@@ -106,88 +106,6 @@
 					}
 				},
 				{
-					"type": "bons_alimento",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 91,
-					"instanceVariables": {},
-					"behaviors": {
-						"Projétil": {
-							"properties": {
-								"speed": 0,
-								"acceleration": 0,
-								"gravity": 270,
-								"bounce-off-solids": true,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 482.6513042145501,
-						"y": -132.3486957854499,
-						"width": 76.52565008227518,
-						"height": 76.52565008227518,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "ruins_alimento",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 92,
-					"instanceVariables": {},
-					"behaviors": {
-						"Projétil": {
-							"properties": {
-								"speed": 0,
-								"acceleration": 0,
-								"gravity": 270,
-								"bounce-off-solids": false,
-								"set-angle": true,
-								"step": false,
-								"enabled": true
-							}
-						}
-					},
-					"world": {
-						"x": 608,
-						"y": -133,
-						"width": 77.65925965064196,
-						"height": 77.65925965064196,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Parede",
 					"properties": {
 						"initially-visible": true,
@@ -403,39 +321,92 @@
 					}
 				},
 				{
-					"type": "VOLTAR_CESTA_PUB",
+					"type": "bons_alimento2",
 					"properties": {
-						"type": "button",
-						"text": "VOLTAR",
-						"tooltip": "",
 						"initially-visible": true,
-						"enabled": true,
-						"auto-font-size": true,
-						"checked": false,
-						"id": ""
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
-					"uid": 132,
+					"uid": 91,
 					"instanceVariables": {},
-					"behaviors": {},
+					"behaviors": {
+						"Projétil": {
+							"properties": {
+								"speed": 0,
+								"acceleration": 0,
+								"gravity": 240,
+								"bounce-off-solids": true,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
 					"world": {
-						"x": 1186,
-						"y": 57,
-						"width": 72,
-						"height": 24,
-						"originX": 0,
-						"originY": 0,
+						"x": 438,
+						"y": -131,
+						"width": 76.52565008227518,
+						"height": 76.52565008227518,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
 							1,
 							1
-						]
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ruins_alimento2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 92,
+					"instanceVariables": {},
+					"behaviors": {
+						"Projétil": {
+							"properties": {
+								"speed": 0,
+								"acceleration": 0,
+								"gravity": 200,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 584,
+						"y": -137,
+						"width": 77.65925965064196,
+						"height": 77.65925965064196,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],
 			"sid": 783726785227276,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
 			"color": [
 				1,
 				1,
@@ -470,5 +441,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet_Cesta"
+	"eventSheet": "Event sheet_Cesta_PUB"
 }

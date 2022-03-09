@@ -1,0 +1,368 @@
+{
+	"name": "Event sheet_Cesta_PUB",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Pontos2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 761995834795392
+		},
+		{
+			"eventType": "variable",
+			"name": "Vida2",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 416881247897393
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 795795568990172
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bons_alimento2",
+					"sid": 981438220143035
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ruins_alimento2",
+					"sid": 258402520140359
+				}
+			],
+			"sid": 683597131568110
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "HOME",
+					"sid": 118700287393217
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 321334276855853,
+					"parameters": {
+						"layout": "Layout_Principal"
+					}
+				}
+			],
+			"sid": 400071759599814
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 505720991868179,
+					"parameters": {
+						"interval-seconds": "3.23"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Criador_Cesta",
+					"sid": 897160512927761,
+					"parameters": {
+						"object": "bons_alimento2",
+						"layer": "0",
+						"image-point": "random(1,14)",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "bons_alimento2",
+					"sid": 922257570412236,
+					"parameters": {
+						"frame-number": "random(0,3)"
+					}
+				}
+			],
+			"sid": 531790202309558
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 802775253671271,
+					"parameters": {
+						"interval-seconds": "5.34"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Criador_Cesta",
+					"sid": 677896033017040,
+					"parameters": {
+						"object": "ruins_alimento2",
+						"layer": "0",
+						"image-point": "random(1,14)",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 611518765137403
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bons_alimento2",
+					"sid": 348416402481050,
+					"parameters": {
+						"object": "Chão"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 952647467695407,
+					"parameters": {
+						"variable": "Vida2",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bons_alimento2",
+					"sid": 254749717222138
+				}
+			],
+			"sid": 488469082381689,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bons_alimento2",
+					"sid": 458862432087653,
+					"parameters": {
+						"object": "Cesta"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 778018444159117,
+					"parameters": {
+						"variable": "Pontos2",
+						"value": "50"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bons_alimento2",
+					"sid": 159840146479205
+				}
+			],
+			"sid": 839144577955055,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ruins_alimento2",
+					"sid": 166132672076300,
+					"parameters": {
+						"object": "Chão"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 683391383142325,
+					"parameters": {
+						"variable": "Pontos2",
+						"value": "25"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ruins_alimento2",
+					"sid": 898737029059977
+				}
+			],
+			"sid": 496983803294067,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ruins_alimento2",
+					"sid": 589566465982391,
+					"parameters": {
+						"object": "Cesta"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 587851513196144,
+					"parameters": {
+						"variable": "Vida2",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ruins_alimento2",
+					"sid": 502505917278210
+				}
+			],
+			"sid": 547646815945368,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 229549148474709
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Pontos",
+					"sid": 432715541845152,
+					"parameters": {
+						"text": "Pontos2"
+					}
+				}
+			],
+			"sid": 712401347159882
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 255899692581458
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Vida",
+					"sid": 901607205510779,
+					"parameters": {
+						"text": "Vida2"
+					}
+				}
+			],
+			"sid": 316259715090643
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 694583904705878
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "vidas",
+					"sid": 314205265280748,
+					"parameters": {
+						"frame-number": "Vida2"
+					}
+				}
+			],
+			"sid": 576075331465105
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 483294030237253,
+					"parameters": {
+						"variable": "Vida2",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 724051673651813
+				}
+			],
+			"sid": 555931871849057
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 908571035059390,
+					"parameters": {
+						"variable": "Pontos2",
+						"comparison": 5,
+						"value": "1000"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 186255431485691,
+					"parameters": {
+						"layout": "PUB"
+					}
+				}
+			],
+			"sid": 898490401399580
+		}
+	],
+	"sid": 154461210297057
+}
