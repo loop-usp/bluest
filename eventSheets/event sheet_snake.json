@@ -45,7 +45,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "On beginning of the game, we display the current score, set the global variable [i]alive[/i] to true, which allows the game to know it has to move the snake on a regular basis and the game is not over, the we call on the function [i][b]spawnStartSnake[/b][/i] which spawns up to [i]length[/i] instances of the snake to start the game with."
+			"text": "No início do jogo, mostramos a pontuação atual, definimos a variável global [i]alive[/i] como verdadeira, o que permite ao jogo saber que tem de mover a cobra regularmente e que o jogo não acabou, a função [i][b]spawnStartSnake[/b][/i] que spawna até [i]length[/i] instâncias da cobra para iniciar o jogo."
 		},
 		{
 			"eventType": "block",
@@ -83,14 +83,14 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "global variables for the game"
+			"text": "Variáveis globais do jogo"
 		},
 		{
 			"eventType": "variable",
 			"name": "length",
 			"type": "number",
 			"initialValue": "5",
-			"comment": "length of the snake (number of instances)",
+			"comment": "comprimento da cobra (número de instâncias)",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 106193506010678
@@ -100,7 +100,7 @@
 			"name": "freq",
 			"type": "number",
 			"initialValue": "0.35",
-			"comment": "time between snake movements (in second)",
+			"comment": "tempo entre os movimentos da cobra (em segundos)",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 638451955604470
@@ -110,7 +110,7 @@
 			"name": "lastUID",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "UID of the last part of the snake",
+			"comment": "UID da última parte da cobra",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 527962042173416
@@ -120,7 +120,7 @@
 			"name": "alive",
 			"type": "boolean",
 			"initialValue": "true",
-			"comment": "snake is alive and moving",
+			"comment": "cobra esta viva e movimentando",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 744790642049672
@@ -130,7 +130,7 @@
 			"name": "eaten",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "number of elements eaten",
+			"comment": "número de elementos comidos",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 159234205323130
@@ -140,7 +140,7 @@
 			"name": "eatenMod",
 			"type": "number",
 			"initialValue": "1",
-			"comment": "number used in modulo comparison",
+			"comment": "número utilizado na comparação do modulo",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 428971750454639
@@ -150,14 +150,36 @@
 			"name": "iterations",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "number of times the modulo number has been used",
+			"comment": "número de vezes que o número do modulo foi utilizado",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 134328408853525
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 197388734520943
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 295514649036514,
+					"parameters": {
+						"variable": "eaten",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 451874651418615
+		},
+		{
 			"eventType": "comment",
-			"text": "spawn the starting snake"
+			"text": "spawna a cobra inicial"
 		},
 		{
 			"functionName": "spawnStartSnake",
@@ -176,7 +198,7 @@
 					"name": "headX",
 					"type": "number",
 					"initialValue": "0",
-					"comment": "head X position (X in pixels)",
+					"comment": "posição X da cabeça (X em pixels)",
 					"isStatic": false,
 					"isConstant": false,
 					"sid": 107724375361148
@@ -186,14 +208,14 @@
 					"name": "headY",
 					"type": "number",
 					"initialValue": "0",
-					"comment": "head Y position (Y in pixels)",
+					"comment": "posição Y da cabeça (Y em pixels)",
 					"isStatic": false,
 					"isConstant": false,
 					"sid": 167043387999481
 				},
 				{
 					"eventType": "comment",
-					"text": "a first instance exists in the layout, which is set to be the [i]head[/i] of the snake that will collide with [b]toEat[/b] objects\nwe keep in memory its current X and Y position in the layout to use as a reference for the other spawned instances"
+					"text": "existe uma primeira instância na disposição, que está definida para ser a [i]head[/i] da serpente que colidirá com [b]toEat[/b] objetos guardamos na memória a sua posição atual X e Y no esquema para usar como referência para as outras instâncias spawnadas"
 				},
 				{
 					"eventType": "block",
@@ -231,7 +253,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "we make a loop from 1 (existing instance) up to [i]length[/i] to spawn the appropriate number of [b]snake[/b] instances on start of the game"
+					"text": "fazemos um loop de 1 (instância existente) até [i]length[/i] para spawnar o número apropriado de [b]snake [b]instances[/b] no início do jogo"
 				},
 				{
 					"eventType": "block",
@@ -262,7 +284,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "we make sure we only have a single [i]head[/i] for the snake by setting the value for the instance variable to false in new instances "
+							"text": "asseguramos que só temos uma única [i]head[/i] para a cobra, definindo o valor da variável de instância como falso em novas instâncias "
 						},
 						{
 							"id": "set-boolean-instvar",
@@ -275,7 +297,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "[i]lastUID[/i] is the Unique Identifier of the last snake instance. We keep it as reference for when we need to spawn a new [b]snake[/b] instance in the function [i][b]spawnSnakePart[/b][/i] ev.24"
+							"text": "[i]lastUID[/i] é o Identificador Único da última instância da cobra. Mantemos como referência para quando precisamos de criar uma nova instância [b]snake[/b] na função [i][b]spawnSnakePart[/b][/i] ev.24"
 						},
 						{
 							"id": "set-eventvar-value",
@@ -293,7 +315,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "main function to move the snake"
+			"text": "função principal para mover a serpente"
 		},
 		{
 			"functionName": "moveSnake",
@@ -309,7 +331,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "we first move the head calling the dedicated [i][b]moveHead[/b][/i] function\n[i][b]setNextPos[/b][/i] is then called to keep in memory the former position of that instance which will be applied to the next instance when moving the snake"
+					"text": "primeiro movemos a cabeça chamando a função dedicada [i][b]moveHead[/b][/i]\n[i][b]setNextPos[/b][/i] é então chamado para manter na memória a posição anterior daquela instância que será aplicada à instância seguinte ao mover a serpente"
 				},
 				{
 					"eventType": "block",
@@ -343,7 +365,7 @@
 				},
 				{
 					"eventType": "comment",
-					"text": "we then move the remaining [b]snake[/b] instances, each one by one, calling the dedicated [i][b]movePos[/b][/i] function"
+					"text": "depois movemos as instâncias restantes [b]snake[/b], uma por uma, chamando a função dedicada [i][b]movePos[/b][/i]."
 				},
 				{
 					"eventType": "block",
@@ -410,7 +432,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "the function has been passed the UID for the instance in order to pick only that specific [b]snake[/b] instance "
+					"text": "a função foi passada a UID para a instância a fim de escolher apenas aquela instância [b]snake[/b] específica "
 				},
 				{
 					"eventType": "block",
@@ -427,7 +449,7 @@
 					"actions": [
 						{
 							"type": "comment",
-							"text": "we keep in memory its previous X and Y instance, in the grid coordinate"
+							"text": "guardamos em memória a sua instância anterior X e Y, na coordenada do grid"
 						},
 						{
 							"id": "set-instvar-value",
@@ -452,7 +474,7 @@
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "depending on the current value of the [i]dir[/i] (direction) instance variable, we move the snake head in the TileMovement grid accordingly\n[i]note[/i]: in this template, we make the movement \"instant\". The TileMovement behavior can also \"animate\" the movement over time. Please refer to the manual article of the TileMovement behavior for further explanation - https://www.construct.net/en/make-games/manuals/construct-3/behavior-reference/tile-movement"
+							"text": "dependendo do valor actual da variável de instância [i]dir[/i] (direção) , movemos a cabeça da cobra no grid TileMovement em conformidade\n[i]note[/i]: neste modelo, fazemos o movimento \"instantâneo\". O comportamento TileMovement também pode \"animar\" o movimento ao longo do tempo. "
 						},
 						{
 							"eventType": "block",
@@ -471,7 +493,7 @@
 							"actions": [
 								{
 									"type": "comment",
-									"text": "right"
+									"text": "direita"
 								},
 								{
 									"id": "set-grid-position",
@@ -504,7 +526,7 @@
 							"actions": [
 								{
 									"type": "comment",
-									"text": "down"
+									"text": "baixo"
 								},
 								{
 									"id": "set-grid-position",
@@ -537,7 +559,7 @@
 							"actions": [
 								{
 									"type": "comment",
-									"text": "left"
+									"text": "esquerda"
 								},
 								{
 									"id": "set-grid-position",
@@ -570,7 +592,7 @@
 							"actions": [
 								{
 									"type": "comment",
-									"text": "up"
+									"text": "cima"
 								},
 								{
 									"id": "set-grid-position",
@@ -612,7 +634,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "the function has been passed the UID for the instance in order to pick only that specific [b]snake[/b] instance "
+					"text": "a função foi passada a UID para a instância a fim de escolher apenas aquela instância [b]snake[/b] específica "
 				},
 				{
 					"eventType": "block",
@@ -629,7 +651,7 @@
 					"actions": [
 						{
 							"type": "comment",
-							"text": "we keep in memory its previous X and Y instance, in the grid coordinate"
+							"text": "guardamos em memória a sua instância anterior X e Y, na coordenada do grid"
 						},
 						{
 							"id": "set-instvar-value",
@@ -651,7 +673,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "we move the current instance to the last position of the previous instance that has been treated\nthe location is kept in the global variables [i]nextX[/i] and [i]nextY[/i] which are updated in the function [i][b]setNextPos[/b][/i]"
+							"text": "deslocamos a instância atual para a última posição da instância anterior que foi tratada\na localização é mantida nas variáveis globais [i]nextX[/i] e [i]nextY[/i] que são atualizadas na função [i][b]setNextPos[/b][/i]"
 						},
 						{
 							"id": "set-grid-position",
@@ -674,7 +696,7 @@
 			"name": "nextX",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "Target X in grid for next snake instance",
+			"comment": "Alvo X no grid para a próxima instância da cobra",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 560896809685225
@@ -684,7 +706,7 @@
 			"name": "nextY",
 			"type": "number",
 			"initialValue": "0",
-			"comment": "Target Y in grid for next snake instance",
+			"comment": "Alvo Y no grid para a próxima instância da cobra",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 182575116593396
@@ -711,7 +733,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "the function has been passed the UID for the instance in order to pick only that specific [b]snake[/b] instance "
+					"text": "a função foi passada a UID para a instância a fim de escolher apenas aquela instância [b]snake[/b] específica "
 				},
 				{
 					"eventType": "block",
@@ -728,7 +750,7 @@
 					"actions": [
 						{
 							"type": "comment",
-							"text": "the values of the global variables [i]nextX[/i] and [i]nextY[/i] is updated with the previous location of the picked [b]snake[/b] instance"
+							"text": "os valores das variáveis globais [i]nextX[/i] e [i]nextY[/i] são actualizados com a localização anterior da instância [b]snake[/b] escolhida"
 						},
 						{
 							"id": "set-eventvar-value",
@@ -755,11 +777,11 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "player input - set the direction of the snake (in degrees)"
+			"text": "entrada do jogador - definir a direção da cobra (em graus)"
 		},
 		{
 			"eventType": "comment",
-			"text": "using the keyboard (the object [b]Keyboard[/b] has been added to the project), we set the [i]dir[/i] instance variable of the snake [i]head[/i] in order to know in what direction the player wants the snake to move"
+			"text": "usando o teclado (o objecto [b]Keyboard[/b] foi adicionado ao projeto), definimos a variável de instância [i]dir[/i] da cobra [i]head[/i] a fim de saber em que direção o jogador quer que a cobra se mova"
 		},
 		{
 			"eventType": "block",
@@ -784,7 +806,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "up"
+					"text": "cima"
 				},
 				{
 					"id": "set-instvar-value",
@@ -821,7 +843,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "right"
+					"text": "direita"
 				},
 				{
 					"id": "set-instvar-value",
@@ -858,7 +880,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "down"
+					"text": "baixo"
 				},
 				{
 					"id": "set-instvar-value",
@@ -895,7 +917,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "left"
+					"text": "esquerda"
 				},
 				{
 					"id": "set-instvar-value",
@@ -911,7 +933,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "touching an [b]arrow[/b] (the [b]Touch[/b] object has been added to the project), we set the [i]dir[/i] instance variable of the snake [i]head[/i] accordingly to the current [b]arrow[/b] angle"
+			"text": "tocando numa [b]arrow[/b] (o objeto [b]Touch[/b] foi adicionado ao projeto), definimos a variável de instância [i]dir[/i] da cobra [i]head[/i] de acordo com o ângulo [b]arrow[/b] atual"
 		},
 		{
 			"eventType": "block",
@@ -945,7 +967,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "we make the arrow flash for half a second in order to let the player know her input has been registered"
+					"text": "fazemos a seta piscar durante meio segundo para que o leitor saiba que a sua entrada foi registada"
 				},
 				{
 					"id": "flash",
@@ -963,7 +985,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "when the game is over, the [b]btnRestart[/b] is visible and can be touched in order to restart the game"
+			"text": "quando o jogo terminar, o [b]btnRestart[/b] é visível e pode ser tocado a fim de reiniciar o jogo"
 		},
 		{
 			"eventType": "block",
@@ -993,7 +1015,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "spawns a new snake part"
+			"text": "cria uma nova parte de cobra"
 		},
 		{
 			"functionName": "spawnSnakePart",
@@ -1009,7 +1031,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "we pick the last [b]snake[/b] instance (its UID is kept in the global variable [i]lastUID[/i]) in order to spawn a new [b]snake instance[/b]"
+					"text": "escolhemos a última instância [b]snake[/b] (a sua UID é mantida na variável global [i]lastUID[/i]) a fim de criar uma nova instância [b]snake[/b]"
 				},
 				{
 					"eventType": "block",
@@ -1038,7 +1060,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "we make sure we only have a single [i]head[/i] for the snake by setting the value for the instance variable to false in new instances "
+							"text": "asseguramos que só temos uma única [i]head[/i] para a cobra, definindo o valor da variável de instância como falso em novas instâncias "
 						},
 						{
 							"id": "set-boolean-instvar",
@@ -1051,7 +1073,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "[i]lastUID[/i] is the Unique Identifier of the last snake instance. We keep it as reference for when we need to spawn a new [b]snake[/b] instance"
+							"text": "[i]lastUID[/i] é o Identificador Único da última instância da cobra. Mantemos como referência para quando precisamos de criar uma nova instância [b]snake[/b]."
 						},
 						{
 							"id": "set-eventvar-value",
@@ -1069,7 +1091,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "spawns toEat"
+			"text": "cria toEat"
 		},
 		{
 			"functionName": "spawnToEat",
@@ -1083,7 +1105,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "we create a [b]toEat[/b] instance at a random position in the game area (between the walls)"
+					"text": "criamos uma instância [b]toEat[/b] numa posição aleatória na área de jogo (entre as paredes)"
 				},
 				{
 					"id": "create-object",
@@ -1102,7 +1124,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "snake collisions"
+			"text": "colisão da cobra"
 		},
 		{
 			"eventType": "block",
@@ -1204,7 +1226,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "related to the modification of the speed of the snake"
+			"text": "relacionado com a modificação da velocidade da serpente"
 		},
 		{
 			"functionName": "checkEaten",
@@ -1218,7 +1240,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "the snake speed is modified and goes up as [b]toEat[/b] objects are eaten\n[i]eaten[/i] is incremented and also acts as the general score\n[i]iterations[/i] correspond to the number of [b]toEat[/b] that have been eaten in the current \"loop\""
+					"text": "a velocidade da cobra é modificada e sobe à medida que os objetos [b]aEat[/b] são comidos\n[i]eaten[/i] é incrementado e também atua como a pontuação geral\n[i]iterations[/i] correspondem ao número de [b]toEat[/b] que foram comidas no \"loop\" atual"
 				},
 				{
 					"id": "add-to-eventvar",
@@ -1243,7 +1265,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "if [i]iterations[/i] is bigger or equal to the value of [i]eatenMod[/i]..."
+					"text": "se [i]iterations[/i] for maior ou igual ao valor de [i]eatenMod[/i]..."
 				},
 				{
 					"eventType": "block",
@@ -1262,11 +1284,11 @@
 					"actions": [
 						{
 							"type": "comment",
-							"text": "at first, we want 1 [b]toEat[/b] to be eaten, then the speed is modified\nthen, the number of [b]toEat[/b] objects to be eaten before modifying the speed again is increased, and checked thanks to [i]iterations[/i] and [i]eatenMod[/i] (modificator)"
+							"text": "a velocidade da cobra é modificada e sobe à medida que os objetos [b]toEat[/b] são comidos\n[i]eaten[/i] é incrementado e também atua como a pontuação geral\n[i]iterations[/i] correspondem ao número de [b]toEat[/b] que foram comidas no \"loop\" atual"
 						},
 						{
 							"type": "comment",
-							"text": "increment the value of [i]eatenMod[/i] by 1"
+							"text": "aumentar o valor de [i]eatenMod[/i] em 1"
 						},
 						{
 							"id": "add-to-eventvar",
@@ -1279,7 +1301,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "reset the value of [i]iterations[/i] to 0; this is a new \"loop\""
+							"text": "repor o valor de [i]iterations[/i] para 0; este é um novo \"loop\""
 						},
 						{
 							"id": "set-eventvar-value",
@@ -1292,7 +1314,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "lower the value of [i]freq[/i] which will have the effect of moving the snake more often, moving it faster\nthe system expression [i]clamp()[/i] is there to make sure the value of [i]freq[/i] stays in values that keep the game manageable and fun for the player. The minimum value is 0.025 (second) and when the snake is the slowest, it is moved at 0.30 second"
+							"text": "baixar o valor de [i]freq[/i] que terá o efeito de mover a cobra com mais frequência, movendo-a mais rapidamente\na expressão do sistema [i]clamp()[/i] existe para garantir que o valor de [i]freq[/i] se mantém em valores que mantêm o jogo manejável e divertido para o jogador. O valor mínimo é 0,025 (segundo) e quando a cobra é a mais lenta, é movida a 0,30 segundos"
 						},
 						{
 							"id": "set-eventvar-value",
@@ -1305,7 +1327,7 @@
 						},
 						{
 							"type": "comment",
-							"text": "spawn an additional [b]toEat[/b] to keep the game running and offer more possibilities to the player\nthis also acts as making the game harder as the snake will keep on growing when eating [b]toEat[/b] rendering the playing space smaller for the player"
+							"text": "criar um adicional [b]toEat[/b] para manter o jogo a funcionar e oferecer mais possibilidades ao jogador\nisto também atua como um jogo mais difícil, pois a serpente continuará a crescer quando comer [b]toEat[/b] tornando o espaço de jogo mais pequeno para o jogador"
 						},
 						{
 							"callFunction": "spawnToEat",
@@ -1318,7 +1340,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "function called when the game is over (the snake has bitten itself or a wall)"
+			"text": "função chamada quando o jogo termina (a cobra mordeu a si própria ou uma parede)"
 		},
 		{
 			"functionName": "gameOver",
@@ -1332,7 +1354,7 @@
 			"actions": [
 				{
 					"type": "comment",
-					"text": "set the global variable [i]alive[/i] to false, the snake won't be moved further"
+					"text": "definir a variável global [i]alive[/i] para falsa, a cobra não será movida mais"
 				},
 				{
 					"id": "set-boolean-eventvar",
@@ -1345,7 +1367,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "the snake flashes indefinitely "
+					"text": "a cobra pisca indefinidamente "
 				},
 				{
 					"id": "flash",
@@ -1360,7 +1382,7 @@
 				},
 				{
 					"type": "comment",
-					"text": "[b]btnRestart[/b] is displayed, the player can touch it to restart the game"
+					"text": "[b]btnRestart[/b] é exibido, o jogador pode tocar nele para reiniciar o jogo"
 				},
 				{
 					"id": "set-visible",
@@ -1375,7 +1397,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "if the game is not executed on mobile (we assume on desktop computer, with a keyboard) we display a text inviting the player to press F5 to restart, alternative to touching [b]btnRestart[/b]\nthis is made possible by having added the [b]PlatformInfo[/b] object to the project"
+					"text": "se o jogo não for executado em celular (assumimos que no computador desktop, com um teclado) exibimos um texto convidando o jogador a pressionar F5 para reiniciar, alternativa ao toque [b]btnRestart[/b]\nisto é possível graças à adição do objeto [b]PlatformInfo[/b] ao projeto"
 				},
 				{
 					"eventType": "block",
@@ -1405,13 +1427,14 @@
 							}
 						}
 					],
-					"sid": 908035967745853
+					"sid": 908035967745853,
+					"disabled": true
 				}
 			]
 		},
 		{
 			"eventType": "comment",
-			"text": "checks if [b]toEat[/b] is spawned on a snake part or a wall; if it is, destroys it and spawns a new one"
+			"text": "verifica se [b]toEat[/b] é criado numa parte da cobra ou numa parede; se for, destrói e cria uma nova"
 		},
 		{
 			"eventType": "block",
@@ -1427,7 +1450,7 @@
 			"children": [
 				{
 					"eventType": "comment",
-					"text": "we check whether, on creation, [b]toEat[/b] is overlapping a wall or a snake part"
+					"text": "verificamos se, na criação, [b]toEat[/b] está a sobrepor uma parede ou a uma parte de uma cobra"
 				},
 				{
 					"eventType": "block",
@@ -1480,7 +1503,7 @@
 		},
 		{
 			"eventType": "comment",
-			"text": "move the snake every [i]freq[/i] seconds, update the displayed score"
+			"text": "mover a cobra a cada [i]freq[/i] segundos, atualizar a pontuação exibida"
 		},
 		{
 			"eventType": "block",
@@ -1510,13 +1533,39 @@
 				{
 					"id": "set-text",
 					"objectClass": "txtScore",
-					"sid": 853364042880681,
+					"sid": 786986135446427,
 					"parameters": {
-						"text": "\"Score: \" & eaten"
+						"text": "\"Pontos: \" & eaten"
 					}
 				}
 			],
 			"sid": 508447182381046
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 559761551540436,
+					"parameters": {
+						"variable": "eaten",
+						"comparison": 5,
+						"value": "15"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 857158255933755,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 693809163554091
 		}
 	],
 	"sid": 458205160109742
