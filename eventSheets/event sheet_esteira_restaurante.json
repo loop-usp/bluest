@@ -1,0 +1,284 @@
+{
+	"name": "Event sheet_Esteira_Restaurante",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Pontos_Esteira",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 478512436443029
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "HOME",
+					"sid": 425498372882172
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 723936539891740,
+					"parameters": {
+						"layout": "Layout_Principal"
+					}
+				}
+			],
+			"sid": 988555632504700
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 447087465364176,
+					"parameters": {
+						"interval-seconds": "2.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Criador_Esteira",
+					"sid": 388651899640735,
+					"parameters": {
+						"object": "Alimento_Bom",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Alimento_Bom",
+					"sid": 678137380091080,
+					"parameters": {
+						"frame-number": "random(0,3)"
+					}
+				}
+			],
+			"sid": 130447774701541
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 405374335886280,
+					"parameters": {
+						"interval-seconds": "5.2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Criador_Esteira",
+					"sid": 831006560899685,
+					"parameters": {
+						"object": "Alimento_Ruim",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 986818336484259
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Alimento_Bom",
+					"sid": 943864142043504,
+					"parameters": {
+						"object": "Prato"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 611917543543232,
+					"parameters": {
+						"variable": "Pontos_Esteira",
+						"value": "100"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Pontos_Esteira",
+					"sid": 219859646835735,
+					"parameters": {
+						"text": "Pontos_Esteira"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Alimento_Bom",
+					"sid": 786765500682537
+				}
+			],
+			"sid": 626645327972516
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Alimento_Ruim",
+					"sid": 985660051421864,
+					"parameters": {
+						"object": "Prato"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 308036489729365,
+					"parameters": {
+						"variable": "Pontos_Esteira",
+						"value": "200"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Pontos_Esteira",
+					"sid": 643149234064420,
+					"parameters": {
+						"text": "Pontos_Esteira"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Alimento_Ruim",
+					"sid": 531000947967251
+				}
+			],
+			"sid": 571707838869702
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parede_Esteira",
+					"sid": 529812302108801,
+					"parameters": {
+						"object": "Alimento_Bom"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 221954676030991,
+					"parameters": {
+						"variable": "Pontos_Esteira",
+						"value": "50"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Alimento_Bom",
+					"sid": 139179515722687
+				}
+			],
+			"sid": 552077713750660
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Parede_Esteira",
+					"sid": 672333132735602,
+					"parameters": {
+						"object": "Alimento_Ruim"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 924529467561113,
+					"parameters": {
+						"variable": "Pontos_Esteira",
+						"value": "50"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Alimento_Ruim",
+					"sid": 182734550171665
+				}
+			],
+			"sid": 889986322577898
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 158263592360384,
+					"parameters": {
+						"variable": "Pontos_Esteira",
+						"comparison": 5,
+						"value": "2000"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 260094886354644,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 789967195886287
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 504678240542900,
+					"parameters": {
+						"variable": "Pontos_Esteira",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 322316987329418
+				}
+			],
+			"sid": 545426601270034
+		}
+	],
+	"sid": 914026895729002
+}

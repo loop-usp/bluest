@@ -1,0 +1,368 @@
+{
+	"name": "Event sheet_Cesta_Sapataria",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Pontos3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 702649501093841
+		},
+		{
+			"eventType": "variable",
+			"name": "Vida3",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 320677525204234
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 670277533029872
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bons_sapatos",
+					"sid": 112156572611292
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bons_sapatos",
+					"sid": 564967048315091
+				}
+			],
+			"sid": 164301929374602
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "HOME",
+					"sid": 858929953780018
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 713257907840600,
+					"parameters": {
+						"layout": "Layout_Principal"
+					}
+				}
+			],
+			"sid": 392632364687491
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 666595033214370,
+					"parameters": {
+						"interval-seconds": "3.23"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Criador_Cesta",
+					"sid": 401285374146367,
+					"parameters": {
+						"object": "bons_sapatos",
+						"layer": "0",
+						"image-point": "random(1,14)",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "bons_sapatos",
+					"sid": 326873480903636,
+					"parameters": {
+						"frame-number": "random(0,3)"
+					}
+				}
+			],
+			"sid": 589401299134404
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 116029877633365,
+					"parameters": {
+						"interval-seconds": "5.34"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Criador_Cesta",
+					"sid": 160426940678912,
+					"parameters": {
+						"object": "ruins_sapatos",
+						"layer": "0",
+						"image-point": "random(1,14)",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 918858604121872
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bons_sapatos",
+					"sid": 547397094943825,
+					"parameters": {
+						"object": "Chão"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 384644976821239,
+					"parameters": {
+						"variable": "Vida3",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bons_sapatos",
+					"sid": 724402519983582
+				}
+			],
+			"sid": 993316240079934,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bons_sapatos",
+					"sid": 853788921431194,
+					"parameters": {
+						"object": "Cesta"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 766333991301903,
+					"parameters": {
+						"variable": "Pontos3",
+						"value": "50"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bons_sapatos",
+					"sid": 991856764723763
+				}
+			],
+			"sid": 368436001099201,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ruins_sapatos",
+					"sid": 295004660479206,
+					"parameters": {
+						"object": "Chão"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 323173546562612,
+					"parameters": {
+						"variable": "Pontos3",
+						"value": "25"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ruins_sapatos",
+					"sid": 696625871234586
+				}
+			],
+			"sid": 360683629601230,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ruins_sapatos",
+					"sid": 773334882531653,
+					"parameters": {
+						"object": "Cesta"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 520267447548453,
+					"parameters": {
+						"variable": "Vida3",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ruins_sapatos",
+					"sid": 115516241075820
+				}
+			],
+			"sid": 599464785742103,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 613808229765840
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Pontos",
+					"sid": 568072645444091,
+					"parameters": {
+						"text": "Pontos3"
+					}
+				}
+			],
+			"sid": 395121560054177
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 358591904005513
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Vida",
+					"sid": 332157619597355,
+					"parameters": {
+						"text": "Vida3"
+					}
+				}
+			],
+			"sid": 276660043936011
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 312314592740156
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "vidas",
+					"sid": 179117726173429,
+					"parameters": {
+						"frame-number": "Vida3"
+					}
+				}
+			],
+			"sid": 485383052863878
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 378541427411290,
+					"parameters": {
+						"variable": "Vida3",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 974620721915318
+				}
+			],
+			"sid": 767148886540409
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 247369415903988,
+					"parameters": {
+						"variable": "Pontos3",
+						"comparison": 5,
+						"value": "800"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 369509561900403,
+					"parameters": {
+						"layout": "Sapataria"
+					}
+				}
+			],
+			"sid": 656755690942337
+		}
+	],
+	"sid": 978042178609886
+}

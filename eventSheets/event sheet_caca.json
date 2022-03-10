@@ -1,0 +1,531 @@
+{
+	"name": "Event sheet_Caca",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Botoes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "VOLTAR_LABIRINTO",
+							"sid": 212592813604275
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 280740968536843,
+							"parameters": {
+								"layout": "Parque"
+							}
+						}
+					],
+					"sid": 973375234548574
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "VOLTAR_SUPORTE",
+							"sid": 359657323024687
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 583945765178334,
+							"parameters": {
+								"layout": "Parque"
+							}
+						}
+					],
+					"sid": 438500951685605
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "VOLTAR_CAÇA",
+							"sid": 440266204368336
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 765910970667145,
+							"parameters": {
+								"layout": "Dentista"
+							}
+						}
+					],
+					"sid": 781607872743507
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-clicked",
+							"objectClass": "VOLTAR_7ERROS",
+							"sid": 712610039930992
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 950076446199748,
+							"parameters": {
+								"layout": "Dentista"
+							}
+						}
+					],
+					"sid": 568453803513755
+				}
+			],
+			"sid": 527298137318745
+		},
+		{
+			"eventType": "variable",
+			"name": "Muda_fase",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 957518708035392
+		},
+		{
+			"eventType": "variable",
+			"name": "Lenght",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 962044717993096
+		},
+		{
+			"eventType": "variable",
+			"name": "select",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 660887249469274
+		},
+		{
+			"eventType": "variable",
+			"name": "ListWord",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 396360724661772
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 212173339348514
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Line2",
+					"sid": 330556454680219
+				}
+			],
+			"sid": 838374929329709,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each-ordered",
+							"objectClass": "System",
+							"sid": 113648349371475,
+							"parameters": {
+								"object": "Word",
+								"expression": "Word.Y",
+								"order": "ascending"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 484709875572993,
+							"parameters": {
+								"variable": "ListWord",
+								"value": "word.Text  &\".\""
+							}
+						}
+					],
+					"sid": 372757769529987
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-text",
+							"objectClass": "letter",
+							"sid": 818267291690757,
+							"parameters": {
+								"text-to-compare": "\"#\"",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "letter",
+							"sid": 138769682892004,
+							"parameters": {
+								"text": "Keyboard.StringFromKeyCode(random(65,91))"
+							}
+						}
+					],
+					"sid": 138729634642300
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-start",
+					"objectClass": "Touch",
+					"sid": 439292100147526
+				},
+				{
+					"id": "is-touching-object",
+					"objectClass": "Touch",
+					"sid": 593524272471095,
+					"parameters": {
+						"object": "letter"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "LINE1",
+					"sid": 961457486801998,
+					"parameters": {
+						"object": "letter",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "LINE1",
+					"sid": 679204651848122,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 339373008674319,
+					"parameters": {
+						"variable": "select",
+						"value": "\"\""
+					}
+				}
+			],
+			"sid": 808288149206235
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-in-touch",
+					"objectClass": "Touch",
+					"sid": 730098187979743
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "letter",
+					"sid": 516019655881343,
+					"parameters": {
+						"which": "nearest",
+						"x": "Touch.X",
+						"y": "Touch.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "LINE1",
+					"sid": 651274588093202,
+					"parameters": {
+						"x": "letter.X",
+						"y": "letter.Y"
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "LINE1",
+					"sid": 997622967312695,
+					"parameters": {
+						"width": "distance(Self.X,Self.Y,letter.X,letter.Y)"
+					}
+				}
+			],
+			"sid": 970538141736641
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 156848542451968
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "LINE1",
+					"sid": 507748583119479,
+					"parameters": {
+						"object": "letter"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 250678346347654,
+					"parameters": {
+						"variable": "Lenght",
+						"value": "letter.PickedCount"
+					}
+				}
+			],
+			"sid": 787245306145891
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 766582383147685
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "LINE1",
+					"sid": 546208732761159,
+					"parameters": {
+						"object": "letter"
+					}
+				},
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 121856391881909,
+					"parameters": {
+						"object": "letter",
+						"expression": "distance(LINE1.X,LINE1.Y,letter.X,letter.Y)",
+						"order": "ascending"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 132479965217520,
+					"parameters": {
+						"variable": "select",
+						"value": "letter.Text"
+					}
+				}
+			],
+			"sid": 685115638673618,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 831742776372403,
+							"parameters": {
+								"name": "\"List\"",
+								"start-index": "0",
+								"end-index": "tokencount(ListWord,\".\")-1"
+							}
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 995093167543661,
+							"parameters": {
+								"first-value": "len(select)",
+								"comparison": 0,
+								"second-value": "Lenght"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 613539901610062,
+							"parameters": {
+								"variable": "select",
+								"comparison": 0,
+								"value": "tokenat(ListWord,loopindex(\"List\"),\".\")"
+							}
+						},
+						{
+							"id": "compare-text",
+							"objectClass": "Word",
+							"sid": 558474016888469,
+							"parameters": {
+								"text-to-compare": "select",
+								"case-sensitivity": "ignore-case"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "LINE1",
+							"sid": 774802730536770,
+							"parameters": {
+								"object": "Line2",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "Line2",
+							"sid": 508916559769122,
+							"parameters": {
+								"width": "LINE1.Width"
+							}
+						},
+						{
+							"id": "set-font-color",
+							"objectClass": "Word",
+							"sid": 390547793968387,
+							"parameters": {
+								"color": "rgb(255, 0, 0)"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "LINE1",
+							"sid": 207048657943969,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 609319630037986
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 743661190461229,
+					"parameters": {
+						"first-value": "Line2.Count",
+						"comparison": 0,
+						"second-value": "Word.Count"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "TXT_WIN",
+					"sid": 341508428522478,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 191659476715371,
+					"parameters": {
+						"variable": "Muda_fase",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 163125358757213
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 493658291964093,
+					"parameters": {
+						"variable": "Muda_fase",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 660317190779015,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 211178106071034,
+					"parameters": {
+						"layout": "Dentista"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 610135296874381,
+					"parameters": {
+						"variable": "Muda_fase",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 510674542644544
+		}
+	],
+	"sid": 553239238302620
+}

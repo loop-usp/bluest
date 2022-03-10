@@ -17,7 +17,7 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Text",
+			"name": "Texto",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -25,7 +25,7 @@
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Tiled Background",
+			"name": "Fundo em blocos",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -33,7 +33,7 @@
 		{
 			"type": "plugin",
 			"id": "Button",
-			"name": "Button",
+			"name": "Botão",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -41,7 +41,7 @@
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Array",
+			"name": "Matriz",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -49,7 +49,7 @@
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Keyboard",
+			"name": "Teclado",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -57,7 +57,7 @@
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "Touch",
+			"name": "Toque",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -65,7 +65,7 @@
 		{
 			"type": "plugin",
 			"id": "PlatformInfo",
-			"name": "Platform info",
+			"name": "Informação da Plataforma",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -73,7 +73,7 @@
 		{
 			"type": "plugin",
 			"id": "Function",
-			"name": "Function",
+			"name": "[Function]",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -89,7 +89,7 @@
 		{
 			"type": "behavior",
 			"id": "Flash",
-			"name": "Flash",
+			"name": "Piscar",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -97,7 +97,7 @@
 		{
 			"type": "behavior",
 			"id": "TileMovement",
-			"name": "Tile movement",
+			"name": "Movimento em grid",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -105,7 +105,7 @@
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solid",
+			"name": "Sólido",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -129,7 +129,7 @@
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"name": "Arrastar & Soltar",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -137,7 +137,7 @@
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Platform",
+			"name": "Plataforma",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -164,7 +164,9 @@
 			"FIM",
 			"Áudio",
 			"Text",
-			"Sprite"
+			"Sprite",
+			"Fundo",
+			"Parabens"
 		],
 		"subfolders": [
 			{
@@ -219,7 +221,11 @@
 					"Vida",
 					"VOLTAR_CESTA_RESTAURANTE",
 					"VOLTAR_CESTA_PUB",
-					"VOLTAR_CESTA_SAPATARIA"
+					"VOLTAR_CESTA_SAPATARIA",
+					"bons_alimento2",
+					"bons_sapatos",
+					"ruins_alimento2",
+					"ruins_sapatos"
 				],
 				"subfolders": [],
 				"name": "Cesta"
@@ -249,7 +255,9 @@
 					"Alimento_Ruim",
 					"Parede_Esteira",
 					"VOLTAR_ESTEIRA_RESTAURANTE",
-					"VOLTAR_ESTEIRA_PUB"
+					"VOLTAR_ESTEIRA_PUB",
+					"Alimento_Bom2",
+					"Alimento_Ruim2"
 				],
 				"subfolders": [],
 				"name": "Esteira"
@@ -316,14 +324,38 @@
 			},
 			{
 				"items": [
-					"VOLTAR_7ERROS",
-					"VOLTAR_CAÇA",
 					"VOLTAR_LABIRINTO",
 					"VOLTAR_SUPORTE",
 					"Contrucao"
 				],
 				"subfolders": [],
 				"name": "EM CONSTRUÇÃO"
+			},
+			{
+				"items": [
+					"LINE1",
+					"VOLTAR_CAÇA",
+					"letter",
+					"Line2",
+					"TXT_WIN",
+					"Word"
+				],
+				"subfolders": [],
+				"name": "Caça-Palavras"
+			},
+			{
+				"items": [
+					"Erro1",
+					"Erro2",
+					"Erro3",
+					"Erro4",
+					"Erro5",
+					"Erro6",
+					"Erro7",
+					"VOLTAR_7ERROS"
+				],
+				"subfolders": [],
+				"name": "7Erros"
 			}
 		]
 	},
@@ -348,15 +380,14 @@
 			{
 				"items": [
 					"Layout_Labirinto",
-					"Layout_Suporte",
-					"Layout_Caça",
-					"Layout_7Erros"
+					"Layout_Suporte"
 				],
 				"subfolders": [],
 				"name": "Em construção"
 			},
 			{
 				"items": [
+					"Layout_7Erros",
 					"Layout_Snake",
 					"Layout_Running_Parque",
 					"Layout_Principal",
@@ -367,7 +398,8 @@
 					"Layout_Running_PUB",
 					"Layout_Esteira_PUB",
 					"Layout_Cesta_PUB",
-					"Layout_Cesta_Sapataria"
+					"Layout_Cesta_Sapataria",
+					"Layout_Caça"
 				],
 				"subfolders": [],
 				"name": "Minigames"
@@ -384,18 +416,22 @@
 			"PUB",
 			"Casa_Reuniao",
 			"Casa_Festa",
-			"Sistema",
-			"EM CONTRUÇÃO"
+			"Sistema"
 		],
 		"subfolders": [
 			{
 				"items": [
-					"Event sheet_Cesta",
-					"Event sheet_Esteira",
+					"Event sheet_Cesta_Restaurante",
+					"Event sheet_Esteira_Restaurante",
 					"Event sheet_Match3",
 					"Event sheet_Principal",
 					"Event sheet_Running",
-					"Event sheet_Snake"
+					"Event sheet_Snake",
+					"Event sheet_Caca",
+					"Event sheet_7Erros",
+					"Event sheet_Cesta_PUB",
+					"Event sheet_Cesta_Sapataria",
+					"Event sheet_Esteira_PUB"
 				],
 				"subfolders": [],
 				"name": "Minigames"
