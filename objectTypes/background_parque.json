@@ -1,0 +1,20 @@
+{
+	"name": "background_parque",
+	"plugin-id": "TiledBg",
+	"sid": 404715942183532,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 1280,
+		"height": 720,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 958279,
+		"useCollisionPoly": true
+	}
+}

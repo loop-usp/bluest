@@ -79,6 +79,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Flash",
 			"name": "Piscar",
@@ -104,16 +112,16 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Bullet",
-			"name": "Projétil",
+			"id": "EightDir",
+			"name": "8 Direction",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
-			"id": "EightDir",
-			"name": "8 Direções",
+			"id": "Bullet",
+			"name": "Bullet",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -133,6 +141,14 @@
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
 		}
 	],
 	"uniqueId": "tj5wknur0l8",
@@ -146,6 +162,9 @@
 			"Player",
 			"BLUEST",
 			"FIM",
+			"Áudio",
+			"Text",
+			"Sprite",
 			"Fundo",
 			"Parabens"
 		],
@@ -168,11 +187,12 @@
 			{
 				"items": [
 					"chao_parque",
-					"bg_parque",
 					"DistanceDisplay",
 					"VOLTAR_RUNNING_PARQUE",
 					"VOLTAR_RUNNING_SAPATARIA",
-					"VOLTAR_RUNNING_PUB"
+					"VOLTAR_RUNNING_PUB",
+					"background_parque",
+					"obstaculo"
 				],
 				"subfolders": [],
 				"name": "Running"
@@ -424,7 +444,13 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "wop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 942913061764302
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

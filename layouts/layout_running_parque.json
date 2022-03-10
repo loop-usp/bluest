@@ -7,7 +7,40 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "bg_parque",
+					"type": "background_parque",
+					"properties": {
+						"initially-visible": true,
+						"origin": "top-left",
+						"wrap-horizontal": "repeat",
+						"wrap-vertical": "repeat",
+						"image-offset-x": 0,
+						"image-offset-y": 0,
+						"image-scale-x": 1,
+						"image-scale-y": 1,
+						"image-angle": 0
+					},
+					"uid": 166,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 1280,
+						"y": 0,
+						"width": 1280,
+						"height": 720,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "background_parque",
 					"properties": {
 						"initially-visible": true,
 						"origin": "top-left",
@@ -21,24 +54,12 @@
 					},
 					"uid": 19,
 					"instanceVariables": {},
-					"behaviors": {
-						"Bullet": {
-							"properties": {
-								"speed": 40,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
-						}
-					},
+					"behaviors": {},
 					"world": {
 						"x": 0,
-						"y": 1,
-						"width": 2851,
-						"height": 724,
+						"y": 0,
+						"width": 1280,
+						"height": 720,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -64,31 +85,22 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 17,
-					"instanceVariables": {},
+					"uid": 70,
+					"instanceVariables": {
+						"GeneratedBlock": false
+					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
 								"enabled": true,
 								"tags": ""
 							}
-						},
-						"Bullet": {
-							"properties": {
-								"speed": 300,
-								"acceleration": 0,
-								"gravity": 0,
-								"bounce-off-solids": false,
-								"set-angle": false,
-								"step": false,
-								"enabled": true
-							}
 						}
 					},
 					"world": {
-						"x": 51,
-						"y": 642,
-						"width": 1557,
+						"x": 257,
+						"y": 440,
+						"width": 919,
 						"height": 78,
 						"originX": 0,
 						"originY": 0,
@@ -112,7 +124,12 @@
 						"live-preview": false
 					},
 					"uid": 20,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"is_holding_jump": false,
+						"MaxHeight": 0,
+						"t": 0,
+						"canPlaySound": true
+					},
 					"behaviors": {
 						"Platform": {
 							"properties": {
@@ -124,18 +141,21 @@
 								"max-fall-speed": 1000,
 								"double-jump": false,
 								"jump-sustain": 0,
-								"default-controls": false,
+								"default-controls": true,
 								"enabled": true
 							}
+						},
+						"Cronômetro": {
+							"properties": {}
 						}
 					},
 					"world": {
-						"x": 146,
-						"y": 481,
-						"width": 52.699999999999996,
+						"x": 257,
+						"y": 316,
+						"width": 52.7,
 						"height": 106.12612612612611,
-						"originX": 0.5133791883454736,
-						"originY": -0.3311263440860215,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
