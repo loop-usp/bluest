@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 27602,
+	"savedWithRelease": 28503,
 	"name": "Bluest",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -11,143 +11,143 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Texto",
+			"name": "Text",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Fundo em blocos",
+			"name": "Tiled Background",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Button",
-			"name": "Botão",
+			"name": "Button",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Matriz",
+			"name": "Array",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Teclado",
+			"name": "Keyboard",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "Toque",
+			"name": "Touch",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "PlatformInfo",
-			"name": "Informação da Plataforma",
+			"name": "Platform info",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Function",
-			"name": "[Function]",
+			"name": "Function",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Audio",
-			"name": "Áudio",
+			"name": "Audio",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Flash",
-			"name": "Piscar",
+			"name": "Flash",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "TileMovement",
-			"name": "Movimento em grid",
+			"name": "Tile movement",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Sólido",
+			"name": "Solid",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "8 Direções",
+			"name": "8 Direction",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Projétil",
+			"name": "Bullet",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Arrastar & Soltar",
+			"name": "Drag & Drop",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Plataforma",
+			"name": "Platform",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Timer",
-			"name": "Cronômetro",
+			"name": "Timer",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		}
 	],
@@ -162,7 +162,9 @@
 			"Player",
 			"BLUEST",
 			"FIM",
-			"Áudio"
+			"Áudio",
+			"Text",
+			"Sprite"
 		],
 		"subfolders": [
 			{
@@ -187,7 +189,8 @@
 					"VOLTAR_RUNNING_PARQUE",
 					"VOLTAR_RUNNING_SAPATARIA",
 					"VOLTAR_RUNNING_PUB",
-					"background_parque"
+					"background_parque",
+					"obstaculo"
 				],
 				"subfolders": [],
 				"name": "Running"
@@ -520,6 +523,8 @@
 		"authorWebsite": "",
 		"appId": "",
 		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
 		"fullscreenQuality": "high",

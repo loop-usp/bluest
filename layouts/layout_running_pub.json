@@ -61,7 +61,8 @@
 					"instanceVariables": {
 						"is_holding_jump": false,
 						"MaxHeight": 0,
-						"t": 0
+						"t": 0,
+						"canPlaySound": true
 					},
 					"behaviors": {
 						"Platform": {
@@ -103,6 +104,7 @@
 			"sid": 705247524230888,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
 			"color": [
 				1,
 				1,
@@ -238,6 +240,7 @@
 			"sid": 261856846636826,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
 			"color": [
 				1,
 				1,
