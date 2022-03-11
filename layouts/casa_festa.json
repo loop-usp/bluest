@@ -142,6 +142,7 @@
 			"sid": 175644472822993,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
 			"color": [
 				1,
 				1,

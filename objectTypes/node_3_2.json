@@ -1,0 +1,67 @@
+{
+	"name": "node_3_2",
+	"plugin-id": "Sprite",
+	"sid": 834299937195549,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "peso",
+			"type": "number",
+			"desc": "",
+			"sid": 569797192472913
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8902083,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 686358947939254,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9609539,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 544608423372263,
+				"name": "ativado",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
