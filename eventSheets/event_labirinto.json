@@ -1,0 +1,4983 @@
+{
+	"name": "Event_labirinto",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Energia",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 528000820750954
+		},
+		{
+			"eventType": "variable",
+			"name": "Estado",
+			"type": "string",
+			"initialValue": "0,0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 580117199852993
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 258534940765296
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "node_0_0",
+					"sid": 277042664274309,
+					"parameters": {
+						"animation": "\"ativado\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 139001484345050
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 752458610907621
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "texto_energia",
+					"sid": 546232501078666,
+					"parameters": {
+						"text": "\"Energia: \" & Energia"
+					}
+				}
+			],
+			"sid": 761970669890290
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 782316134767593,
+					"parameters": {
+						"variable": "Energia",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 179627585607680
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 633091335927139,
+					"parameters": {
+						"variable": "Energia",
+						"value": "6"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 272036718151123,
+					"parameters": {
+						"variable": "Estado",
+						"value": "\"0,0\""
+					}
+				}
+			],
+			"sid": 841669914944951
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 540053883403236,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"0,0\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 816884311124295,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 429673445295583,
+							"parameters": {
+								"object": "node_0_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_1",
+							"sid": 182836118731783,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 928196684167031,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 486947153249272,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,1\""
+							}
+						}
+					],
+					"sid": 909480027990444,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 995507686988722,
+							"parameters": {
+								"object": "node_1_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_1",
+							"sid": 219770905823244,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 935052144510373,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 837127173357635,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,1\""
+							}
+						}
+					],
+					"sid": 531219373361383,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 243171455522421,
+							"parameters": {
+								"object": "node_1_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_0",
+							"sid": 697644210099357,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 340153974840885,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 481038391766702,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,0\""
+							}
+						}
+					],
+					"sid": 288942575121037,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 521288804758614,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"0,1\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 807431408951347,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 514658075013252,
+							"parameters": {
+								"object": "node_1_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_1",
+							"sid": 610192741969657,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 382935316023586,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 637382687870126,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,1\""
+							}
+						}
+					],
+					"sid": 612222700636392,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 259319095215233,
+							"parameters": {
+								"object": "node_1_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_0",
+							"sid": 700732247435793,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 748786319844164,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 526449092858971,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,0\""
+							}
+						}
+					],
+					"sid": 800961272137348,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 341009629386804,
+							"parameters": {
+								"object": "node_1_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_2",
+							"sid": 432709888275074,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 883773293908908,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 495340517941530,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,2\""
+							}
+						}
+					],
+					"sid": 143959215721961,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 336409779573687,
+							"parameters": {
+								"object": "node_0_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_2",
+							"sid": 269085475105775,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 769024335281260,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 902383573148796,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,2\""
+							}
+						}
+					],
+					"sid": 976888231476572,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 911855966180528,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"0,2\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 207984248126804,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 297310910900718,
+							"parameters": {
+								"object": "node_0_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_1",
+							"sid": 566242180732294,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 927112126105723,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 894085776521733,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,1\""
+							}
+						}
+					],
+					"sid": 478624172143077,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 691036756597875,
+							"parameters": {
+								"object": "node_1_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_1",
+							"sid": 352342030303903,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 367715322933963,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 270163132596396,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,1\""
+							}
+						}
+					],
+					"sid": 373974533169315,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 109515501191343,
+							"parameters": {
+								"object": "node_1_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_2",
+							"sid": 981202995024624,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 762719868908823,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 944695172930719,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,2\""
+							}
+						}
+					],
+					"sid": 796166016875264,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 888375260008191,
+							"parameters": {
+								"object": "node_0_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_3",
+							"sid": 972524264757301,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 758575000250291,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 810229230333751,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,3\""
+							}
+						}
+					],
+					"sid": 516108932182946,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 417925438854645,
+							"parameters": {
+								"object": "node_1_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_3",
+							"sid": 384962384796133,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 719097483692631,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 462524751419160,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,3\""
+							}
+						}
+					],
+					"sid": 711905571502274,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 685353339605173,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"0,3\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 564044146234594,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 154867399872064,
+							"parameters": {
+								"object": "node_0_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_2",
+							"sid": 697898963159673,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 133417131782709,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 790979103237412,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,2\""
+							}
+						}
+					],
+					"sid": 786899891169651,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 168610163373050,
+							"parameters": {
+								"object": "node_1_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_2",
+							"sid": 226497603428549,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 300872736748441,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 175983087726098,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,2\""
+							}
+						}
+					],
+					"sid": 836423863689181,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 658882449153290,
+							"parameters": {
+								"object": "node_1_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_3",
+							"sid": 623136004661534,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 626071217989463,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 975995992935842,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,3\""
+							}
+						}
+					],
+					"sid": 520160486630206,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 715088649288229,
+							"parameters": {
+								"object": "node_0_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_4",
+							"sid": 388627658847755,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 908436003361390,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 885410664461494,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,4\""
+							}
+						}
+					],
+					"sid": 704349272632520,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 169869045013350,
+							"parameters": {
+								"object": "node_1_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_4",
+							"sid": 409442901028174,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 716216957673126,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 557556925065709,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,4\""
+							}
+						}
+					],
+					"sid": 186616893595941,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 529087783834306,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"0,4\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 778846123786130,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 280233539042700,
+							"parameters": {
+								"object": "node_1_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_3",
+							"sid": 222166601829524,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 964685264641476,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 521296350523713,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,3\""
+							}
+						}
+					],
+					"sid": 345283126248562,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 988488301890123,
+							"parameters": {
+								"object": "node_0_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_3",
+							"sid": 173453585315043,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 184477331487448,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 232100663230204,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,3\""
+							}
+						}
+					],
+					"sid": 754807547538746,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 191640697397260,
+							"parameters": {
+								"object": "node_1_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_4",
+							"sid": 845614633095244,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 988475511727328,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 288013432902201,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,4\""
+							}
+						}
+					],
+					"sid": 703060886363535,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 761987904838805,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"1,0\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 315775822810399,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 966289715964409,
+							"parameters": {
+								"object": "node_1_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_1",
+							"sid": 787599186892822,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 874488496809893,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 482755671708969,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,1\""
+							}
+						}
+					],
+					"sid": 351436551736476,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 466321243078587,
+							"parameters": {
+								"object": "node_0_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_1",
+							"sid": 768918864582854,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 177645884634437,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 189857951489130,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,1\""
+							}
+						}
+					],
+					"sid": 701311810372716,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 352357739978450,
+							"parameters": {
+								"object": "node_2_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_0",
+							"sid": 269330964402993,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 992680276184576,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 762103000553618,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,0\""
+							}
+						}
+					],
+					"sid": 758777202560426,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 629911462780777,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 952582851380608,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 798627626432779,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 990334175320332,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 904676126843429,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 554432830098255,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"1,1\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 793919445231104,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 941437959606180,
+							"parameters": {
+								"object": "node_0_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_1",
+							"sid": 715172168476159,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 266931100733849,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 390460687608219,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,1\""
+							}
+						}
+					],
+					"sid": 432486296372986,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 589042496245345,
+							"parameters": {
+								"object": "node_1_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_0",
+							"sid": 137778206765420,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 544057457635345,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 933088216994184,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,0\""
+							}
+						}
+					],
+					"sid": 759914808640321,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 730692629076206,
+							"parameters": {
+								"object": "node_2_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_0",
+							"sid": 144866726565614,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 167649617840580,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 120102519654077,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,0\""
+							}
+						}
+					],
+					"sid": 766109956589858,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 623376589460628,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 112122134550330,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 748069948634718,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 580709357532057,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 565874032425088,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 215664821972659,
+							"parameters": {
+								"object": "node_2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_2",
+							"sid": 573538423450021,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 618560005274823,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 652728844339500,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,2\""
+							}
+						}
+					],
+					"sid": 546109782041328,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 640613824177846,
+							"parameters": {
+								"object": "node_1_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_2",
+							"sid": 909452193206803,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 864419146652105,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 338054706904506,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,2\""
+							}
+						}
+					],
+					"sid": 258912757382620,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 326375468402167,
+							"parameters": {
+								"object": "node_0_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_2",
+							"sid": 546519521357441,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 164087536031237,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 991876755561391,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,2\""
+							}
+						}
+					],
+					"sid": 894769059763412,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 877958293024203,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"1,2\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 344304710669983,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 632986443504653,
+							"parameters": {
+								"object": "node_0_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_1",
+							"sid": 124028403785453,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 143343562334772,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 402489716960158,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,1\""
+							}
+						}
+					],
+					"sid": 819749933635970,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 779948457965716,
+							"parameters": {
+								"object": "node_0_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_2",
+							"sid": 550812120152839,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 862759024077981,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 846771980770495,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,2\""
+							}
+						}
+					],
+					"sid": 891853832920636,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 796495588308745,
+							"parameters": {
+								"object": "node_0_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_3",
+							"sid": 676602098799237,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 258540442026193,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 938593056443520,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,3\""
+							}
+						}
+					],
+					"sid": 650260632048324,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 441423012625755,
+							"parameters": {
+								"object": "node_1_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_3",
+							"sid": 660486389151846,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 147720307288649,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 937098895955917,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,3\""
+							}
+						}
+					],
+					"sid": 683722561340538,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 865200312507360,
+							"parameters": {
+								"object": "node_2_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_3",
+							"sid": 540170455041190,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 598487876998737,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 457871406519466,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,3\""
+							}
+						}
+					],
+					"sid": 663296507918969,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 305899108978559,
+							"parameters": {
+								"object": "node_2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_2",
+							"sid": 253879196565698,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 527766828939557,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 245358679982634,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,2\""
+							}
+						}
+					],
+					"sid": 979133941541817,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 893091085155830,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 967817323788061,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 347392971872687,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 787101379360901,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 931121523732681,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 667021007694372,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"1,3\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 658531276487537,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 679424584897886,
+							"parameters": {
+								"object": "node_0_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_2",
+							"sid": 693347633623944,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 168960019839520,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 707442181062296,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,2\""
+							}
+						}
+					],
+					"sid": 967876572521139,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 490086101904366,
+							"parameters": {
+								"object": "node_0_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_3",
+							"sid": 381776807335302,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 953596735861412,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 416858051975595,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,3\""
+							}
+						}
+					],
+					"sid": 225398597070764,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 502358895221612,
+							"parameters": {
+								"object": "node_0_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_4",
+							"sid": 603100123757448,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 537602803668955,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 766194837805422,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,4\""
+							}
+						}
+					],
+					"sid": 450651635406732,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 171254864118560,
+							"parameters": {
+								"object": "node_1_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_4",
+							"sid": 139768144853522,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 474455987475138,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 356792862150906,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,4\""
+							}
+						}
+					],
+					"sid": 142140574811407,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 909459655446389,
+							"parameters": {
+								"object": "node_2_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_4",
+							"sid": 860871280733189,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 975607455830608,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 556099002406713,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,4\""
+							}
+						}
+					],
+					"sid": 930734807441971,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 407899896270113,
+							"parameters": {
+								"object": "node_2_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_3",
+							"sid": 524509462367877,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 748206941237693,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 294007599885285,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,3\""
+							}
+						}
+					],
+					"sid": 197532789801153,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 421397201666903,
+							"parameters": {
+								"object": "node_2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_2",
+							"sid": 620389972835483,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 875524457585082,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 583119124704110,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,2\""
+							}
+						}
+					],
+					"sid": 715699760534799,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 729248423538095,
+							"parameters": {
+								"object": "node_1_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_2",
+							"sid": 364647269454837,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 487118112687468,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 269943996812909,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,2\""
+							}
+						}
+					],
+					"sid": 253789769469925,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 682494638544068,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"1,4\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 144250161318616,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 126685825150865,
+							"parameters": {
+								"object": "node_2_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_4",
+							"sid": 212820135903433,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 954323246806897,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 550088808761826,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,4\""
+							}
+						}
+					],
+					"sid": 835059723160990,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 619584764416780,
+							"parameters": {
+								"object": "node_2_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_3",
+							"sid": 606600878867100,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 643545612709078,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 106044028835006,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,3\""
+							}
+						}
+					],
+					"sid": 841679869783617,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 817051295152742,
+							"parameters": {
+								"object": "node_1_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_3",
+							"sid": 704135059770701,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 280863949644305,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 524246835825698,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,3\""
+							}
+						}
+					],
+					"sid": 248245502504307,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 758459748085327,
+							"parameters": {
+								"object": "node_0_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_3",
+							"sid": 117965804506865,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 817291606929263,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 173548580326556,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,3\""
+							}
+						}
+					],
+					"sid": 998958334590153,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 849443007116895,
+							"parameters": {
+								"object": "node_0_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_0_4",
+							"sid": 805933995906587,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 750383078878160,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 292909911740857,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"0,4\""
+							}
+						}
+					],
+					"sid": 587824373776868,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 305438980693943,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"2,0\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 405515714180682,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 116987475895806,
+							"parameters": {
+								"object": "node_1_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_0",
+							"sid": 991702639238817,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 754992950319525,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 693343796699314,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,0\""
+							}
+						}
+					],
+					"sid": 729420071888141,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 710887653767759,
+							"parameters": {
+								"object": "node_1_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_1",
+							"sid": 900157892558091,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 423098627995512,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 415443071084945,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,1\""
+							}
+						}
+					],
+					"sid": 328669163175127,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 175923527693503,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 441671781541012,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 993414927396989,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 792958248248116,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 182368926540874,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 549741490352979,
+							"parameters": {
+								"object": "node_3_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_0",
+							"sid": 314823742959245,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 563242752825419,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 554963325496669,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,0\""
+							}
+						}
+					],
+					"sid": 513907664519521,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 619914250366761,
+							"parameters": {
+								"object": "node_3_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_1",
+							"sid": 960202861028969,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 155377207928555,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 672316491172634,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,1\""
+							}
+						}
+					],
+					"sid": 211835628695912,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 975983691031037,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"2,1\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 130041071411077,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 361959000256823,
+							"parameters": {
+								"object": "node_1_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_0",
+							"sid": 956184017666913,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 795599349315339,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 899880277295481,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,0\""
+							}
+						}
+					],
+					"sid": 313240611990906,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 990374364104428,
+							"parameters": {
+								"object": "node_1_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_1",
+							"sid": 628145150421289,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 100809331359803,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 457268275997060,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,1\""
+							}
+						}
+					],
+					"sid": 221169635340812,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 743860154463208,
+							"parameters": {
+								"object": "node_1_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_2",
+							"sid": 912623991105252,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 134186913279401,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 328095142359503,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,2\""
+							}
+						}
+					],
+					"sid": 755115968712447,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 863216553589058,
+							"parameters": {
+								"object": "node_2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_2",
+							"sid": 313962584488481,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 980061133955507,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 859118191192370,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,2\""
+							}
+						}
+					],
+					"sid": 745393478635598,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 226070233354819,
+							"parameters": {
+								"object": "node_3_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_2",
+							"sid": 234828481437380,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 484201740614249,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 491367442739604,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,2\""
+							}
+						}
+					],
+					"sid": 350550811723424,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 904168908223501,
+							"parameters": {
+								"object": "node_3_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_1",
+							"sid": 701224716134557,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 457764850964731,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 281218225014295,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,1\""
+							}
+						}
+					],
+					"sid": 669421686353027,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 282732560661023,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 100289159604022,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 652507495496764,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 196680079970266,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 747726613933609,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 197512244054289,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"2,2\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 590165283410975,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 186047229075124,
+							"parameters": {
+								"object": "node_1_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_1",
+							"sid": 522900611108824,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 369194836079087,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 744444374837528,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,1\""
+							}
+						}
+					],
+					"sid": 437172721041053,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 318226970653541,
+							"parameters": {
+								"object": "node_1_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_2",
+							"sid": 346314444599585,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 355100076358286,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 792248125747674,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,2\""
+							}
+						}
+					],
+					"sid": 540728344696122,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 585986840022530,
+							"parameters": {
+								"object": "node_1_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_3",
+							"sid": 591408994297856,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 714635236724102,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 211762657708535,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,3\""
+							}
+						}
+					],
+					"sid": 877742334036849,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 616485558791087,
+							"parameters": {
+								"object": "node_2_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_3",
+							"sid": 606068199030642,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 937096292091627,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 421202373573587,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,3\""
+							}
+						}
+					],
+					"sid": 832795086117581,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 548410244625139,
+							"parameters": {
+								"object": "node_3_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_3",
+							"sid": 615545641433102,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 701800480612557,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 965482889512132,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,3\""
+							}
+						}
+					],
+					"sid": 474541846034977,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 903351464174778,
+							"parameters": {
+								"object": "node_3_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_2",
+							"sid": 183388591305800,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 230173695512783,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 982124356565028,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,2\""
+							}
+						}
+					],
+					"sid": 972814253487787,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 223821443642418,
+							"parameters": {
+								"object": "node_3_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_1",
+							"sid": 656029191032065,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 786387118606445,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 578955235306503,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,1\""
+							}
+						}
+					],
+					"sid": 930687890357937,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 563854809895395,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 689817232027989,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 946291898715419,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 397524800509358,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 999126181550375,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 410021968590950,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"2,3\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 131223124383967,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 541617026106830,
+							"parameters": {
+								"object": "node_1_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_2",
+							"sid": 153080774643454,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 522726055761311,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 846043360978403,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,2\""
+							}
+						}
+					],
+					"sid": 360723450502021,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 709330168156527,
+							"parameters": {
+								"object": "node_1_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_3",
+							"sid": 384776425192537,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 851916330097940,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 289757174969567,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,3\""
+							}
+						}
+					],
+					"sid": 346268827671301,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 515958502978626,
+							"parameters": {
+								"object": "node_1_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_4",
+							"sid": 419860564559020,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 820203156523566,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 833777273016927,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,4\""
+							}
+						}
+					],
+					"sid": 221908173338852,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 662145885429589,
+							"parameters": {
+								"object": "node_2_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_4",
+							"sid": 839616261794686,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 745823524108693,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 117918623217575,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,4\""
+							}
+						}
+					],
+					"sid": 155564353610580,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 377046767872060,
+							"parameters": {
+								"object": "node_3_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_3",
+							"sid": 992004769697873,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 116036683871317,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 502150137129773,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,3\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 188720632732407,
+							"parameters": {
+								"layout": "Parque"
+							}
+						}
+					],
+					"sid": 264414291846257,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 861120834358338,
+							"parameters": {
+								"object": "node_3_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_3",
+							"sid": 591339098596070,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 438100034658548,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 885446139731482,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,3\""
+							}
+						}
+					],
+					"sid": 413480364177914,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 422822671476453,
+							"parameters": {
+								"object": "node_3_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_2",
+							"sid": 464771703634307,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 948945676780628,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 155963272322964,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,2\""
+							}
+						}
+					],
+					"sid": 655127445701893,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 855700470595809,
+							"parameters": {
+								"object": "node_2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_2",
+							"sid": 268473237775563,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 405172934518192,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 955866126441054,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,2\""
+							}
+						}
+					],
+					"sid": 961927553592734,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 261460131225893,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"2,4\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 421742365925417,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 146822716499509,
+							"parameters": {
+								"object": "node_1_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_4",
+							"sid": 621440352407959,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 422300441918667,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 868550023715222,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,4\""
+							}
+						}
+					],
+					"sid": 464689469310113,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 251391585463715,
+							"parameters": {
+								"object": "node_1_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_1_3",
+							"sid": 766709375975545,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 780808958816560,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 216312531175243,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"1,3\""
+							}
+						}
+					],
+					"sid": 235001439055601,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 798066058831845,
+							"parameters": {
+								"object": "node_2_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_3",
+							"sid": 750082749715772,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 550703047776302,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 751970552947397,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,3\""
+							}
+						}
+					],
+					"sid": 536310131265324,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 926300948698342,
+							"parameters": {
+								"object": "node_3_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_3",
+							"sid": 679088799457903,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 393754608655081,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 255918830304462,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,3\""
+							}
+						}
+					],
+					"sid": 807872296252346,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 103006141421381,
+							"parameters": {
+								"object": "node_3_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_3",
+							"sid": 914452458325384,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 581396628882074,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 511273722008575,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,3\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 174369391577537,
+							"parameters": {
+								"layout": "Parque"
+							}
+						}
+					],
+					"sid": 407816543398466,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 468720797565999,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"3,0\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 632732289237049,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 585602418481284,
+							"parameters": {
+								"object": "node_2_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_0",
+							"sid": 465893743226477,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 355179920137462,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 377059604597861,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,0\""
+							}
+						}
+					],
+					"sid": 838670749809196,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 729598028597844,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 278595073286235,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 688273815828120,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 697631725710358,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 727654118946956,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 602428773663089,
+							"parameters": {
+								"object": "node_3_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_1",
+							"sid": 401513800402362,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 845772385332163,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 520831989390324,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,1\""
+							}
+						}
+					],
+					"sid": 905775756735450,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 578618693646277,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"3,1\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 353837012437072,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 998337834579229,
+							"parameters": {
+								"object": "node_3_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_0",
+							"sid": 832513271669238,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 211145548179957,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 306277117922824,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,0\""
+							}
+						}
+					],
+					"sid": 710748200130408,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 593429547850296,
+							"parameters": {
+								"object": "node_2_0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_0",
+							"sid": 912666823351155,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 591783819160236,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 344503282020612,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,0\""
+							}
+						}
+					],
+					"sid": 472434250169810,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 886940620986215,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 121034351394998,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 765538611832459,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 426987123674731,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 309768176803004,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 225562469674223,
+							"parameters": {
+								"object": "node_2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_2",
+							"sid": 140029958557839,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 295166530116296,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 561326618713528,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,2\""
+							}
+						}
+					],
+					"sid": 146613057318834,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 772215751910971,
+							"parameters": {
+								"object": "node_3_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_2",
+							"sid": 922965165788176,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 930360566845169,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 474875156684677,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,2\""
+							}
+						}
+					],
+					"sid": 387457600719282,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 684527270709055,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"3,2\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 819511516655955,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 452738472608050,
+							"parameters": {
+								"object": "node_3_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_1",
+							"sid": 460086533478835,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 830924203790676,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 775322636847088,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,1\""
+							}
+						}
+					],
+					"sid": 223904818088792,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 400242434255961,
+							"parameters": {
+								"object": "node_2_1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_1",
+							"sid": 555761689087585,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 651631372174169,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 662117520159684,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,1\""
+							}
+						}
+					],
+					"sid": 426282698566624,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 305305832194438,
+							"parameters": {
+								"object": "node_2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_2",
+							"sid": 246917288111876,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 649478542901289,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 893270078740482,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,2\""
+							}
+						}
+					],
+					"sid": 301758153185291,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 525389055922300,
+							"parameters": {
+								"object": "node_2_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_3",
+							"sid": 378624133609455,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 377790142069641,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 890369751204412,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,3\""
+							}
+						}
+					],
+					"sid": 315084077636929,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 617228212526948,
+							"parameters": {
+								"object": "node_3_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_3",
+							"sid": 527793825194955,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 655437094934431,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 349112100397537,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,3\""
+							}
+						}
+					],
+					"sid": 800103896170427,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 641694139297950,
+					"parameters": {
+						"variable": "Estado",
+						"comparison": 0,
+						"value": "\"3,3\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 861376901221793,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 516303647387863,
+							"parameters": {
+								"object": "node_3_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_2",
+							"sid": 696806899501818,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 943677422696970,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 868206443086567,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,2\""
+							}
+						}
+					],
+					"sid": 605276420822878,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 917261627115170,
+							"parameters": {
+								"object": "node_2_2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_2",
+							"sid": 517182801833046,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 436349214609655,
+							"parameters": {
+								"variable": "Energia",
+								"value": "4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 182085643679331,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,2\""
+							}
+						}
+					],
+					"sid": 958458873510573,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 887691207417197,
+							"parameters": {
+								"object": "node_2_3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_3",
+							"sid": 563395552750529,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 795757264487527,
+							"parameters": {
+								"variable": "Energia",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 448290164433525,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,3\""
+							}
+						}
+					],
+					"sid": 284443982773755,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 701075608795689,
+							"parameters": {
+								"object": "node_2_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_2_4",
+							"sid": 764569098337574,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 742278088108140,
+							"parameters": {
+								"variable": "Energia",
+								"value": "2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 115124181623704,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"2,4\""
+							}
+						}
+					],
+					"sid": 455561365716562,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 590183168750997,
+							"parameters": {
+								"object": "node_3_4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "node_3_3",
+							"sid": 881722544129063,
+							"parameters": {
+								"animation": "\"ativado\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 971405421091584,
+							"parameters": {
+								"variable": "Energia",
+								"value": "3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 718123854787601,
+							"parameters": {
+								"variable": "Estado",
+								"value": "\"3,3\""
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 454705427937014,
+							"parameters": {
+								"layout": "Parque"
+							}
+						}
+					],
+					"sid": 303126423891173,
+					"isOrBlock": true
+				}
+			]
+		}
+	],
+	"sid": 567596094577278
+}

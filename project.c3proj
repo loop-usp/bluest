@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 27602,
+	"savedWithRelease": 28503,
 	"name": "Bluest",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -11,135 +11,135 @@
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Text",
+			"name": "Texto",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Tiled Background",
+			"name": "Fundo em blocos",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Button",
-			"name": "Button",
+			"name": "Botão",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Array",
+			"name": "Matriz",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Keyboard",
+			"name": "Teclado",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "Touch",
+			"name": "Toque",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "PlatformInfo",
-			"name": "Platform info",
+			"name": "Informação da Plataforma",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
 			"id": "Function",
-			"name": "Function",
+			"name": "[Function]",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Flash",
-			"name": "Flash",
+			"name": "Piscar",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "TileMovement",
-			"name": "Tile movement",
+			"name": "Movimento em grid",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Solid",
+			"name": "Sólido",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Bullet",
+			"name": "Projétil",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "8 Direction",
+			"name": "8 Direções",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Drag & Drop",
+			"name": "Arrastar & Soltar",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Fade",
-			"name": "Fade",
+			"name": "Esmaecer",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		},
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Platform",
+			"name": "Plataforma",
 			"author": "Scirra",
-			"version": "r276.2",
+			"version": "r285.3",
 			"bundled": false
 		}
 	],
@@ -156,7 +156,28 @@
 			"FIM",
 			"ondeestaowally_770x433_acf_cropped",
 			"wally",
-			"barrierWally"
+			"barrierWally",
+			"node_0_0",
+			"node_0_1",
+			"node_0_2",
+			"node_0_3",
+			"node_0_4",
+			"node_1_0",
+			"node_1_1",
+			"node_1_2",
+			"node_1_3",
+			"node_1_4",
+			"node_2_0",
+			"node_2_1",
+			"node_2_2",
+			"node_2_3",
+			"node_2_4",
+			"node_3_0",
+			"node_3_1",
+			"node_3_2",
+			"node_3_3",
+			"node_3_4",
+			"texto_energia"
 		],
 		"subfolders": [
 			{
@@ -425,7 +446,8 @@
 					"Event sheet_Running",
 					"Event sheet_Snake",
 					"Event_sheet_match3_fix",
-					"Event_suporte_na_multidao"
+					"Event_suporte_na_multidao",
+					"Event_labirinto"
 				],
 				"subfolders": [],
 				"name": "Minigames"
@@ -547,6 +569,8 @@
 		"authorWebsite": "",
 		"appId": "",
 		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
 		"fullscreenMode": "letterbox-scale",
 		"fullscreenQuality": "high",
