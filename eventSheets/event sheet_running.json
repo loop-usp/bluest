@@ -219,18 +219,18 @@
 						{
 							"id": "set-position",
 							"objectClass": "chao_parque",
-							"sid": 615028848295898,
+							"sid": 852902787859743,
 							"parameters": {
-								"x": "513",
-								"y": "511"
+								"x": "257",
+								"y": " 440"
 							}
 						},
 						{
 							"id": "set-size",
 							"objectClass": "chao_parque",
-							"sid": 545845990290509,
+							"sid": 704515299315365,
 							"parameters": {
-								"width": "919",
+								"width": "1140",
 								"height": "78"
 							}
 						},
@@ -420,6 +420,21 @@
 						}
 					],
 					"sid": 937859561850978
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Player",
+							"sid": 178114833629193,
+							"parameters": {
+								"object": "chao_parque"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 176705907419746
 				},
 				{
 					"eventType": "block",
@@ -1112,7 +1127,16 @@
 					}
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 553229408913064,
+					"parameters": {
+						"layout": "Parque"
+					}
+				}
+			],
 			"sid": 989636549975831
 		}
 	],

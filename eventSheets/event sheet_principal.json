@@ -31,54 +31,6 @@
 				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
-					"sid": 380973666400165,
-					"parameters": {
-						"object": "CRÉDITOS"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 891933445803133,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 328338967433792,
-					"parameters": {
-						"object": "CONFIGURACOES"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 807179404786220,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
-					"sid": 707685429064734,
-					"parameters": {
-						"object": "VOLUME"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 156160841189576,
-			"disabled": true
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-tap-object",
-					"objectClass": "Touch",
 					"sid": 556068473061653,
 					"parameters": {
 						"object": "Botão_Snake"

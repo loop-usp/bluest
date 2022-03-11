@@ -1,0 +1,26 @@
+{
+	"name": "bg_parque",
+	"plugin-id": "TiledBg",
+	"sid": 287489273078918,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 565233798785791
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 1080,
+		"height": 701,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 5590445,
+		"useCollisionPoly": true
+	}
+}
