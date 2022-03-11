@@ -1,2 +1,0 @@
-# bluest
-JOGAÇO LANAÇO

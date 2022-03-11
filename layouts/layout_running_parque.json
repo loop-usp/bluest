@@ -19,7 +19,7 @@
 						"image-scale-y": 1,
 						"image-angle": 0
 					},
-					"uid": 166,
+					"uid": 9,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -98,8 +98,8 @@
 						}
 					},
 					"world": {
-						"x": 257,
-						"y": 440,
+						"x": 513,
+						"y": 511,
 						"width": 919,
 						"height": 78,
 						"originX": 0,
@@ -150,8 +150,8 @@
 						}
 					},
 					"world": {
-						"x": 257,
-						"y": 316,
+						"x": 543,
+						"y": 352,
 						"width": 52.7,
 						"height": 106.12612612612611,
 						"originX": 0,
