@@ -1,0 +1,49 @@
+{
+	"name": "RightBlock",
+	"plugin-id": "Sprite",
+	"sid": 502836984850951,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6514858,
+						"collisionPoly": {
+							"points": [
+								0.9782608695652174,
+								0.9782608695652174,
+								0.021739130434782594,
+								0.9782608695652174,
+								0.021739130434782594,
+								0.021739130434782594,
+								0.9782608695652174,
+								0.021739130434782594
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 595571831601327,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

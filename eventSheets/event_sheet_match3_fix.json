@@ -1,0 +1,2760 @@
+{
+	"name": "Event_sheet_match3_fix",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "BlockBeingMoved",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 618387441752169
+		},
+		{
+			"eventType": "variable",
+			"name": "TempX",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 116068766086875
+		},
+		{
+			"eventType": "variable",
+			"name": "TempY",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 705698056421824
+		},
+		{
+			"eventType": "variable",
+			"name": "MatchesFound",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 846574628352556
+		},
+		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 935864908243763
+		},
+		{
+			"eventType": "variable",
+			"name": "Scoring",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 619122774227091
+		},
+		{
+			"eventType": "variable",
+			"name": "SpawnX",
+			"type": "number",
+			"initialValue": "96",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 632968376285208
+		},
+		{
+			"eventType": "variable",
+			"name": "SpawnY",
+			"type": "number",
+			"initialValue": "48",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 953095465676618
+		},
+		{
+			"eventType": "variable",
+			"name": "CanDrag",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 873426794183471
+		},
+		{
+			"eventType": "variable",
+			"name": "Speed",
+			"type": "number",
+			"initialValue": "12",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 793375941489049
+		},
+		{
+			"eventType": "variable",
+			"name": "HasMatchingNeighbour",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 125278650167402
+		},
+		{
+			"eventType": "variable",
+			"name": "BlockFalling",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 433635133002149
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 339260209121932
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Blocks",
+					"sid": 117748784938347
+				}
+			],
+			"sid": 779758882007260
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 267443344927081
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Points",
+					"sid": 313867223230971,
+					"parameters": {
+						"text": "Score"
+					}
+				}
+			],
+			"sid": 577871239729161
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 660387463774149,
+					"parameters": {
+						"variable": "Scoring",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 224126627622670,
+					"parameters": {
+						"variable": "BlockFalling"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 309039701845211,
+					"parameters": {
+						"variable": "CanDrag",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 605121939232054
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 702196141604855,
+					"parameters": {
+						"variable": "CanDrag"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 754245619991600,
+					"parameters": {
+						"variable": "Scoring",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-enabled",
+					"objectClass": "Blocks",
+					"sid": 533676651836621,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "enabled"
+					}
+				}
+			],
+			"sid": 729913226235886
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 281201618145917,
+					"parameters": {
+						"variable": "CanDrag"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "drop",
+					"objectClass": "Blocks",
+					"sid": 170805191285358,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Blocks",
+					"sid": 845206837436421,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 874708375908460
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Blocks",
+					"sid": 758159764605167,
+					"parameters": {
+						"instance-variable": "Matched"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 975895997855666,
+					"parameters": {
+						"variable": "BlockBeingMoved",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 291967169509609,
+					"parameters": {
+						"variable": "Scoring",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 146753674726513,
+					"parameters": {
+						"variable": "Scoring",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 364646854081964,
+					"parameters": {
+						"variable": "CanDrag",
+						"value": "false"
+					}
+				},
+				{
+					"callFunction": "GivePoints",
+					"sid": 808124691555537
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Blocks",
+					"sid": 204219772876934,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 258171107171003,
+					"parameters": {
+						"variable": "CanDrag",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 934619480657675,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Blocks",
+					"sid": 176325286471419
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 899493198446883,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 567145266983802,
+					"parameters": {
+						"variable": "Scoring",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 749690766521541
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Spawn",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 426839695324187,
+							"parameters": {
+								"variable": "BlockBeingMoved",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 221178815387728,
+							"parameters": {
+								"variable": "HasMatchingNeighbour",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "Spawner",
+							"sid": 622528342324993,
+							"parameters": {
+								"object": "Blocks",
+								"offset-x": "0",
+								"offset-y": "10"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 502217380167806,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 803245829167138,
+									"parameters": {
+										"object": "Spawner"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Spawner",
+									"sid": 996867763500260,
+									"parameters": {
+										"object": "Blocks",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 211264930807227,
+									"parameters": {
+										"variable": "HasMatchingNeighbour",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "TestNeighbour",
+									"sid": 925213290182218,
+									"parameters": [
+										"Blocks.UID"
+									]
+								}
+							],
+							"sid": 581200482089175
+						}
+					]
+				}
+			],
+			"sid": 937298100579500
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-at-offset",
+							"objectClass": "Blocks",
+							"sid": 251954321358710,
+							"parameters": {
+								"object": "Blocks",
+								"offset-x": "0",
+								"offset-y": "1"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 147848661819279,
+							"parameters": {
+								"variable": "BlockBeingMoved",
+								"comparison": 0,
+								"value": "0"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Blocks",
+							"sid": 572737307187427,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "SpawnY+(13*Blocks.Width)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-at-angle",
+							"objectClass": "Blocks",
+							"sid": 322124467808473,
+							"parameters": {
+								"angle": "90",
+								"distance": "Speed"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 356910150370661,
+							"parameters": {
+								"variable": "CanDrag",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 683218950488847,
+							"parameters": {
+								"variable": "BlockFalling",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 786610408004685
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 180873556855674
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 979955139068528,
+							"parameters": {
+								"variable": "BlockBeingMoved",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 374874133052785,
+							"parameters": {
+								"variable": "BlockFalling",
+								"value": "false"
+							}
+						},
+						{
+							"callFunction": "FindMatches",
+							"sid": 544623647852809
+						}
+					],
+					"sid": 841769083758590
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-dragging",
+							"objectClass": "Blocks",
+							"sid": 645146461816060,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Blocks",
+							"sid": 167265654787915,
+							"parameters": {
+								"x": "48*(round(Blocks.X/48))",
+								"y": "48*(round(Blocks.Y/48))"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 800034952906230,
+							"parameters": {
+								"variable": "BlockBeingMoved",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 402594859185922,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 858017647154875,
+									"parameters": {
+										"object": "BottomBlock"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 908409932504908,
+									"parameters": {
+										"object": "RightBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 685713704841206,
+									"parameters": {
+										"object": "LeftBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "BottomBlock",
+									"sid": 391090998319700,
+									"parameters": {
+										"comparison": 3,
+										"y-co-ordinate": "SpawnY+(Blocks.Width*13)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 452563969664504,
+									"parameters": {
+										"x": "BottomBlock.X",
+										"y": "BottomBlock.Y"
+									}
+								},
+								{
+									"callFunction": "FindSwapMatch",
+									"sid": 455188253448907
+								}
+							],
+							"sid": 241987604795161
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 359117432588953
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 509387999574582,
+									"parameters": {
+										"object": "TopBlock"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 416769633174604,
+									"parameters": {
+										"object": "RightBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 202610211552996,
+									"parameters": {
+										"object": "LeftBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "TopBlock",
+									"sid": 890965995670608,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "SpawnY"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 197466888609783,
+									"parameters": {
+										"x": "TopBlock.X",
+										"y": "TopBlock.Y"
+									}
+								},
+								{
+									"callFunction": "FindSwapMatch",
+									"sid": 729693869099103
+								}
+							],
+							"sid": 952339080397192
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 508608624813629
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 241412093377944,
+									"parameters": {
+										"object": "LeftBlock"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 616920058419558,
+									"parameters": {
+										"object": "TopBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 688118254876821,
+									"parameters": {
+										"object": "BottomBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "LeftBlock",
+									"sid": 585016861019861,
+									"parameters": {
+										"comparison": 5,
+										"x-co-ordinate": "SpawnX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 989675376323398,
+									"parameters": {
+										"x": "LeftBlock.X",
+										"y": "LeftBlock.Y"
+									}
+								},
+								{
+									"callFunction": "FindSwapMatch",
+									"sid": 822748223096572
+								}
+							],
+							"sid": 212469116707174
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 621150145733434
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 730110188421612,
+									"parameters": {
+										"object": "RightBlock"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 341261152881125,
+									"parameters": {
+										"object": "TopBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 261564509228842,
+									"parameters": {
+										"object": "BottomBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "RightBlock",
+									"sid": 748282397271530,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "SpawnX+(Blocks.Width*6)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 957260117553198,
+									"parameters": {
+										"x": "RightBlock.X",
+										"y": "RightBlock.Y"
+									}
+								},
+								{
+									"callFunction": "FindSwapMatch",
+									"sid": 119993776727373
+								}
+							],
+							"sid": 521188320153919
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 251500549491296
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 306138738279271,
+									"parameters": {
+										"x": "BlockPositions.At(0,0)",
+										"y": "BlockPositions.At(0,1)"
+									}
+								}
+							],
+							"sid": 221731291848099
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drag-start",
+							"objectClass": "Blocks",
+							"sid": 742021963481639,
+							"behaviorType": "DragDrop"
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 702127181615660,
+							"parameters": {
+								"variable": "BlockBeingMoved",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 144335992900146,
+							"parameters": {
+								"variable": "BlockBeingMoved",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Blocks",
+							"sid": 119013403664631,
+							"parameters": {
+								"z": "1"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "BlockPositions",
+							"sid": 415228500756384,
+							"parameters": {
+								"x": "0",
+								"y": "0",
+								"value": "Blocks.x"
+							}
+						},
+						{
+							"id": "set-at-xy",
+							"objectClass": "BlockPositions",
+							"sid": 901703805951135,
+							"parameters": {
+								"x": "0",
+								"y": "1",
+								"value": "Blocks.Y"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "BottomBlock",
+							"sid": 738165334820494,
+							"parameters": {
+								"x": "Blocks.x",
+								"y": "Blocks.Y + Blocks.Width"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TopBlock",
+							"sid": 939189381914108,
+							"parameters": {
+								"x": "Blocks.x",
+								"y": "Blocks.Y - Blocks.Width"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "RightBlock",
+							"sid": 750052065981444,
+							"parameters": {
+								"x": "Blocks.x + Blocks.Width",
+								"y": "Blocks.Y"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "LeftBlock",
+							"sid": 206985407550575,
+							"parameters": {
+								"x": "Blocks.x - Blocks.Width",
+								"y": "Blocks.Y"
+							}
+						}
+					],
+					"sid": 236241159525431
+				}
+			],
+			"sid": 562181354207272
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Swap",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Blocks",
+							"sid": 582780966164987,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 146540237656249,
+							"parameters": {
+								"variable": "BlockBeingMoved",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Blocks",
+							"sid": 453865338926664,
+							"parameters": {
+								"z": "0"
+							}
+						}
+					],
+					"sid": 445281625948317,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 250721696175135,
+									"parameters": {
+										"object": "BottomBlock"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 276390641051456,
+									"parameters": {
+										"object": "RightBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 481196534622241,
+									"parameters": {
+										"object": "LeftBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "BottomBlock",
+									"sid": 748687304027167,
+									"parameters": {
+										"comparison": 3,
+										"y-co-ordinate": "SpawnY+(Blocks.Width*13)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 757791887524524,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "BottomBlock.X"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 178199814059793,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "BottomBlock.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 652321834974990,
+									"parameters": {
+										"x": "BlockPositions.At(0,0)",
+										"y": "BlockPositions.At(0,1)"
+									}
+								}
+							],
+							"sid": 675374880502900,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Blocks",
+											"sid": 408294299262223,
+											"parameters": {
+												"instance-variable": "CanSwap"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Swap",
+											"sid": 287263357697073
+										}
+									],
+									"sid": 140705761131066
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 615677571364445
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 230356655877051,
+									"parameters": {
+										"object": "TopBlock"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 321134369409615,
+									"parameters": {
+										"object": "RightBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 630011795132505,
+									"parameters": {
+										"object": "LeftBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "TopBlock",
+									"sid": 463129968824168,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "SpawnY"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 250232280548984,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "TopBlock.X"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 618523656385969,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "TopBlock.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 370637361386857,
+									"parameters": {
+										"x": "BlockPositions.At(0,0)",
+										"y": "BlockPositions.At(0,1)"
+									}
+								}
+							],
+							"sid": 713179449358387,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Blocks",
+											"sid": 700718756484114,
+											"parameters": {
+												"instance-variable": "CanSwap"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Swap",
+											"sid": 676465018865477
+										}
+									],
+									"sid": 717810822495930
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 668193582300200
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 895475892460847,
+									"parameters": {
+										"object": "LeftBlock"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 526114709571567,
+									"parameters": {
+										"object": "TopBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 103094087229077,
+									"parameters": {
+										"object": "BottomBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "LeftBlock",
+									"sid": 579806496568559,
+									"parameters": {
+										"comparison": 5,
+										"x-co-ordinate": "SpawnX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 458836619397923,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "LeftBlock.X"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 169480791686931,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "LeftBlock.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 132972073173321,
+									"parameters": {
+										"x": "BlockPositions.At(0,0)",
+										"y": "BlockPositions.At(0,1)"
+									}
+								}
+							],
+							"sid": 969056477393477,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Blocks",
+											"sid": 917696079428409,
+											"parameters": {
+												"instance-variable": "CanSwap"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Swap",
+											"sid": 931907079621045
+										}
+									],
+									"sid": 688275869826230
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 184226595123401
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 885434021338179,
+									"parameters": {
+										"object": "RightBlock"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 561939719296686,
+									"parameters": {
+										"object": "TopBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Blocks",
+									"sid": 843667988060651,
+									"parameters": {
+										"object": "BottomBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-x",
+									"objectClass": "RightBlock",
+									"sid": 657380979500278,
+									"parameters": {
+										"comparison": 3,
+										"x-co-ordinate": "SpawnX+(Blocks.Width*6)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 988303259975600,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "RightBlock.X"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 199472195802577,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "RightBlock.Y"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 519699336687189,
+									"parameters": {
+										"x": "BlockPositions.At(0,0)",
+										"y": "BlockPositions.At(0,1)"
+									}
+								}
+							],
+							"sid": 151809279832435,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "Blocks",
+											"sid": 886026691113819,
+											"parameters": {
+												"instance-variable": "CanSwap"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Swap",
+											"sid": 426053713476831
+										}
+									],
+									"sid": 477693314210990
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 839314191298586
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 584481886322947,
+									"parameters": {
+										"x": "BlockPositions.At(0,0)",
+										"y": "BlockPositions.At(0,1)"
+									}
+								}
+							],
+							"sid": 219988792350089
+						}
+					]
+				},
+				{
+					"functionName": "Swap",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 645878974676656,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Blocks",
+									"sid": 993351242859556,
+									"parameters": {
+										"comparison": 0,
+										"x-co-ordinate": "BlockPositions.At(0,0)"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Blocks",
+									"sid": 318386161820713,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "BlockPositions.At(0,1)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 458618140055839,
+									"parameters": {
+										"x": "TempX",
+										"y": "TempY"
+									}
+								}
+							],
+							"sid": 851657108001767
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Blocks",
+									"sid": 483099458485967,
+									"parameters": {
+										"comparison": 0,
+										"x-co-ordinate": "BlockPositions.At(1,0)"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Blocks",
+									"sid": 979802997283722,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "BlockPositions.At(1,1)"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 614373084555511,
+									"parameters": {
+										"x": "BlockPositions.At(0,0)",
+										"y": "BlockPositions.At(0,1)"
+									}
+								}
+							],
+							"sid": 274088484461116
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Blocks",
+									"sid": 814488943368386,
+									"parameters": {
+										"comparison": 0,
+										"x-co-ordinate": "TempX"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Blocks",
+									"sid": 224154305568900,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "TempY"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Blocks",
+									"sid": 717523343850660,
+									"parameters": {
+										"x": "BlockPositions.At(1,0)",
+										"y": "BlockPositions.At(1,1)"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 427898993603583,
+									"parameters": {
+										"x": "0",
+										"y": "0",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 239309512613042,
+									"parameters": {
+										"x": "0",
+										"y": "1",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 536176178889545,
+									"parameters": {
+										"x": "1",
+										"y": "0",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-at-xy",
+									"objectClass": "BlockPositions",
+									"sid": 617257311540658,
+									"parameters": {
+										"x": "1",
+										"y": "1",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 414749022135686
+						}
+					]
+				}
+			],
+			"sid": 707286672047155
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Check and Match",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "FindMatches",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 117326418482277,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 938252431373269,
+									"parameters": {
+										"object": "Blocks"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 704390242922048,
+									"parameters": {
+										"variable": "MatchesFound",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "Match",
+									"sid": 558709886690034,
+									"parameters": [
+										"Blocks.X",
+										"Blocks.Y",
+										"Blocks.Type",
+										"1",
+										"0"
+									]
+								}
+							],
+							"sid": 712816156525011,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 565843543871569,
+											"parameters": {
+												"variable": "MatchesFound",
+												"comparison": 5,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 486543582550444,
+											"parameters": {
+												"instance-variable": "Matched",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 750415529740392
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 908155829602441,
+									"parameters": {
+										"object": "Blocks"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 128049448696757,
+									"parameters": {
+										"variable": "MatchesFound",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "Match",
+									"sid": 410119431745078,
+									"parameters": [
+										"Blocks.X",
+										"Blocks.Y",
+										"Blocks.Type",
+										"0",
+										"1"
+									]
+								}
+							],
+							"sid": 710402416523582,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 621224878862633,
+											"parameters": {
+												"variable": "MatchesFound",
+												"comparison": 5,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 398384046811482,
+											"parameters": {
+												"instance-variable": "Matched",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 530445333117013
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "Match",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "X",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 380929494652195
+						},
+						{
+							"name": "Y",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 660361278304937
+						},
+						{
+							"name": "Type",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 459027049302597
+						},
+						{
+							"name": "Horizontal",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 564908248900043
+						},
+						{
+							"name": "Vertical",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 880762895347972
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 458653229202713,
+							"parameters": {
+								"variable": "BlockFalling"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 942149154702245,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Blocks",
+									"sid": 536467748021314,
+									"parameters": {
+										"comparison": 0,
+										"x-co-ordinate": "X+((Blocks.Width)*Horizontal)"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Blocks",
+									"sid": 350371721207735,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "Y+((Blocks.Width)*Vertical)"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Blocks",
+									"sid": 751818076499378,
+									"parameters": {
+										"instance-variable": "Type",
+										"comparison": 0,
+										"value": "Type"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 436712521979989,
+									"parameters": {
+										"variable": "MatchesFound",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "Match",
+									"sid": 953767111347939,
+									"parameters": [
+										"X+((Blocks.Width)*Horizontal)",
+										"Y+((Blocks.Width)*Vertical)",
+										"Type",
+										"Horizontal",
+										"Vertical"
+									]
+								}
+							],
+							"sid": 466309340705103,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 700255859979270,
+											"parameters": {
+												"variable": "MatchesFound",
+												"comparison": 5,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 853856670365399,
+											"parameters": {
+												"first-value": "Horizontal",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 543355786727140,
+											"parameters": {
+												"instance-variable": "Matched",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 389866737072934,
+											"parameters": {
+												"instance-variable": "MatchedX",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 532746237135746
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 378740022644740,
+											"parameters": {
+												"variable": "MatchesFound",
+												"comparison": 5,
+												"value": "3"
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 662513833000453,
+											"parameters": {
+												"first-value": "Vertical",
+												"comparison": 0,
+												"second-value": "1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 760969181627485,
+											"parameters": {
+												"instance-variable": "Matched",
+												"value": "true"
+											}
+										},
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 731297699280741,
+											"parameters": {
+												"instance-variable": "MatchedY",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 466444622671615
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "FindSwapMatch",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 684183122565063,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 358406011951480,
+									"parameters": {
+										"object": "Blocks"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 480598459615034,
+									"parameters": {
+										"variable": "MatchesFound",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "SwapMatch",
+									"sid": 726559012861055,
+									"parameters": [
+										"Blocks.X",
+										"Blocks.Y",
+										"Blocks.Type",
+										"1",
+										"0"
+									]
+								}
+							],
+							"sid": 287552281091977,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 343598158325585,
+											"parameters": {
+												"variable": "MatchesFound",
+												"comparison": 5,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 259651366821827,
+											"parameters": {
+												"instance-variable": "CanSwap",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 787534775034653
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 259508526559609,
+									"parameters": {
+										"object": "Blocks"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 730595161962608,
+									"parameters": {
+										"variable": "MatchesFound",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "SwapMatch",
+									"sid": 221135878043586,
+									"parameters": [
+										"Blocks.X",
+										"Blocks.Y",
+										"Blocks.Type",
+										"0",
+										"1"
+									]
+								}
+							],
+							"sid": 365074817258662,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 644101118247178,
+											"parameters": {
+												"variable": "MatchesFound",
+												"comparison": 5,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 229204180474659,
+											"parameters": {
+												"instance-variable": "CanSwap",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 488215142224722
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "SwapMatch",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "X",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 251776658806587
+						},
+						{
+							"name": "Y",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 165855383750207
+						},
+						{
+							"name": "Type",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 306308386449298
+						},
+						{
+							"name": "Horizontal",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 538101512078001
+						},
+						{
+							"name": "Vertical",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 547997220908144
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 311110209726168,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-x",
+									"objectClass": "Blocks",
+									"sid": 665281723955531,
+									"parameters": {
+										"comparison": 0,
+										"x-co-ordinate": "X+((Blocks.Width)*Horizontal)"
+									}
+								},
+								{
+									"id": "compare-y",
+									"objectClass": "Blocks",
+									"sid": 508457558715759,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "Y+((Blocks.Width)*Vertical)"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Blocks",
+									"sid": 304702767926054,
+									"parameters": {
+										"instance-variable": "Type",
+										"comparison": 0,
+										"value": "Type"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 259680908034744,
+									"parameters": {
+										"variable": "MatchesFound",
+										"value": "1"
+									}
+								},
+								{
+									"callFunction": "SwapMatch",
+									"sid": 228400742163011,
+									"parameters": [
+										"X+((Blocks.Width)*Horizontal)",
+										"Y+((Blocks.Width)*Vertical)",
+										"Type",
+										"Horizontal",
+										"Vertical"
+									]
+								}
+							],
+							"sid": 267815559402287,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 111388554146389,
+											"parameters": {
+												"variable": "MatchesFound",
+												"comparison": 5,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "Blocks",
+											"sid": 405064220128478,
+											"parameters": {
+												"instance-variable": "CanSwap",
+												"value": "true"
+											}
+										}
+									],
+									"sid": 795989234237477
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "GivePoints",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 856962579511864,
+							"parameters": {
+								"object": "Blocks"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Blocks",
+							"sid": 867496973190430,
+							"parameters": {
+								"instance-variable": "Matched"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 906634114481057,
+							"parameters": {
+								"variable": "Score",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 280297974576944,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Blocks",
+									"sid": 294481678048567,
+									"parameters": {
+										"instance-variable": "MatchedX"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Blocks",
+									"sid": 573976499927927,
+									"parameters": {
+										"instance-variable": "MatchedY"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 689002136187852,
+									"parameters": {
+										"variable": "Score",
+										"value": "10"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Points",
+									"sid": 650319526094981,
+									"parameters": {
+										"text": "Score"
+									}
+								}
+							],
+							"sid": 189808275236850
+						}
+					]
+				}
+			],
+			"sid": 723468557024856
+		},
+		{
+			"functionName": "GetType",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "number",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "X",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 697151285396172
+				},
+				{
+					"name": "Y",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 266740948844525
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 113457317461303,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "Blocks",
+							"sid": 569631835566174,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "X"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "Blocks",
+							"sid": 747241172019402,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 712901726303322,
+							"parameters": {
+								"value": "Blocks.Type"
+							}
+						}
+					],
+					"sid": 132988459339774
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 577620791096013
+						}
+					],
+					"actions": [
+						{
+							"id": "set-function-return-value",
+							"objectClass": "Functions",
+							"sid": 616324045487783,
+							"parameters": {
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 906464750168567
+				}
+			]
+		},
+		{
+			"functionName": "TestNeighbour",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "BlockID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 401428235199142
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 417086796576033,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "while",
+							"objectClass": "System",
+							"sid": 590599397244106
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 110396524336185,
+							"parameters": {
+								"variable": "HasMatchingNeighbour",
+								"comparison": 5,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 435927763556972,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "Blocks",
+									"sid": 936706929992353,
+									"parameters": {
+										"unique-id": "BlockID"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 706519135296081,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Blocks",
+											"sid": 935645805969381,
+											"parameters": {
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "Functions.GetType(Blocks.X-Blocks.Width, Blocks.Y)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Blocks",
+											"sid": 186011933585851
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 672137155223375,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 247800613944066
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Blocks",
+											"sid": 765533176812940,
+											"parameters": {
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "Functions.GetType(Blocks.X+Blocks.Width, Blocks.Y)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Blocks",
+											"sid": 201516487409561
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 153747872991317,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 553264876530198
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Blocks",
+											"sid": 939785299727145,
+											"parameters": {
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "Functions.GetType(Blocks.X, Blocks.Y+Blocks.Width+Speed)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Blocks",
+											"sid": 441459960244801
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 912599220489937,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 539389941951198
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Blocks",
+											"sid": 592611678339711,
+											"parameters": {
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "Functions.GetType(Blocks.X, Blocks.Y-Blocks.Width-Speed)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Blocks",
+											"sid": 457808755622005
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 177300459254215,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 604231762160971
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Blocks",
+											"sid": 631522549550802,
+											"parameters": {
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "Functions.GetType(Blocks.X-Blocks.Width, Blocks.Y-Blocks.Width-speed)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Blocks",
+											"sid": 776216026578325
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 776098752880321,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 914330664644297
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Blocks",
+											"sid": 386098224463186,
+											"parameters": {
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "Functions.GetType(Blocks.X+Blocks.Width, Blocks.Y+Blocks.Width+speed)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Blocks",
+											"sid": 392103549759963
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 530107305893881,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 361834262220738
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Blocks",
+											"sid": 671745464046963,
+											"parameters": {
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "Functions.GetType(Blocks.X-Blocks.Width, Blocks.Y+Blocks.Width+Speed)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Blocks",
+											"sid": 875457533448925
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 650272352853184,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 578905571366489
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Blocks",
+											"sid": 220130636679151,
+											"parameters": {
+												"instance-variable": "Type",
+												"comparison": 0,
+												"value": "Functions.GetType(Blocks.X+Blocks.Width, Blocks.Y-Blocks.Width-Speed)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Blocks",
+											"sid": 199871738518225
+										},
+										{
+											"id": "add-to-eventvar",
+											"objectClass": "System",
+											"sid": 918348651842443,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 440982064052784
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 873547861328547
+										}
+									],
+									"actions": [
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 637907091455121,
+											"parameters": {
+												"variable": "HasMatchingNeighbour",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 715661523504637
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 262097854809579,
+					"parameters": {
+						"variable": "Score",
+						"comparison": 4,
+						"value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 788823134931792,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 227235049842412
+		}
+	],
+	"sid": 990289638193528
+}

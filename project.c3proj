@@ -149,6 +149,14 @@
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"version": "r285.3",
+			"bundled": false
 		}
 	],
 	"uniqueId": "tj5wknur0l8",
@@ -170,7 +178,21 @@
 			"BG_Layout_Principal",
 			"ondeestaowally_770x433_acf_cropped",
 			"wally",
-			"barrierWally"
+			"barrierWally",
+			"TiledBackground",
+			"Block1",
+			"Spawner",
+			"Block2",
+			"Block3",
+			"Block4",
+			"Block5",
+			"FloatingText",
+			"RightBlock",
+			"BottomBlock",
+			"LeftBlock",
+			"TopBlock",
+			"Points",
+			"BlockPositions"
 		],
 		"subfolders": [
 			{
@@ -366,7 +388,9 @@
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"Blocks"
+		],
 		"subfolders": []
 	},
 	"layouts": {
@@ -404,7 +428,8 @@
 					"Layout_Cesta_PUB",
 					"Layout_Cesta_Sapataria",
 					"Layout_Caça",
-					"Layout_suporte_na_multidao"
+					"Layout_suporte_na_multidao",
+					"Layout_Match3_fix"
 				],
 				"subfolders": [],
 				"name": "Minigames"
@@ -437,7 +462,8 @@
 					"Event sheet_Cesta_PUB",
 					"Event sheet_Cesta_Sapataria",
 					"Event sheet_Esteira_PUB",
-					"Event_suporte_na_multidao"
+					"Event_suporte_na_multidao",
+					"Event_sheet_match3_fix"
 				],
 				"subfolders": [],
 				"name": "Minigames"
