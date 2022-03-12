@@ -202,36 +202,6 @@
 					}
 				},
 				{
-					"type": "VOLTAR_ESTEIRA_PUB",
-					"properties": {
-						"type": "button",
-						"text": "VOLTAR",
-						"tooltip": "",
-						"initially-visible": true,
-						"enabled": true,
-						"auto-font-size": true,
-						"checked": false,
-						"id": ""
-					},
-					"uid": 137,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 1184,
-						"y": 59,
-						"width": 72,
-						"height": 24,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						]
-					}
-				},
-				{
 					"type": "Alimento_Bom2",
 					"properties": {
 						"initially-visible": true,

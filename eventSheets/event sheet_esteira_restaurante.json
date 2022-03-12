@@ -193,6 +193,14 @@
 					}
 				},
 				{
+					"id": "set-text",
+					"objectClass": "Pontos_Esteira",
+					"sid": 495049593878042,
+					"parameters": {
+						"text": "Pontos_Esteira"
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "Alimento_Bom",
 					"sid": 139179515722687
@@ -220,6 +228,14 @@
 					"parameters": {
 						"variable": "Pontos_Esteira",
 						"value": "50"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Pontos_Esteira",
+					"sid": 897886055322539,
+					"parameters": {
+						"text": "Pontos_Esteira"
 					}
 				},
 				{
@@ -262,10 +278,10 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 504678240542900,
+					"sid": 666464813528878,
 					"parameters": {
 						"variable": "Pontos_Esteira",
-						"comparison": 3,
+						"comparison": 2,
 						"value": "0"
 					}
 				}
@@ -275,6 +291,11 @@
 					"id": "restart-layout",
 					"objectClass": "System",
 					"sid": 322316987329418
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 682994219308547
 				}
 			],
 			"sid": 545426601270034
