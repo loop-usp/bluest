@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "Energia",
+			"type": "number",
+			"initialValue": "9",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 193812218911419
+		},
+		{
+			"eventType": "variable",
 			"name": "peso_atual",
 			"type": "number",
 			"initialValue": "0",
@@ -126,6 +136,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite0_1.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 594788300231246,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite0_1.peso"
+							}
 						}
 					],
 					"sid": 375104478880524,
@@ -206,6 +225,15 @@
 							"sid": 305484681671466,
 							"parameters": {
 								"variable": "peso_atual",
+								"value": "Sprite0_2.peso"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 941186415788905,
+							"parameters": {
+								"variable": "Energia",
 								"value": "Sprite0_2.peso"
 							}
 						}
@@ -290,6 +318,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite0_3.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 476073359546334,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite0_3.peso"
+							}
 						}
 					],
 					"sid": 121960004091872,
@@ -360,6 +397,15 @@
 							"sid": 117140482392230,
 							"parameters": {
 								"variable": "peso_atual",
+								"value": "Sprite0_4.peso"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 465100687231176,
+							"parameters": {
+								"variable": "Energia",
 								"value": "Sprite0_4.peso"
 							}
 						}
@@ -442,6 +488,15 @@
 							"sid": 579150730557071,
 							"parameters": {
 								"variable": "peso_atual",
+								"value": "Sprite1_0.peso"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 464920805943423,
+							"parameters": {
+								"variable": "Energia",
 								"value": "Sprite1_0.peso"
 							}
 						}
@@ -536,6 +591,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite1_1.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 693972981261380,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite1_1.peso"
+							}
 						}
 					],
 					"sid": 994847420391173,
@@ -626,6 +690,15 @@
 							"sid": 534821482965024,
 							"parameters": {
 								"variable": "peso_atual",
+								"value": "Sprite1_2.peso"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 301904377290913,
+							"parameters": {
+								"variable": "Energia",
 								"value": "Sprite1_2.peso"
 							}
 						}
@@ -720,6 +793,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite1_3.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 908582695950165,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite1_3.peso"
+							}
 						}
 					],
 					"sid": 551407246322761,
@@ -802,6 +884,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite1_4.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 211926092258718,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite1_4.peso"
+							}
 						}
 					],
 					"sid": 300066373602785,
@@ -882,6 +973,15 @@
 							"sid": 678051443930136,
 							"parameters": {
 								"variable": "peso_atual",
+								"value": "Sprite2_0.peso"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 294612848622483,
+							"parameters": {
+								"variable": "Energia",
 								"value": "Sprite2_0.peso"
 							}
 						}
@@ -976,6 +1076,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite2_1.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 286839522575399,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite2_1.peso"
+							}
 						}
 					],
 					"sid": 102984228862617,
@@ -1066,6 +1175,15 @@
 							"sid": 905370563357953,
 							"parameters": {
 								"variable": "peso_atual",
+								"value": "Sprite2_2.peso"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 831020136722814,
+							"parameters": {
+								"variable": "Energia",
 								"value": "Sprite2_2.peso"
 							}
 						}
@@ -1160,6 +1278,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite2_3.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 645190303745702,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite2_3.peso"
+							}
 						}
 					],
 					"sid": 281485506129682,
@@ -1242,6 +1369,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite2_4.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 604589763997614,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite2_4.peso"
+							}
 						}
 					],
 					"sid": 878664350125426,
@@ -1312,6 +1448,15 @@
 							"sid": 310884946565394,
 							"parameters": {
 								"variable": "peso_atual",
+								"value": "Sprite3_0.peso"
+							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 992598102243369,
+							"parameters": {
+								"variable": "Energia",
 								"value": "Sprite3_0.peso"
 							}
 						}
@@ -1396,6 +1541,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite3_1.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 348757273077466,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite3_1.peso"
+							}
 						}
 					],
 					"sid": 470457679635682,
@@ -1478,6 +1632,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite3_2.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 899380011457575,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite3_2.peso"
+							}
 						}
 					],
 					"sid": 705360956545853,
@@ -1550,6 +1713,15 @@
 								"variable": "peso_atual",
 								"value": "Sprite3_3.peso"
 							}
+						},
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 371196517627544,
+							"parameters": {
+								"variable": "Energia",
+								"value": "Sprite3_3.peso"
+							}
 						}
 					],
 					"sid": 531792796064036,
@@ -1612,10 +1784,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 997853445916790,
-							"disabled": true,
+							"sid": 866883318657659,
 							"parameters": {
-								"layout": "Casa_Festa"
+								"layout": "Parque"
 							}
 						}
 					],
@@ -1630,11 +1801,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 955730928399947,
+					"sid": 765926690330495,
 					"parameters": {
-						"variable": "peso_atual",
-						"comparison": 4,
-						"value": "9"
+						"variable": "Energia",
+						"comparison": 2,
+						"value": "0"
 					}
 				}
 			],
@@ -1651,6 +1822,27 @@
 				}
 			],
 			"sid": 364120467867840
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 899247581780632
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "energia",
+					"sid": 326055683869814,
+					"parameters": {
+						"text": "Energia"
+					}
+				}
+			],
+			"sid": 515826823420281
 		}
 	],
 	"sid": 532149726959618

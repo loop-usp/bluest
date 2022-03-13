@@ -401,9 +401,9 @@
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 211834444822120,
+							"sid": 873254611503988,
 							"parameters": {
-								"layout": "Layout_Suporte"
+								"layout": "Layout_suporte_na_multidao"
 							}
 						}
 					],
@@ -1441,9 +1441,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "Falas",
-									"sid": 567790305425060,
+									"sid": 259882570748161,
 									"parameters": {
-										"text": "\"Bom… (ela ri) Nenhum deles. Estou olhando meu irmaozinho. É aquele de camisa amarela. \"\r\n"
+										"text": "\"Bom… (ela ri) Nenhum deles. Estou olhando meu irmaozinho. E aquele de camisa amarela. \"\r\n"
 									}
 								},
 								{
@@ -1725,26 +1725,6 @@
 									"parameters": {
 										"frame-number": "0"
 									}
-								},
-								{
-									"id": "set-visible",
-									"objectClass": "PROXIMO",
-									"sid": 737376130275849,
-									"parameters": {
-										"visibility": "invisible"
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 164952220101183,
-									"parameters": {
-										"object-to-create": "JOGAR_LABIRINTO",
-										"layer": "1",
-										"x": "1164",
-										"y": "682",
-										"create-hierarchy": false
-									}
 								}
 							],
 							"sid": 286942772859554
@@ -1778,6 +1758,26 @@
 									"sid": 351427225238480,
 									"parameters": {
 										"frame-number": "4"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "PROXIMO",
+									"sid": 144190256026600,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 105711548160134,
+									"parameters": {
+										"object-to-create": "JOGAR_LABIRINTO",
+										"layer": "1",
+										"x": "1164",
+										"y": "682",
+										"create-hierarchy": false
 									}
 								}
 							],
@@ -1813,9 +1813,9 @@
 								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 354092204431875,
+									"sid": 493551860113800,
 									"parameters": {
-										"layout": "Layout_Labirinto"
+										"layout": "Layout_labirinto_Done"
 									}
 								}
 							],

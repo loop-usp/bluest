@@ -676,9 +676,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Falas",
-							"sid": 108715821979949,
+							"sid": 817657012031292,
 							"parameters": {
-								"text": "\"A comida chega e eles comem.\r\n*O OBJETO MÁQUINA DE COMIDA ENTRA EM DESTAQUE NA CENA*\""
+								"text": "\"A comida chega e eles comem.\r\n*O OBJETO MAQUINA DE COMIDA ENTRA EM DESTAQUE NA CENA*\""
 							}
 						},
 						{

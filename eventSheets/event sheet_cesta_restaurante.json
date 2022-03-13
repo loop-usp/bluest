@@ -375,6 +375,11 @@
 					"id": "restart-layout",
 					"objectClass": "System",
 					"sid": 467463050827351
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 547544659548817
 				}
 			],
 			"sid": 983457002813186
@@ -385,11 +390,11 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 773402533709459,
+					"sid": 203361978354304,
 					"parameters": {
 						"variable": "Pontos",
 						"comparison": 5,
-						"value": "600"
+						"value": "400"
 					}
 				}
 			],

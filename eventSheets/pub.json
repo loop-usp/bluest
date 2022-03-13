@@ -1128,9 +1128,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Falas",
-							"sid": 477023975481748,
+							"sid": 908635010504171,
 							"parameters": {
-								"text": "\"Você tomou algum remedio hoje?\""
+								"text": "\"Voce tomou algum remedio hoje?\""
 							}
 						},
 						{
