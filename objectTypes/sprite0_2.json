@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 363280713282433,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "peso",
+			"type": "number",
+			"desc": "",
+			"sid": 372254748051000
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -18,7 +25,7 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4247228,
+						"imageSpriteId": 5748510,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

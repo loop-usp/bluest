@@ -12,6 +12,16 @@
 			"sid": 552244050526879
 		},
 		{
+			"eventType": "variable",
+			"name": "peso_atual",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 288262626903926
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -107,6 +117,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 602034796678208,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite0_1.peso"
+							}
 						}
 					],
 					"sid": 375104478880524,
@@ -179,6 +198,15 @@
 							"sid": 784465811602925,
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 305484681671466,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite0_2.peso"
 							}
 						}
 					],
@@ -253,6 +281,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 735305220534939,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite0_3.peso"
+							}
 						}
 					],
 					"sid": 121960004091872,
@@ -315,6 +352,15 @@
 							"sid": 795656565985239,
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 117140482392230,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite0_4.peso"
 							}
 						}
 					],
@@ -388,6 +434,15 @@
 							"sid": 225125309698483,
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 579150730557071,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite1_0.peso"
 							}
 						}
 					],
@@ -472,6 +527,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 581960711957754,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite1_1.peso"
+							}
 						}
 					],
 					"sid": 994847420391173,
@@ -554,6 +618,15 @@
 							"sid": 965694175345828,
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 534821482965024,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite1_2.peso"
 							}
 						}
 					],
@@ -638,6 +711,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 382341860350051,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite1_3.peso"
+							}
 						}
 					],
 					"sid": 551407246322761,
@@ -711,6 +793,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 677388607693912,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite1_4.peso"
+							}
 						}
 					],
 					"sid": 300066373602785,
@@ -783,6 +874,15 @@
 							"sid": 598429250477598,
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 678051443930136,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite2_0.peso"
 							}
 						}
 					],
@@ -867,6 +967,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 400477161671096,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite2_1.peso"
+							}
 						}
 					],
 					"sid": 102984228862617,
@@ -949,6 +1058,15 @@
 							"sid": 390694902324114,
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 905370563357953,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite2_2.peso"
 							}
 						}
 					],
@@ -1033,6 +1151,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 947233103781505,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite2_3.peso"
+							}
 						}
 					],
 					"sid": 281485506129682,
@@ -1106,6 +1233,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 967877273985295,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite2_4.peso"
+							}
 						}
 					],
 					"sid": 878664350125426,
@@ -1168,6 +1304,15 @@
 							"sid": 510553970042292,
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 310884946565394,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite3_0.peso"
 							}
 						}
 					],
@@ -1242,6 +1387,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 769155829970824,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite3_1.peso"
+							}
 						}
 					],
 					"sid": 470457679635682,
@@ -1315,6 +1469,15 @@
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
 							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 210377116298561,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite3_2.peso"
+							}
 						}
 					],
 					"sid": 705360956545853,
@@ -1377,6 +1540,15 @@
 							"sid": 893518673945363,
 							"parameters": {
 								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 809502041081419,
+							"parameters": {
+								"variable": "peso_atual",
+								"value": "Sprite3_3.peso"
 							}
 						}
 					],
@@ -1451,6 +1623,34 @@
 					"isOrBlock": true
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 955730928399947,
+					"parameters": {
+						"variable": "peso_atual",
+						"comparison": 4,
+						"value": "9"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 240742636414341
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 536187917473858
+				}
+			],
+			"sid": 364120467867840
 		}
 	],
 	"sid": 532149726959618

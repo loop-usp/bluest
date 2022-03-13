@@ -16,7 +16,9 @@
 						"live-preview": false
 					},
 					"uid": 124,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 90,
@@ -45,7 +47,9 @@
 						"live-preview": false
 					},
 					"uid": 127,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 5
+					},
 					"behaviors": {},
 					"world": {
 						"x": 330,
@@ -74,7 +78,9 @@
 						"live-preview": false
 					},
 					"uid": 132,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 570,
@@ -103,7 +109,9 @@
 						"live-preview": false
 					},
 					"uid": 133,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 5
+					},
 					"behaviors": {},
 					"world": {
 						"x": 810,
@@ -132,7 +140,9 @@
 						"live-preview": false
 					},
 					"uid": 137,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 2
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1050,
@@ -161,7 +171,9 @@
 						"live-preview": false
 					},
 					"uid": 311,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 2
+					},
 					"behaviors": {},
 					"world": {
 						"x": 90,
@@ -190,7 +202,9 @@
 						"live-preview": false
 					},
 					"uid": 312,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 4
+					},
 					"behaviors": {},
 					"world": {
 						"x": 330,
@@ -219,7 +233,9 @@
 						"live-preview": false
 					},
 					"uid": 313,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 4
+					},
 					"behaviors": {},
 					"world": {
 						"x": 570,
@@ -248,7 +264,9 @@
 						"live-preview": false
 					},
 					"uid": 314,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 810,
@@ -277,7 +295,9 @@
 						"live-preview": false
 					},
 					"uid": 315,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 2
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1050,
@@ -306,7 +326,9 @@
 						"live-preview": false
 					},
 					"uid": 316,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 90,
@@ -335,7 +357,9 @@
 						"live-preview": false
 					},
 					"uid": 317,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 3
+					},
 					"behaviors": {},
 					"world": {
 						"x": 330,
@@ -364,7 +388,9 @@
 						"live-preview": false
 					},
 					"uid": 318,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 570,
@@ -393,7 +419,9 @@
 						"live-preview": false
 					},
 					"uid": 319,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 810,
@@ -422,7 +450,9 @@
 						"live-preview": false
 					},
 					"uid": 320,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1050,
@@ -451,7 +481,9 @@
 						"live-preview": false
 					},
 					"uid": 321,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 6
+					},
 					"behaviors": {},
 					"world": {
 						"x": 90,
@@ -480,7 +512,9 @@
 						"live-preview": false
 					},
 					"uid": 322,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 2
+					},
 					"behaviors": {},
 					"world": {
 						"x": 330,
@@ -509,7 +543,9 @@
 						"live-preview": false
 					},
 					"uid": 323,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 1
+					},
 					"behaviors": {},
 					"world": {
 						"x": 570,
@@ -538,7 +574,9 @@
 						"live-preview": false
 					},
 					"uid": 324,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 3
+					},
 					"behaviors": {},
 					"world": {
 						"x": 810,
@@ -567,7 +605,9 @@
 						"live-preview": false
 					},
 					"uid": 325,
-					"instanceVariables": {},
+					"instanceVariables": {
+						"peso": 0
+					},
 					"behaviors": {},
 					"world": {
 						"x": 1050,
