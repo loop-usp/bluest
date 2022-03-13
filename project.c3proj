@@ -17,7 +17,7 @@
 		{
 			"type": "plugin",
 			"id": "Text",
-			"name": "Texto",
+			"name": "Text",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -25,7 +25,7 @@
 		{
 			"type": "plugin",
 			"id": "TiledBg",
-			"name": "Fundo em blocos",
+			"name": "Tiled Background",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -33,7 +33,7 @@
 		{
 			"type": "plugin",
 			"id": "Button",
-			"name": "Botão",
+			"name": "Button",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -41,7 +41,7 @@
 		{
 			"type": "plugin",
 			"id": "Arr",
-			"name": "Matriz",
+			"name": "Array",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -49,7 +49,7 @@
 		{
 			"type": "plugin",
 			"id": "Keyboard",
-			"name": "Teclado",
+			"name": "Keyboard",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -57,7 +57,7 @@
 		{
 			"type": "plugin",
 			"id": "Touch",
-			"name": "Toque",
+			"name": "Touch",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -65,7 +65,7 @@
 		{
 			"type": "plugin",
 			"id": "PlatformInfo",
-			"name": "Informação da Plataforma",
+			"name": "Platform info",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -73,7 +73,7 @@
 		{
 			"type": "plugin",
 			"id": "Function",
-			"name": "[Function]",
+			"name": "Function",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -81,7 +81,7 @@
 		{
 			"type": "plugin",
 			"id": "Audio",
-			"name": "Áudio",
+			"name": "Audio",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -89,7 +89,7 @@
 		{
 			"type": "behavior",
 			"id": "Flash",
-			"name": "Piscar",
+			"name": "Flash",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -97,7 +97,7 @@
 		{
 			"type": "behavior",
 			"id": "TileMovement",
-			"name": "Movimento em grid",
+			"name": "Tile movement",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -105,7 +105,7 @@
 		{
 			"type": "behavior",
 			"id": "solid",
-			"name": "Sólido",
+			"name": "Solid",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -113,7 +113,7 @@
 		{
 			"type": "behavior",
 			"id": "EightDir",
-			"name": "8 Direções",
+			"name": "8 Direction",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -121,7 +121,7 @@
 		{
 			"type": "behavior",
 			"id": "Bullet",
-			"name": "Projétil",
+			"name": "Bullet",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -129,7 +129,7 @@
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
-			"name": "Arrastar & Soltar",
+			"name": "Drag & Drop",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -137,7 +137,7 @@
 		{
 			"type": "behavior",
 			"id": "Platform",
-			"name": "Plataforma",
+			"name": "Platform",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -145,7 +145,7 @@
 		{
 			"type": "behavior",
 			"id": "Timer",
-			"name": "Cronômetro",
+			"name": "Timer",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -153,7 +153,7 @@
 		{
 			"type": "behavior",
 			"id": "Fade",
-			"name": "Esmaecer",
+			"name": "Fade",
 			"author": "Scirra",
 			"version": "r285.3",
 			"bundled": false
@@ -192,7 +192,37 @@
 			"LeftBlock",
 			"TopBlock",
 			"Points",
-			"BlockPositions"
+			"BlockPositions",
+			"Sprite0_0",
+			"Sprite0_1",
+			"Sprite0_2",
+			"Sprite0_3",
+			"Sprite0_4",
+			"Sprite1_0",
+			"Sprite1_1",
+			"Sprite1_2",
+			"Sprite1_3",
+			"Sprite1_4",
+			"Sprite1_5",
+			"Sprite1_6",
+			"Sprite1_7",
+			"Sprite1_8",
+			"Sprite1_9",
+			"Sprite1_10",
+			"Sprite1_11",
+			"Sprite1_12",
+			"Sprite1_13",
+			"Sprite1_14",
+			"Sprite2_0",
+			"Sprite2_1",
+			"Sprite2_2",
+			"Sprite2_3",
+			"Sprite2_4",
+			"Sprite3_0",
+			"Sprite3_1",
+			"Sprite3_2",
+			"Sprite3_3",
+			"Sprite3_4"
 		],
 		"subfolders": [
 			{
@@ -429,7 +459,8 @@
 					"Layout_Cesta_Sapataria",
 					"Layout_Caça",
 					"Layout_suporte_na_multidao",
-					"Layout_Match3_fix"
+					"Layout_Match3_fix",
+					"Layout_labirinto_Done"
 				],
 				"subfolders": [],
 				"name": "Minigames"
@@ -446,7 +477,8 @@
 			"PUB",
 			"Casa_Reuniao",
 			"Casa_Festa",
-			"Sistema"
+			"Sistema",
+			"Labirinto_Done"
 		],
 		"subfolders": [
 			{

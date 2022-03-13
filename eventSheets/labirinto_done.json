@@ -1,0 +1,1457 @@
+{
+	"name": "Labirinto_Done",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "posicao",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 552244050526879
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 629663985967194
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 546738052252020,
+					"parameters": {
+						"variable": "posicao",
+						"value": "Sprite0_0.UID"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "Sprite0_0",
+					"sid": 437933645685811,
+					"parameters": {
+						"color": "rgbEx(1, 0, 0)"
+					}
+				}
+			],
+			"sid": 864182705799376
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 307136384890793,
+					"parameters": {
+						"object": "Sprite0_1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 903996495045788,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 807340273538190,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_0.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 414954081787449,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 220262221943246,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_1.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 848934570763871,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite0_1.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite0_1",
+							"sid": 267953721711727,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 375104478880524,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 230460926537344,
+					"parameters": {
+						"object": "Sprite0_2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 334542259258572,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 404925677245037,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 805386341950643,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 460856840980626,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_2.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 115737502520479,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite0_2.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite0_2",
+							"sid": 784465811602925,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 223665130922515,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 735678889619615,
+					"parameters": {
+						"object": "Sprite0_3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 128488557801093,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 712033491524933,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 962842312427530,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_4.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 547387275391527,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_3.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 795272862338516,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite0_3.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite0_3",
+							"sid": 480895595785578,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 121960004091872,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 233914607212937,
+					"parameters": {
+						"object": "Sprite0_4"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 962013423672301,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 888122044495218,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 382442681045018,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_4.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 654691029322560,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite0_3.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite0_4",
+							"sid": 795656565985239,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 328805298000034,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 762601816818766,
+					"parameters": {
+						"object": "Sprite1_0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 232260888214071,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 294038700740639,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_0.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 814394369048881,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 456048937404240,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_0.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 302904344943512,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite1_0.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite1_0",
+							"sid": 225125309698483,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 747725297423035,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 255622243619202,
+					"parameters": {
+						"object": "Sprite1_1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 240778666496920,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 510588094701466,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 114968005025415,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 580894517418839,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 977138296378810,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_0.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 269276352218730,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite1_1.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite1_1",
+							"sid": 446491514985851,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 994847420391173,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 115445138301953,
+					"parameters": {
+						"object": "Sprite1_2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 592922672953393,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 379050328012897,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 532845774555899,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 473080455360746,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 183524685552327,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_1.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 802109312430483,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite1_2.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite1_2",
+							"sid": 965694175345828,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 789435889311882,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 896273375492907,
+					"parameters": {
+						"object": "Sprite1_3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 832224202055021,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 428287257662861,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 191469274961817,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_4.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 835441894291742,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 926135230480344,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_2.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 565480202347852,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite1_3.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite1_3",
+							"sid": 163195580606688,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 551407246322761,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 687157569390519,
+					"parameters": {
+						"object": "Sprite1_4"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 597126410923656,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 535389658805690,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite0_4.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 398257218791886,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 979663269164622,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_4.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 385160509523990,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite1_4.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite1_4",
+							"sid": 684289737827557,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 300066373602785,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 224799035189693,
+					"parameters": {
+						"object": "Sprite2_0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 360483783106255,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 573547397268937,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_0.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 387629738427306,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 939094137968901,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_0.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 626743780995611,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite2_0.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite2_0",
+							"sid": 598429250477598,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 757674543102844,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 387237552253526,
+					"parameters": {
+						"object": "Sprite2_1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 928069628760853,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 812451793504019,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 528110906525740,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 245837964188706,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 984757281235179,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_0.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 651719419057122,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite2_1.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite2_1",
+							"sid": 554590653766274,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 102984228862617,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 118735431918943,
+					"parameters": {
+						"object": "Sprite2_2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 883188617687191,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 536618581958317,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 268785697275720,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 373022281385306,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 708613350716526,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_1.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 742405956111818,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite2_2.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite2_2",
+							"sid": 390694902324114,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 101011310670685,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 790237271887873,
+					"parameters": {
+						"object": "Sprite2_3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 262401033660091,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 857231905563415,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 518387288879051,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_4.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 766237614193725,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 407097999431089,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_2.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 291883400927570,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite2_3.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite2_3",
+							"sid": 702296438469940,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 281485506129682,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 162035622314956,
+					"parameters": {
+						"object": "Sprite2_4"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 390237738019104,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 373223949347917,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite1_4.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 970220206446560,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 798821095976242,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_4.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 280636605075149,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite2_4.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite2_4",
+							"sid": 821969414270841,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 878664350125426,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 154819209578174,
+					"parameters": {
+						"object": "Sprite3_0"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 323408700764607,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 799912131176477,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_0.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 421712495874126,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_1.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 277186699276850,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite3_0.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite3_0",
+							"sid": 510553970042292,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 399628512916187,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 317368645958696,
+					"parameters": {
+						"object": "Sprite3_1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 138431136429956,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 881727517075448,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_0.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 161616601096955,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 621908219351072,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_2.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 570233427057844,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite3_1.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite3_1",
+							"sid": 155717094057071,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 470457679635682,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 421444923449830,
+					"parameters": {
+						"object": "Sprite3_2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 247849477066575,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 845031200866352,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_1.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 309066432415979,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 384718524158760,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_3.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 387677940712859,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite3_2.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite3_2",
+							"sid": 300034741337019,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 705360956545853,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 630303430023271,
+					"parameters": {
+						"object": "Sprite3_3"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 520874154077920,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 941496668527622,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_2.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 384260625698254,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_3.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 204865087023573,
+							"parameters": {
+								"variable": "posicao",
+								"value": "Sprite3_3.UID"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite3_3",
+							"sid": 893518673945363,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						}
+					],
+					"sid": 531792796064036,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Ultimo lugar, agora ganha o jogo e vai pra outro layout"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 957004547164611,
+					"parameters": {
+						"object": "Sprite3_4"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 999677228280316,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 972925446720220,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite3_3.UID"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 320704438043008,
+							"parameters": {
+								"variable": "posicao",
+								"comparison": 0,
+								"value": "Sprite2_4.UID"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "Sprite3_4",
+							"sid": 603059397114722,
+							"parameters": {
+								"color": "rgbEx(1, 0, 0)"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 997853445916790,
+							"disabled": true,
+							"parameters": {
+								"layout": "Casa_Festa"
+							}
+						}
+					],
+					"sid": 126792132784113,
+					"isOrBlock": true
+				}
+			]
+		}
+	],
+	"sid": 532149726959618
+}
