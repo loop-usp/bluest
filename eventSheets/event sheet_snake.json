@@ -2,6 +2,16 @@
 	"name": "Event sheet_Snake",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "eaten",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "número de elementos comidos",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 160763215145307
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -23,27 +33,6 @@
 			"sid": 699400154231159
 		},
 		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked",
-					"objectClass": "VOLTAR_SNAKE",
-					"sid": 645565654404515
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 635043680626024,
-					"parameters": {
-						"layout": "Restaurante"
-					}
-				}
-			],
-			"sid": 520320573428110
-		},
-		{
 			"eventType": "comment",
 			"text": "No início do jogo, mostramos a pontuação atual, definimos a variável global [i]alive[/i] como verdadeira, o que permite ao jogo saber que tem de mover a cobra regularmente e que o jogo não acabou, a função [i][b]spawnStartSnake[/b][/i] que spawna até [i]length[/i] instâncias da cobra para iniciar o jogo."
 		},
@@ -60,15 +49,61 @@
 				{
 					"id": "set-text",
 					"objectClass": "txtScore",
-					"sid": 132676520621951,
+					"sid": 986848946558648,
 					"parameters": {
-						"text": "\"Score: \" & eaten"
+						"text": "\"Pontos: \" & eaten"
 					}
 				},
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 240659990359634,
+					"parameters": {
+						"object-to-create": "INST_SNAKE",
+						"layer": "1",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 742815210880025
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 758573881074657,
+					"parameters": {
+						"object": "INST_SNAKE"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_SNAKE",
+					"sid": 464019673524993
+				}
+			],
+			"sid": 999683222730198
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "INST_SNAKE",
+					"sid": 308402148521208
+				}
+			],
+			"actions": [
+				{
 					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 269089362524621,
+					"sid": 121759861090612,
 					"parameters": {
 						"variable": "alive",
 						"value": "true"
@@ -76,10 +111,10 @@
 				},
 				{
 					"callFunction": "spawnStartSnake",
-					"sid": 386164506862681
+					"sid": 812303949936284
 				}
 			],
-			"sid": 742815210880025
+			"sid": 351908619651716
 		},
 		{
 			"eventType": "comment",
@@ -124,16 +159,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 744790642049672
-		},
-		{
-			"eventType": "variable",
-			"name": "eaten",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "número de elementos comidos",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 159234205323130
 		},
 		{
 			"eventType": "variable",
@@ -1557,15 +1582,43 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 567914952936403,
+					"parameters": {
+						"object-to-create": "Ganhou",
+						"layer": "1",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 693809163554091
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 788615300981777,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 857158255933755,
+					"sid": 563469228290984,
 					"parameters": {
 						"layout": "Restaurante"
 					}
 				}
 			],
-			"sid": 693809163554091
+			"sid": 747427079749222
 		}
 	],
 	"sid": 458205160109742

@@ -36,9 +36,55 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 604715114098385
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 260777117065188,
+					"parameters": {
+						"object-to-create": "INST_ESTEIRA_RESTAURANTE",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 138291996871205
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 448673058384940,
+					"parameters": {
+						"object": "INST_ESTEIRA_RESTAURANTE"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_ESTEIRA_RESTAURANTE",
+					"sid": 664872477362872
+				}
+			],
+			"sid": 302210344714294
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 447087465364176,
+					"sid": 593987004731241,
 					"parameters": {
 						"interval-seconds": "2.1"
 					}
@@ -48,7 +94,7 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Criador_Esteira",
-					"sid": 388651899640735,
+					"sid": 641632189587242,
 					"parameters": {
 						"object": "Alimento_Bom",
 						"layer": "0",
@@ -59,13 +105,13 @@
 				{
 					"id": "set-animation-frame",
 					"objectClass": "Alimento_Bom",
-					"sid": 678137380091080,
+					"sid": 207424124479689,
 					"parameters": {
 						"frame-number": "random(0,3)"
 					}
 				}
 			],
-			"sid": 130447774701541
+			"sid": 889572790852694
 		},
 		{
 			"eventType": "block",
@@ -73,7 +119,7 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 405374335886280,
+					"sid": 227562145781715,
 					"parameters": {
 						"interval-seconds": "5.2"
 					}
@@ -83,7 +129,7 @@
 				{
 					"id": "spawn-another-object",
 					"objectClass": "Criador_Esteira",
-					"sid": 831006560899685,
+					"sid": 699573950192688,
 					"parameters": {
 						"object": "Alimento_Ruim",
 						"layer": "0",
@@ -92,7 +138,7 @@
 					}
 				}
 			],
-			"sid": 986818336484259
+			"sid": 931308219675930
 		},
 		{
 			"eventType": "block",
@@ -100,7 +146,7 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Alimento_Bom",
-					"sid": 943864142043504,
+					"sid": 343800685802368,
 					"parameters": {
 						"object": "Prato"
 					}
@@ -110,7 +156,7 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 611917543543232,
+					"sid": 696420756359069,
 					"parameters": {
 						"variable": "Pontos_Esteira",
 						"value": "100"
@@ -119,7 +165,7 @@
 				{
 					"id": "set-text",
 					"objectClass": "Pontos_Esteira",
-					"sid": 219859646835735,
+					"sid": 738930550922912,
 					"parameters": {
 						"text": "Pontos_Esteira"
 					}
@@ -127,10 +173,10 @@
 				{
 					"id": "destroy",
 					"objectClass": "Alimento_Bom",
-					"sid": 786765500682537
+					"sid": 623163040456587
 				}
 			],
-			"sid": 626645327972516
+			"sid": 828419031856631
 		},
 		{
 			"eventType": "block",
@@ -138,7 +184,7 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Alimento_Ruim",
-					"sid": 985660051421864,
+					"sid": 488894586670926,
 					"parameters": {
 						"object": "Prato"
 					}
@@ -148,7 +194,7 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 308036489729365,
+					"sid": 599617635817562,
 					"parameters": {
 						"variable": "Pontos_Esteira",
 						"value": "200"
@@ -157,7 +203,7 @@
 				{
 					"id": "set-text",
 					"objectClass": "Pontos_Esteira",
-					"sid": 643149234064420,
+					"sid": 857787480466119,
 					"parameters": {
 						"text": "Pontos_Esteira"
 					}
@@ -165,10 +211,10 @@
 				{
 					"id": "destroy",
 					"objectClass": "Alimento_Ruim",
-					"sid": 531000947967251
+					"sid": 990842783362773
 				}
 			],
-			"sid": 571707838869702
+			"sid": 750350086939181
 		},
 		{
 			"eventType": "block",
@@ -176,7 +222,7 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Parede_Esteira",
-					"sid": 529812302108801,
+					"sid": 509081373983313,
 					"parameters": {
 						"object": "Alimento_Bom"
 					}
@@ -186,7 +232,7 @@
 				{
 					"id": "subtract-from-eventvar",
 					"objectClass": "System",
-					"sid": 221954676030991,
+					"sid": 636211898735273,
 					"parameters": {
 						"variable": "Pontos_Esteira",
 						"value": "50"
@@ -195,7 +241,7 @@
 				{
 					"id": "set-text",
 					"objectClass": "Pontos_Esteira",
-					"sid": 495049593878042,
+					"sid": 460676404870773,
 					"parameters": {
 						"text": "Pontos_Esteira"
 					}
@@ -203,10 +249,10 @@
 				{
 					"id": "destroy",
 					"objectClass": "Alimento_Bom",
-					"sid": 139179515722687
+					"sid": 426328963684490
 				}
 			],
-			"sid": 552077713750660
+			"sid": 888085883786723
 		},
 		{
 			"eventType": "block",
@@ -214,7 +260,7 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "Parede_Esteira",
-					"sid": 672333132735602,
+					"sid": 906894581599624,
 					"parameters": {
 						"object": "Alimento_Ruim"
 					}
@@ -224,7 +270,7 @@
 				{
 					"id": "add-to-eventvar",
 					"objectClass": "System",
-					"sid": 924529467561113,
+					"sid": 689893639650802,
 					"parameters": {
 						"variable": "Pontos_Esteira",
 						"value": "50"
@@ -233,7 +279,7 @@
 				{
 					"id": "set-text",
 					"objectClass": "Pontos_Esteira",
-					"sid": 897886055322539,
+					"sid": 571865079700436,
 					"parameters": {
 						"text": "Pontos_Esteira"
 					}
@@ -241,10 +287,10 @@
 				{
 					"id": "destroy",
 					"objectClass": "Alimento_Ruim",
-					"sid": 182734550171665
+					"sid": 234589085149491
 				}
 			],
-			"sid": 889986322577898
+			"sid": 294577171497684
 		},
 		{
 			"eventType": "block",
@@ -252,33 +298,7 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 158263592360384,
-					"parameters": {
-						"variable": "Pontos_Esteira",
-						"comparison": 5,
-						"value": "2000"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 260094886354644,
-					"parameters": {
-						"layout": "Restaurante"
-					}
-				}
-			],
-			"sid": 789967195886287
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-eventvar",
-					"objectClass": "System",
-					"sid": 666464813528878,
+					"sid": 861223312312796,
 					"parameters": {
 						"variable": "Pontos_Esteira",
 						"comparison": 2,
@@ -290,15 +310,69 @@
 				{
 					"id": "restart-layout",
 					"objectClass": "System",
-					"sid": 322316987329418
+					"sid": 687098906469488
 				},
 				{
 					"id": "reset-global-variables",
 					"objectClass": "System",
-					"sid": 682994219308547
+					"sid": 869824385064428
 				}
 			],
-			"sid": 545426601270034
+			"sid": 801243041089131
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 495094123795294,
+					"parameters": {
+						"variable": "Pontos_Esteira",
+						"comparison": 5,
+						"value": "2000"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 572760965598080,
+					"parameters": {
+						"object-to-create": "Ganhou",
+						"layer": "0",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 678338763025090
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 693022641308921,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 390569520216570,
+					"parameters": {
+						"layout": "Restaurante"
+					}
+				}
+			],
+			"sid": 160615481891136
 		}
 	],
 	"sid": 914026895729002

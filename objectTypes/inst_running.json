@@ -1,7 +1,7 @@
 {
-	"name": "ondeestaowally_770x433_acf_cropped",
+	"name": "INST_RUNNING",
 	"plugin-id": "Sprite",
-	"sid": 859760115319510,
+	"sid": 659369135859789,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,20 +11,40 @@
 			{
 				"frames": [
 					{
-						"width": 770,
-						"height": 433,
+						"width": 500,
+						"height": 333,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9867670,
+						"imageSpriteId": 1697549,
+						"collisionPoly": {
+							"points": [
+								0.02,
+								0.03,
+								0.5,
+								0,
+								0.9766666666666667,
+								0.03,
+								0.9966666666666667,
+								0.5,
+								0.9766666666666667,
+								0.965,
+								0.5,
+								0.995,
+								0.02,
+								0.965,
+								0,
+								0.5
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 123299860336692,
-				"name": "Default",
+				"sid": 216379836993789,
+				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

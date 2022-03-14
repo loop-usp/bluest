@@ -1,0 +1,57 @@
+{
+	"name": "Ganhou",
+	"plugin-id": "Sprite",
+	"sid": 234546338784074,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 500,
+						"height": 220,
+						"originX": 0.5,
+						"originY": 0.7593984962406015,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7747104,
+						"collisionPoly": {
+							"points": [
+								0.023178807947019868,
+								0.05263157894736842,
+								0.5,
+								0.007518796992481203,
+								0.9735099337748344,
+								0.05263157894736842,
+								0.9933774834437086,
+								0.7593984962406015,
+								0.7649006622516558,
+								0.9849624060150376,
+								0.5,
+								0.9849624060150376,
+								0.23178807947019867,
+								0.9849624060150376,
+								0.0033112582781456954,
+								0.7593984962406015
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 314556748615719,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

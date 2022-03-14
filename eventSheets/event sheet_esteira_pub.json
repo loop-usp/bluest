@@ -36,6 +36,52 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 190225344952486
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 586279690332326,
+					"parameters": {
+						"object-to-create": "INST_ESTEIRA_PUB",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 216267652519069
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 676117801773121,
+					"parameters": {
+						"object": "INST_ESTEIRA_PUB"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_ESTEIRA_PUB",
+					"sid": 454016807179184
+				}
+			],
+			"sid": 469961438680042
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
 					"sid": 933468139353482,
@@ -262,15 +308,43 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 184695966083296,
+					"parameters": {
+						"object-to-create": "Ganhou",
+						"layer": "0",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 137079606215529
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 808307431913472,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 532420801968438,
+					"sid": 435610105421221,
 					"parameters": {
 						"layout": "PUB"
 					}
 				}
 			],
-			"sid": 137079606215529
+			"sid": 807908468650348
 		},
 		{
 			"eventType": "block",

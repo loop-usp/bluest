@@ -19,9 +19,42 @@
 						"x": "random(0, 1100)",
 						"y": "random(0, 650)"
 					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 136086328611046,
+					"parameters": {
+						"object-to-create": "INST_CESTA_REST",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
 				}
 			],
 			"sid": 967187405822249
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 697348165923209,
+					"parameters": {
+						"object": "INST_CESTA_REST"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_CESTA_REST",
+					"sid": 309784042304161
+				}
+			],
+			"sid": 127256839517818
 		},
 		{
 			"eventType": "block",
@@ -37,11 +70,15 @@
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
+					"id": "create-object",
 					"objectClass": "System",
-					"sid": 197056508823810,
+					"sid": 101896710313985,
 					"parameters": {
-						"layout": "Restaurante"
+						"object-to-create": "Ganhou",
+						"layer": "0",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
 					}
 				}
 			],
@@ -51,26 +88,25 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-overlapping-another-object",
-					"objectClass": "wally",
-					"sid": 597587451294337,
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 458828268684805,
 					"parameters": {
-						"object": "barrierWally"
+						"object": "Ganhou"
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "set-position",
-					"objectClass": "wally",
-					"sid": 421793856691653,
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 847537485714756,
 					"parameters": {
-						"x": "random(0, 1100)",
-						"y": "random(0, 650)"
+						"layout": "Restaurante"
 					}
 				}
 			],
-			"sid": 226665486621173
+			"sid": 201014911787144
 		}
 	],
 	"sid": 115815074826118

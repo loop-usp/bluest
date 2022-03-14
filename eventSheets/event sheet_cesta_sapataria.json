@@ -27,6 +27,52 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
+					"sid": 753137139057106
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 661335357408629,
+					"parameters": {
+						"object-to-create": "INST_CESTA_SAP",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 552962934456926
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 131222089000551,
+					"parameters": {
+						"object": "INST_CESTA_SAP"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_CESTA_SAP",
+					"sid": 220439491003113
+				}
+			],
+			"sid": 964132309559477
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
 					"sid": 670277533029872
 				}
 			],
@@ -38,8 +84,8 @@
 				},
 				{
 					"id": "destroy",
-					"objectClass": "bons_sapatos",
-					"sid": 564967048315091
+					"objectClass": "ruins_sapatos",
+					"sid": 380315863370022
 				}
 			],
 			"sid": 164301929374602
@@ -358,15 +404,43 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 463256679316620,
+					"parameters": {
+						"object-to-create": "Ganhou",
+						"layer": "0",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 656755690942337
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 849620260489972,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 369509561900403,
+					"sid": 265789770738945,
 					"parameters": {
 						"layout": "Sapataria"
 					}
 				}
 			],
-			"sid": 656755690942337
+			"sid": 951048064356423
 		}
 	],
 	"sid": 978042178609886

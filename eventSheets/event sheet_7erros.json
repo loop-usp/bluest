@@ -23,87 +23,70 @@
 					"conditions": [
 						{
 							"id": "on-clicked",
-							"objectClass": "VOLTAR_LABIRINTO",
-							"sid": 948704598958638
+							"objectClass": "HOME",
+							"sid": 654764406817753
 						}
 					],
 					"actions": [
 						{
 							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 444679561473300,
+							"sid": 229548601565137,
 							"parameters": {
-								"layout": "Parque"
+								"layout": "Layout_Principal"
 							}
 						}
 					],
 					"sid": 167256227775489
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-clicked",
-							"objectClass": "VOLTAR_SUPORTE",
-							"sid": 246354916801369
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 641672818736743,
-							"parameters": {
-								"layout": "Parque"
-							}
-						}
-					],
-					"sid": 643943152560941
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-clicked",
-							"objectClass": "VOLTAR_CAÇA",
-							"sid": 827186977621610
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 160895715663700,
-							"parameters": {
-								"layout": "Dentista"
-							}
-						}
-					],
-					"sid": 960590388349211
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-clicked",
-							"objectClass": "VOLTAR_7ERROS",
-							"sid": 718682389163482
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 800316918733242,
-							"parameters": {
-								"layout": "Dentista"
-							}
-						}
-					],
-					"sid": 402952983378304
 				}
 			],
 			"sid": 547517853118912
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 906956828562249
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 400795480005417,
+					"parameters": {
+						"object-to-create": "INST_7ERROS",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 638530798375616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 236344038927421,
+					"parameters": {
+						"object": "INST_7ERROS"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_7ERROS",
+					"sid": 910911871948707
+				}
+			],
+			"sid": 321625698318028
 		},
 		{
 			"eventType": "block",
@@ -352,15 +335,43 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 919685049316561,
+					"parameters": {
+						"object-to-create": "Ganhou",
+						"layer": "0",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 987138310963430
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 923876217247498,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 935805678131929,
+					"sid": 538981132871607,
 					"parameters": {
 						"layout": "Dentista"
 					}
 				}
 			],
-			"sid": 987138310963430
+			"sid": 933132150617139
 		}
 	],
 	"sid": 968672547543832

@@ -96,6 +96,52 @@
 			"sid": 527298137318745
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 163721581348743
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 768667936769186,
+					"parameters": {
+						"object-to-create": "INST_CACA",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 947476250059244
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 530749799846863,
+					"parameters": {
+						"object": "INST_CACA"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_CACA",
+					"sid": 104806187592672
+				}
+			],
+			"sid": 675678659733901
+		},
+		{
 			"eventType": "variable",
 			"name": "Muda_fase",
 			"type": "number",
@@ -499,32 +545,43 @@
 			],
 			"actions": [
 				{
-					"id": "wait",
+					"id": "create-object",
 					"objectClass": "System",
-					"sid": 660317190779015,
+					"sid": 621349703312896,
 					"parameters": {
-						"seconds": "3"
-					}
-				},
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 211178106071034,
-					"parameters": {
-						"layout": "Dentista"
-					}
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 610135296874381,
-					"parameters": {
-						"variable": "Muda_fase",
-						"value": "1"
+						"object-to-create": "Ganhou",
+						"layer": "0",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
 					}
 				}
 			],
 			"sid": 510674542644544
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 385060495659023,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 999299361706547,
+					"parameters": {
+						"layout": "Dentista"
+					}
+				}
+			],
+			"sid": 192966854958181
 		}
 	],
 	"sid": 553239238302620

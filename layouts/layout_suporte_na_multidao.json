@@ -7,35 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "ondeestaowally_770x433_acf_cropped",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 75,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 640,
-						"y": 360,
-						"width": 1280,
-						"height": 720,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "wally",
 					"properties": {
 						"initially-visible": true,
@@ -48,70 +19,12 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 320,
-						"y": -136,
-						"width": 27.407285265638734,
-						"height": 31.653812089425912,
-						"originX": 0.49433962264150944,
-						"originY": 0.49242424242424243,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "barrierWally",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 121,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 399,
-						"y": 179,
-						"width": 184,
-						"height": 246,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "barrierWally",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 122,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 854,
-						"y": 188,
-						"width": 114.3733991069945,
-						"height": 184.6070083997377,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 322,
+						"y": -127,
+						"width": 38.291871604130435,
+						"height": 84.90044853531441,
+						"originX": 0.39409616555082166,
+						"originY": 0.13852813852813853,
 						"color": [
 							1,
 							1,

@@ -1,7 +1,7 @@
 {
-	"name": "barrierWally",
+	"name": "INST_CESTA_SAP",
 	"plugin-id": "Sprite",
-	"sid": 342987487767422,
+	"sid": 611267282137661,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,39 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 500,
+						"height": 333,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 3724742,
+						"imageSpriteId": 2937337,
+						"collisionPoly": {
+							"points": [
+								0.02,
+								0.03,
+								0.5,
+								0,
+								0.9766666666666667,
+								0.03,
+								0.9966666666666667,
+								0.5,
+								0.9766666666666667,
+								0.965,
+								0.5,
+								0.995,
+								0.02,
+								0.965,
+								0,
+								0.5
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 702335701294314,
+				"sid": 812312276848506,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

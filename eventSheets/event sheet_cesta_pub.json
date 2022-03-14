@@ -27,6 +27,52 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
+					"sid": 804282090250708
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 959396453690729,
+					"parameters": {
+						"object-to-create": "INST_CESTA_PUB",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 242999817904632
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 976910444047452,
+					"parameters": {
+						"object": "INST_CESTA_PUB"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_CESTA_PUB",
+					"sid": 450942733002459
+				}
+			],
+			"sid": 889623255812519
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
 					"sid": 795795568990172
 				}
 			],
@@ -358,15 +404,43 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 722694838252971,
+					"parameters": {
+						"object-to-create": "Ganhou",
+						"layer": "0",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 898490401399580
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 406609104569021,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 186255431485691,
+					"sid": 967276080421140,
 					"parameters": {
 						"layout": "PUB"
 					}
 				}
 			],
-			"sid": 898490401399580
+			"sid": 685394289729884
 		}
 	],
 	"sid": 154461210297057

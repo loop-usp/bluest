@@ -49,17 +49,55 @@
 						"variable": "posicao",
 						"value": "Sprite0_0.UID"
 					}
-				},
-				{
-					"id": "set-default-color",
-					"objectClass": "Sprite0_0",
-					"sid": 437933645685811,
-					"parameters": {
-						"color": "rgbEx(1, 0, 0)"
-					}
 				}
 			],
 			"sid": 864182705799376
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 141030055808855
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 461908804349366,
+					"parameters": {
+						"object-to-create": "INST_LABIRINTO",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 256295636777473
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 275334525172330,
+					"parameters": {
+						"object": "INST_LABIRINTO"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "INST_LABIRINTO",
+					"sid": 256889301896772
+				}
+			],
+			"sid": 335568266346544
 		},
 		{
 			"eventType": "block",
@@ -1782,11 +1820,15 @@
 							}
 						},
 						{
-							"id": "go-to-layout",
+							"id": "create-object",
 							"objectClass": "System",
-							"sid": 866883318657659,
+							"sid": 342364584344915,
 							"parameters": {
-								"layout": "Parque"
+								"object-to-create": "Ganhou",
+								"layer": "0",
+								"x": "648",
+								"y": "416",
+								"create-hierarchy": false
 							}
 						}
 					],
@@ -1794,6 +1836,30 @@
 					"isOrBlock": true
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 629301409666471,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 168657982183943,
+					"parameters": {
+						"layout": "Parque"
+					}
+				}
+			],
+			"sid": 975431650794128
 		},
 		{
 			"eventType": "block",

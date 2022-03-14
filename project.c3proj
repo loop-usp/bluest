@@ -176,16 +176,8 @@
 			"Fundo",
 			"Parabens",
 			"BG_Layout_Principal",
-			"ondeestaowally_770x433_acf_cropped",
-			"wally",
-			"barrierWally",
 			"TiledBackground",
-			"Block1",
 			"Spawner",
-			"Block2",
-			"Block3",
-			"Block4",
-			"Block5",
 			"FloatingText",
 			"RightBlock",
 			"BottomBlock",
@@ -193,37 +185,19 @@
 			"TopBlock",
 			"Points",
 			"BlockPositions",
-			"Sprite0_0",
-			"Sprite0_1",
-			"Sprite0_2",
-			"Sprite0_3",
-			"Sprite0_4",
-			"Sprite1_0",
-			"Sprite1_1",
-			"Sprite1_2",
-			"Sprite1_3",
-			"Sprite1_4",
-			"Sprite1_5",
-			"Sprite1_6",
-			"Sprite1_7",
-			"Sprite1_8",
-			"Sprite1_9",
-			"Sprite1_10",
-			"Sprite1_11",
-			"Sprite1_12",
-			"Sprite1_13",
-			"Sprite1_14",
-			"Sprite2_0",
-			"Sprite2_1",
-			"Sprite2_2",
-			"Sprite2_3",
-			"Sprite2_4",
-			"Sprite3_0",
-			"Sprite3_1",
-			"Sprite3_2",
-			"Sprite3_3",
-			"Sprite3_4",
-			"energia"
+			"energia",
+			"INST_SNAKE",
+			"Ganhou",
+			"INST_ESTEIRA_RESTAURANTE",
+			"INST_ESTEIRA_PUB",
+			"INST_CESTA_REST",
+			"INST_CESTA_SAP",
+			"INST_CESTA_PUB",
+			"INST_MATCH3",
+			"INST_RUNNING",
+			"INST_LABIRINTO",
+			"INST_7ERROS",
+			"INST_CACA"
 		],
 		"subfolders": [
 			{
@@ -297,7 +271,12 @@
 					"esquerda",
 					"Array",
 					"Pontos_Match3",
-					"VOLTAR_MATCH3"
+					"VOLTAR_MATCH3",
+					"Block1",
+					"Block2",
+					"Block3",
+					"Block4",
+					"Block5"
 				],
 				"subfolders": [],
 				"name": "Match3"
@@ -413,6 +392,49 @@
 				],
 				"subfolders": [],
 				"name": "7Erros"
+			},
+			{
+				"items": [
+					"wally"
+				],
+				"subfolders": [],
+				"name": "Suporte"
+			},
+			{
+				"items": [
+					"Sprite0_0",
+					"Sprite0_1",
+					"Sprite0_2",
+					"Sprite0_3",
+					"Sprite0_4",
+					"Sprite1_0",
+					"Sprite1_1",
+					"Sprite1_10",
+					"Sprite1_11",
+					"Sprite1_12",
+					"Sprite1_13",
+					"Sprite1_14",
+					"Sprite1_2",
+					"Sprite1_3",
+					"Sprite1_4",
+					"Sprite1_5",
+					"Sprite1_6",
+					"Sprite1_7",
+					"Sprite1_8",
+					"Sprite1_9",
+					"Sprite2_0",
+					"Sprite2_1",
+					"Sprite2_2",
+					"Sprite2_3",
+					"Sprite2_4",
+					"Sprite3_0",
+					"Sprite3_1",
+					"Sprite3_2",
+					"Sprite3_3",
+					"Sprite3_4"
+				],
+				"subfolders": [],
+				"name": "Labirinto"
 			}
 		]
 	},
@@ -437,11 +459,6 @@
 			"Casa_Festa"
 		],
 		"subfolders": [
-			{
-				"items": [],
-				"subfolders": [],
-				"name": "Em construção"
-			},
 			{
 				"items": [
 					"Layout_7Erros",
@@ -475,8 +492,7 @@
 			"PUB",
 			"Casa_Reuniao",
 			"Casa_Festa",
-			"Sistema",
-			"Labirinto_Done"
+			"Sistema"
 		],
 		"subfolders": [
 			{
@@ -493,7 +509,8 @@
 					"Event sheet_Cesta_Sapataria",
 					"Event sheet_Esteira_PUB",
 					"Event_suporte_na_multidao",
-					"Event_sheet_match3_fix"
+					"Event_sheet_match3_fix",
+					"Labirinto_Done"
 				],
 				"subfolders": [],
 				"name": "Minigames"

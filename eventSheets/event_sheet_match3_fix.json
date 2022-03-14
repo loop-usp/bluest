@@ -127,17 +127,50 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 339260209121932
+					"sid": 512660456997418
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 871072547424933,
+					"parameters": {
+						"object-to-create": "INST_MATCH3",
+						"layer": "0",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Blocks",
+					"sid": 482241571308595
+				}
+			],
+			"sid": 255301869069785
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 839168450648953,
+					"parameters": {
+						"object": "INST_MATCH3"
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "Blocks",
-					"sid": 117748784938347
+					"objectClass": "INST_MATCH3",
+					"sid": 196790643071963
 				}
 			],
-			"sid": 779758882007260
+			"sid": 130742232940779
 		},
 		{
 			"eventType": "block",
@@ -2745,15 +2778,43 @@
 			],
 			"actions": [
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 473830563652647,
+					"parameters": {
+						"object-to-create": "Ganhou",
+						"layer": "0",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 227235049842412
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 652543659648412,
+					"parameters": {
+						"object": "Ganhou"
+					}
+				}
+			],
+			"actions": [
+				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 788823134931792,
+					"sid": 360415148173731,
 					"parameters": {
 						"layout": "Restaurante"
 					}
 				}
 			],
-			"sid": 227235049842412
+			"sid": 891508725110393
 		}
 	],
 	"sid": 990289638193528

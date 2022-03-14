@@ -106,64 +106,47 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-clicked",
-					"objectClass": "VOLTAR_RUNNING_PARQUE",
-					"sid": 115843810086329
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 910071018587056
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
+					"id": "create-object",
 					"objectClass": "System",
-					"sid": 240060386542392,
+					"sid": 662872788216185,
 					"parameters": {
-						"layout": "Parque"
+						"object-to-create": "INST_RUNNING",
+						"layer": "1",
+						"x": "632",
+						"y": "352",
+						"create-hierarchy": false
 					}
 				}
 			],
-			"sid": 801481799103041
+			"sid": 400916416309897
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-clicked",
-					"objectClass": "VOLTAR_RUNNING_SAPATARIA",
-					"sid": 280109192410258
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 245857249684442,
+					"parameters": {
+						"object": "INST_RUNNING"
+					}
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 329822380431416,
-					"parameters": {
-						"layout": "Layout_Cesta_Sapataria"
-					}
+					"id": "destroy",
+					"objectClass": "INST_RUNNING",
+					"sid": 797996285943626
 				}
 			],
-			"sid": 841139008126457
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-clicked",
-					"objectClass": "VOLTAR_RUNNING_PUB",
-					"sid": 933044954878980
-				}
-			],
-			"actions": [
-				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 498320071385937,
-					"parameters": {
-						"layout": "PUB"
-					}
-				}
-			],
-			"sid": 328747653439309
+			"sid": 119475096704655
 		},
 		{
 			"eventType": "group",
@@ -1119,11 +1102,39 @@
 				{
 					"id": "compare-eventvar",
 					"objectClass": "System",
-					"sid": 430266630519444,
+					"sid": 407854718439329,
 					"parameters": {
 						"variable": "TotalDistance",
 						"comparison": 0,
-						"value": "40000"
+						"value": "1700"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 900276117089181,
+					"parameters": {
+						"object-to-create": "Ganhou",
+						"layer": "1",
+						"x": "648",
+						"y": "416",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 989636549975831
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 885031319751776,
+					"parameters": {
+						"object": "Ganhou"
 					}
 				}
 			],
@@ -1131,13 +1142,13 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 553229408913064,
+					"sid": 981545627212226,
 					"parameters": {
 						"layout": "Parque"
 					}
 				}
 			],
-			"sid": 989636549975831
+			"sid": 188672607742696
 		}
 	],
 	"sid": 453506405208434
