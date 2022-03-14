@@ -23,9 +23,9 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 136086328611046,
+					"sid": 102383785960347,
 					"parameters": {
-						"object-to-create": "INST_CESTA_REST",
+						"object-to-create": "INST_SUP",
 						"layer": "0",
 						"x": "632",
 						"y": "352",
@@ -41,17 +41,17 @@
 				{
 					"id": "on-tap-object",
 					"objectClass": "Touch",
-					"sid": 697348165923209,
+					"sid": 381597170061162,
 					"parameters": {
-						"object": "INST_CESTA_REST"
+						"object": "INST_SUP"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "INST_CESTA_REST",
-					"sid": 309784042304161
+					"objectClass": "INST_SUP",
+					"sid": 454494807983980
 				}
 			],
 			"sid": 127256839517818

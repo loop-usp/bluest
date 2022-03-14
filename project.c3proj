@@ -197,7 +197,10 @@
 			"INST_RUNNING",
 			"INST_LABIRINTO",
 			"INST_7ERROS",
-			"INST_CACA"
+			"INST_CACA",
+			"INST_SUP",
+			"BGWALLY",
+			"MEIO"
 		],
 		"subfolders": [
 			{
@@ -631,12 +634,12 @@
 		]
 	},
 	"properties": {
-		"description": "",
+		"description": "Projeto de jogo em oncoloia",
 		"version": "1.0.0.0",
 		"author": "Lana Nogueira Vieira",
 		"authorEmail": "lananog@usp.br",
 		"authorWebsite": "",
-		"appId": "",
+		"appId": "com.lto.lana",
 		"pixelRounding": false,
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
